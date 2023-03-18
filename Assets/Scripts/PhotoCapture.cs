@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
+using UnityEngine.SceneManagement;
 
 public class PhotoCapture : MonoBehaviour
 {
@@ -16,6 +18,16 @@ public class PhotoCapture : MonoBehaviour
     private void Start()
     {
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+    }
+
+    private void OnEnable()
+    {
+        cameraUI.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        cameraUI.SetActive(false);
     }
 
     private void Update()
@@ -44,6 +56,10 @@ public class PhotoCapture : MonoBehaviour
 
         screenCapture.ReadPixels(regionToRead, 0, 0, false);
         screenCapture.Apply();
+
+        byte[] bytes = screenCapture.EncodeToPNG();
+        File.WriteAllBytes(Application.dataPath + "/TempStuff/" + SceneManager.GetActiveScene().name + ".png", bytes);
+
         ShowPhoto();
     }
 
