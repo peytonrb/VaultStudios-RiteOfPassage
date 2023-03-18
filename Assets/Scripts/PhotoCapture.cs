@@ -11,6 +11,8 @@ public class PhotoCapture : MonoBehaviour
     [SerializeField] private Image photoDisplayArea;
     [SerializeField] private GameObject photoFrame;
     [SerializeField] private GameObject cameraUI;
+    public GameObject photoHolder;
+    private Renderer rend;
 
     private Texture2D screenCapture;
     private bool viewingPhoto;
@@ -18,6 +20,7 @@ public class PhotoCapture : MonoBehaviour
     private void Start()
     {
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        rend = photoHolder.GetComponent<Renderer>();
     }
 
     private void OnEnable()
@@ -59,6 +62,9 @@ public class PhotoCapture : MonoBehaviour
 
         byte[] bytes = screenCapture.EncodeToPNG();
         File.WriteAllBytes(Application.dataPath + "/TempStuff/" + SceneManager.GetActiveScene().name + ".png", bytes);
+
+        rend.material = new Material(Shader.Find("Standard"));
+        rend.material.mainTexture = screenCapture;
 
         ShowPhoto();
     }

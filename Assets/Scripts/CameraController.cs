@@ -14,6 +14,12 @@ public class CameraController : MonoBehaviour
     private float time = 0.2f;
     private Vector2 rotationXMinMax = new Vector2(-40, 40);
 
+    void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+    
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSens;
@@ -29,4 +35,5 @@ public class CameraController : MonoBehaviour
         transform.localEulerAngles = currentRotation;
         transform.position = target.position - transform.forward * targetDistance;
     }
+    
 }

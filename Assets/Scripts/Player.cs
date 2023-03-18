@@ -11,7 +11,9 @@ public class Player : MonoBehaviour
     public GameObject cameraManager;
     public float minDistance;
     public bool inRangeOfCameraArea;
-    
+    public bool cameraActive;
+    private PlayerController pController;
+    private Rigidbody rb;
 
     void Start()
     {
@@ -20,6 +22,9 @@ public class Player : MonoBehaviour
         photoCam.SetActive(false);
         mainCam.SetActive(true);
         cameraManager.SetActive(false);
+        cameraActive = false;
+        pController = GetComponent<PlayerController>();
+        rb = GetComponent<Rigidbody>();
     }
     
     void Update()
@@ -45,6 +50,8 @@ public class Player : MonoBehaviour
                     photoCam.SetActive(true);
                     cameraManager.SetActive(true);
                     fUI.SetActive(false);
+                    rb.isKinematic = true;
+                    pController.enabled = false;
                 }
             }
             else
