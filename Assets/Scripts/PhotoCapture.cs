@@ -31,6 +31,7 @@ public class PhotoCapture : MonoBehaviour
     private void OnDisable()
     {
         cameraUI.SetActive(false);
+        photoFrame.SetActive(false);
     }
 
     private void Update()

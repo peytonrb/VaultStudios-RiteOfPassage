@@ -8,10 +8,8 @@ public class Player : MonoBehaviour
     public GameObject fUI;
     public GameObject mainCam;
     public GameObject photoCam;
-    public GameObject cameraManager;
+    public GameObject CameraStuff;
     public float minDistance;
-    public bool inRangeOfCameraArea;
-    public bool cameraActive;
     private PlayerController pController;
     private Rigidbody rb;
 
@@ -21,8 +19,7 @@ public class Player : MonoBehaviour
         fUI.SetActive(false);
         photoCam.SetActive(false);
         mainCam.SetActive(true);
-        cameraManager.SetActive(false);
-        cameraActive = false;
+        CameraStuff.SetActive(false);
         pController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody>();
     }
@@ -34,31 +31,53 @@ public class Player : MonoBehaviour
             if (Vector3.Distance(area.transform.position, transform.position) < minDistance)
             {
                 //Debug.Log("In Range of Camera Area");
-                inRangeOfCameraArea = true;
-                if(mainCam.activeSelf)
+                if (mainCam.activeSelf)
                 {
                     fUI.SetActive(true);
                 }
-
-                if(Input.GetKeyDown(KeyCode.F))
+                else
                 {
-                    if(photoCam.transform.position != area.transform.position)
+                    fUI.SetActive(false);
+                }
+
+                if (Input.GetKeyDown(KeyCode.F) & mainCam.activeSelf)
+                {
+                    if (photoCam.transform.position != area.transform.position)
                     {
                         photoCam.transform.position = new Vector3(area.transform.position.x, area.transform.position.y + 1.75f, area.transform.position.z);
                     }
-                    mainCam.SetActive(false);
-                    photoCam.SetActive(true);
-                    cameraManager.SetActive(true);
-                    fUI.SetActive(false);
-                    rb.isKinematic = true;
-                    pController.enabled = false;
+                    
+                    ActivateCamera();
+                }
+                else if (Input.GetKeyDown(KeyCode.F) & !mainCam.activeSelf)
+                {
+                    DeactivateCamera();
                 }
             }
             else
             {
-                inRangeOfCameraArea = false;
                 fUI.SetActive(false);
             }
         }
+
+        
+    }
+
+    private void ActivateCamera()
+    {
+        mainCam.SetActive(false);
+        photoCam.SetActive(true);
+        CameraStuff.SetActive(true);
+        rb.isKinematic = true;
+        pController.enabled = false;
+    }
+
+    private void DeactivateCamera()
+    {
+        mainCam.SetActive(true);
+        photoCam.SetActive(false);
+        CameraStuff.SetActive(false);
+        rb.isKinematic = false;
+        pController.enabled = true;
     }
 }
