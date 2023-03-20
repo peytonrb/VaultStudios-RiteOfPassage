@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PhotoArea
+  - isGrappable
   layers:
   - Default
   - TransparentFX
