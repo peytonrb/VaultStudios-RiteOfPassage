@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement")]
     public CharacterController controller;
     public float speed;
     public float sensitivity;
@@ -13,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight;
     private float gravity = -9.81f;
 
+    [Header("Glider Mechanic")]
+    public float glideSpeed;
+
     private void Start() 
     {
         controller = GetComponent<CharacterController>();    
@@ -20,12 +24,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update() 
     {
-        Movement();    
-    }
-
-    void Movement() 
-    {
         isGrounded = controller.isGrounded;
+
         if (isGrounded && velocity.y < 0) 
         {
             velocity.y = 0f;
@@ -46,10 +46,9 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, sensitivity * Time.deltaTime);
         }
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
+        if (Input.GetButtonDown("Jump") && isGrounded) {
             velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
-        }
+        } 
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
