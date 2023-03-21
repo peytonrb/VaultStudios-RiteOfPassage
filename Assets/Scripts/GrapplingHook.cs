@@ -46,6 +46,7 @@ public class GrapplingHook : MonoBehaviour
 
         // performs complete grapple
         if (hooked && fired) {
+            
             hook.transform.parent = hookedObject.transform;
             transform.position = Vector3.MoveTowards(transform.position, hook.transform.position, 
                                                     Time.deltaTime * playerTravelSpeed);
