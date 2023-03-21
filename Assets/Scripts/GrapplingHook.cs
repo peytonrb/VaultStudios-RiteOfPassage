@@ -26,6 +26,12 @@ public class GrapplingHook : MonoBehaviour
             fired = true;
         }
 
+        if (fired) {
+            LineRenderer rope = hook.GetComponent<LineRenderer>();
+            rope.SetPosition(0, hookHolder.transform.position);
+            rope.SetPosition(1, hook.transform.position);
+        }
+
         if (fired && !hooked) {
             hook.transform.Translate(Vector3.forward * Time.deltaTime * hookTravelSpeed);
             currentDistance = Vector3.Distance(transform.position, hook.transform.position);
