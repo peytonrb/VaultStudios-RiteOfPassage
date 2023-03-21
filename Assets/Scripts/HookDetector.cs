@@ -6,6 +6,7 @@ public class HookDetector : MonoBehaviour
 {
     public GameObject player;
 
+    // determines if hook is attached to a surface
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.tag == "isGrappable")

@@ -26,12 +26,15 @@ public class GrapplingHook : MonoBehaviour
             fired = true;
         }
 
+        // creates visual line (rope)
         if (fired) {
             LineRenderer rope = hook.GetComponent<LineRenderer>();
             rope.positionCount = 2;
             rope.SetPosition(0, hookHolder.transform.position);
             rope.SetPosition(1, hook.transform.position);
         }
+
+        // if fired but not hooked, hook continues to travel and returns to player
         if (fired && !hooked) {
             hook.transform.Translate(Vector3.forward * Time.deltaTime * hookTravelSpeed);
             currentDistance = Vector3.Distance(transform.position, hook.transform.position);
@@ -41,6 +44,7 @@ public class GrapplingHook : MonoBehaviour
             }
         }
 
+        // performs complete grapple
         if (hooked && fired) {
             hook.transform.parent = hookedObject.transform;
             transform.position = Vector3.MoveTowards(transform.position, hook.transform.position, 
@@ -50,7 +54,7 @@ public class GrapplingHook : MonoBehaviour
 
             if (distanceFromHook < 1)
             {
-                // climb up wall if close enough to top
+                // player will climb up wall if close enough to top
                 if (!grounded) {
                     this.transform.Translate(Vector3.forward * Time.deltaTime * 13f);
                     this.transform.Translate(Vector3.up * Time.deltaTime * 17f);
@@ -65,11 +69,13 @@ public class GrapplingHook : MonoBehaviour
         }
     }
 
+    // initiates so player does not glitch into corners if the hook grabs the edge of a block
     private IEnumerator Climb() {
         yield return new WaitForSeconds(0.1f);
         returnHook();
     }
 
+    // returns hook to original position
     private void returnHook() {
         hook.transform.rotation = hookHolder.transform.rotation;
         hook.transform.position = hookHolder.transform.position;
@@ -79,6 +85,7 @@ public class GrapplingHook : MonoBehaviour
         rope.positionCount = 0;
     }
 
+    // helper method, performs ground check 
     private void isGrounded() {
         RaycastHit hit;
         float distance = 1f;
