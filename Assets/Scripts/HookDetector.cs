@@ -11,6 +11,7 @@ public class HookDetector : MonoBehaviour
         if (collision.tag == "isGrappable")
         {
             player.GetComponent<GrapplingHook>().hooked = true;
+            player.GetComponent<GrapplingHook>().hookedObject = collision.gameObject;
         }
     }
 }
