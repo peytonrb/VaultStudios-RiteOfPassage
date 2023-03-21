@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     public float jumpHeight;
     private float gravity;
+    private float turnSmoothTime = 0.1f;
+    private float turnSmoothVelocity;
 
 
     [Header("Ground Check")]
@@ -44,7 +46,8 @@ public class PlayerController : MonoBehaviour
 
         if (direction.magnitude >= 0.1f) {
             float desiredRotation = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y; // calculates angle
-            transform.rotation = Quaternion.Euler(0f, desiredRotation, 0f);
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, desiredRotation, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 moveDirection = Quaternion.Euler(0f, desiredRotation, 0f) * Vector3.forward; 
             controller.Move(moveDirection.normalized * speed * Time.deltaTime);

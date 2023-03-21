@@ -20,6 +20,8 @@ public class GrapplingHook : MonoBehaviour
     private bool grounded;
 
     void Update() {
+        CharacterController charController = this.GetComponent<CharacterController>();
+        Rigidbody rigidbody = this.GetComponent<Rigidbody>();
 
         // firing the hook
         if (Input.GetKeyDown(KeyCode.F) && !fired) {
@@ -46,12 +48,13 @@ public class GrapplingHook : MonoBehaviour
 
         // performs complete grapple
         if (hooked && fired) {
-            
             hook.transform.parent = hookedObject.transform;
+            charController.enabled = false;
             transform.position = Vector3.MoveTowards(transform.position, hook.transform.position, 
                                                     Time.deltaTime * playerTravelSpeed);
+            charController.enabled = true;
             float distanceFromHook = Vector3.Distance(transform.position, hook.transform.position);
-            this.GetComponent<Rigidbody>().useGravity = false;
+            rigidbody.useGravity = false;
 
             if (distanceFromHook < 1)
             {
@@ -66,7 +69,8 @@ public class GrapplingHook : MonoBehaviour
             }
         } else {
             hook.transform.parent = hookHolder.transform;
-            this.GetComponent<Rigidbody>().useGravity = true;
+            rigidbody.useGravity = true;
+            charController.enabled = true;
         }
     }
 
