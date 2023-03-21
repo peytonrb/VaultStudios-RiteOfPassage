@@ -1128,7 +1128,7 @@ MonoBehaviour:
   sensitivity: 10
   camera: {fileID: 963194227}
   jumpHeight: 1
-  glideSpeed: 0.1
+  glideSpeed: 3
 --- !u!143 &1914158569
 CharacterController:
   m_ObjectHideFlags: 0

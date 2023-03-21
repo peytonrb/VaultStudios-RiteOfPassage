@@ -8,7 +8,7 @@ public class PhotoCameraController : MonoBehaviour
     public float mouseSensitivity = 2f;
     float cameraVerticalRotation = 0f;
 
-    bool lockedCursor = true;
+    // bool lockedCursor = true; <-- commented bc variable is assigned but not being used
 
     void Start()
     {
