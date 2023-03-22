@@ -52,19 +52,7 @@ public class PlayerController : MonoBehaviour
             Vector3 moveDirection = Quaternion.Euler(0f, desiredRotation, 0f) * Vector3.forward; 
             controller.Move(moveDirection.normalized * speed * Time.deltaTime);
         }
-
-    //     Vector3 movementInput = Quaternion.Euler(0, camera.transform.eulerAngles.y, 0) * new Vector3(horizontalInput, 0, verticalInput);
-    //     Vector3 movementDirection = movementInput.normalized;
-
-    //     controller.Move(movementDirection * speed * Time.deltaTime);
-
-    //     // player faces movement direction
-    //     if (movementDirection != Vector3.zero) 
-    //     {
-    //         Quaternion desiredRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
-    //         transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, sensitivity * Time.deltaTime);
-    //     }
-
+        
         if (Input.GetButtonDown("Jump") && isGrounded) {
             gravity = -9.81f;
             velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
