@@ -20,4 +20,10 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);   
         }
     }
+    
+    void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 }

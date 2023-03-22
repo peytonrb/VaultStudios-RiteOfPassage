@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PhotoCameraController : MonoBehaviour
 {
-    public Transform target;
+    public GameObject target;
     public float mouseSensitivity = 2f;
     float cameraVerticalRotation = 0f;
 
@@ -28,6 +28,7 @@ public class PhotoCameraController : MonoBehaviour
         transform.localEulerAngles = Vector3.right * cameraVerticalRotation;
 
         // Horizontal Mouse Rotation
-        target.Rotate(Vector3.up * inputX);
+        target.transform.Rotate(Vector3.up * inputX);
+        
     }
 }

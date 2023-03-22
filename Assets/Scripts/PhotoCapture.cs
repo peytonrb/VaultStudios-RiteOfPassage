@@ -11,6 +11,7 @@ public class PhotoCapture : MonoBehaviour
     [SerializeField] private Image photoDisplayArea;
     [SerializeField] private GameObject photoFrame;
     [SerializeField] private GameObject cameraUI;
+    [SerializeField] private GameObject mainUI;
     public GameObject photoHolder;
     private Renderer rend;
 
@@ -26,6 +27,7 @@ public class PhotoCapture : MonoBehaviour
     private void OnEnable()
     {
         cameraUI.SetActive(true);
+        mainUI.SetActive(false);
     }
 
     private void OnDisable()

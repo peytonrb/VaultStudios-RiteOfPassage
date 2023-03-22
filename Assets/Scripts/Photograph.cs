@@ -9,6 +9,7 @@ public class Photograph : MonoBehaviour
     public GameObject mainCam;
     public GameObject photoCam;
     public GameObject CameraStuff;
+    public GameObject mainUI;
     public float minDistance;
     private PlayerController pController;
     private Rigidbody rb;
@@ -22,6 +23,7 @@ public class Photograph : MonoBehaviour
         CameraStuff.SetActive(false);
         pController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody>();
+        mainUI.SetActive(true);
     }
     
     void Update()
@@ -70,6 +72,7 @@ public class Photograph : MonoBehaviour
         CameraStuff.SetActive(true);
         rb.isKinematic = true;
         pController.enabled = false;
+        mainUI.SetActive(false);
     }
 
     private void DeactivateCamera()
@@ -79,5 +82,6 @@ public class Photograph : MonoBehaviour
         CameraStuff.SetActive(false);
         rb.isKinematic = false;
         pController.enabled = true;
+        mainUI.SetActive(true);
     }
 }
