@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
     public float jumpHeight;
-    private float gravity;
+    private float gravity = -9.81f;
     private float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
 

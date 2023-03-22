@@ -8,6 +8,7 @@ public class GrapplingHook : MonoBehaviour
     public GameObject hook;
     public GameObject hookHolder;
     public LayerMask isGrappable;
+    public Camera cam;
 
     [Header("Variables")]
     public float hookTravelSpeed;
@@ -36,9 +37,15 @@ public class GrapplingHook : MonoBehaviour
             rope.SetPosition(1, hook.transform.position);
         }
 
-        // if fired but not hooked, hook continues to travel and returns to player
+        // if fired but not hooked, hook continues to travel and/or returns to player
         if (fired && !hooked) {
-            hook.transform.Translate(Vector3.forward * Time.deltaTime * hookTravelSpeed);
+            float x = Screen.width / 2;
+            float y = Screen.height / 2;
+
+            Ray ray = cam.ScreenPointToRay(new Vector3(x, y, 0));
+            hook.transform.Translate(ray.direction * hookTravelSpeed * Time.deltaTime);
+            // hook.transform.Translate(Vector3.forward * Time.deltaTime * hookTravelSpeed);
+
             currentDistance = Vector3.Distance(transform.position, hook.transform.position);
 
             if (currentDistance >= maxDistance) {
