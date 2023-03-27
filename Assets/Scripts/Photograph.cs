@@ -61,8 +61,6 @@ public class Photograph : MonoBehaviour
                 fUI.SetActive(false);
             }
         }
-
-        
     }
 
     private void ActivateCamera()

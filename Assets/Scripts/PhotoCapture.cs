@@ -63,11 +63,11 @@ public class PhotoCapture : MonoBehaviour
         screenCapture.ReadPixels(regionToRead, 0, 0, false);
         screenCapture.Apply();
 
-        byte[] bytes = screenCapture.EncodeToPNG();
-        File.WriteAllBytes(Application.dataPath + "/TempStuff/" + SceneManager.GetActiveScene().name + ".png", bytes);
+        //byte[] bytes = screenCapture.EncodeToPNG();
+        //File.WriteAllBytes(Application.dataPath + "/TempStuff/" + SceneManager.GetActiveScene().name + ".png", bytes);
 
-        rend.material = new Material(Shader.Find("Standard"));
-        rend.material.mainTexture = screenCapture;
+        //rend.material = new Material(Shader.Find("Standard"));
+        //rend.material.mainTexture = screenCapture;
 
         ShowPhoto();
     }
