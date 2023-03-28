@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
     public float jumpHeight;
-    private float gravity = -9.81f;
+    private float gravity;
     private float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
 
@@ -24,16 +24,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("Glider Mechanic")]
     public float glideSpeed;
-
-    // private void Start() 
-    // {
-    //     controller = GetComponent<CharacterController>();    
-    // }
-
+    
     private void Update() 
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, ground); // is player on ground?
-        // Debug.Log(isGrounded);
 
         if (isGrounded && velocity.y < 0) 
         {
@@ -54,16 +48,16 @@ public class PlayerController : MonoBehaviour
         }
         
         if (Input.GetButtonDown("Jump") && isGrounded) {
-            gravity = -9.81f;
-            velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
+            gravity = 9.81f;
+            velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * -gravity);
         }
 
-        // if (Input.GetKeyDown(KeyCode.E) && !isGrounded) {
-        //     gravity = -glideSpeed;
-        // }
+        // glider
+        if (Input.GetKeyDown(KeyCode.E) && !isGrounded) {
+            gravity = glideSpeed;
+        }
 
-        velocity.y += gravity * Time.deltaTime;
+        velocity.y += -gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
-    // }
     }
 }

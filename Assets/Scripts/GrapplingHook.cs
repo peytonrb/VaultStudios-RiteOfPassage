@@ -46,6 +46,7 @@ public class GrapplingHook : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, maxDistance, 9)) {
                 if (hit.collider.tag == "isGrappable") {
+                    transform.LookAt(hit.point); // in case player is backwards when fire
                     hook.transform.LookAt(hit.point);
                     hook.transform.Translate(ray.direction * hookTravelSpeed * Time.deltaTime);
                     currentDistance = Vector3.Distance(transform.position, hook.transform.position);
@@ -66,6 +67,7 @@ public class GrapplingHook : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, hook.transform.position, 
                                                     Time.deltaTime * playerTravelSpeed);
             charController.enabled = true;
+            // transform.LookAt(new Vector3(hookedObject.transform.position.x, hookedObject.transform.position.y, 0));
             float distanceFromHook = Vector3.Distance(transform.position, hook.transform.position);
             rigidbody.useGravity = false;
 
