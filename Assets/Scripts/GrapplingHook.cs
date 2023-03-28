@@ -41,14 +41,20 @@ public class GrapplingHook : MonoBehaviour
         if (fired && !hooked) {
             float x = Screen.width / 2;
             float y = Screen.height / 2;
-
+            RaycastHit hit;
             Ray ray = cam.ScreenPointToRay(new Vector3(x, y, 0));
-            hook.transform.Translate(ray.direction * hookTravelSpeed * Time.deltaTime);
-            // hook.transform.Translate(Vector3.forward * Time.deltaTime * hookTravelSpeed);
+            
+            if (Physics.Raycast(ray, out hit, maxDistance)) {
+                if (hit.collider.tag == "isGrappable") {
+                    hook.transform.LookAt(hit.point);
+                    hook.transform.Translate(ray.direction * hookTravelSpeed * Time.deltaTime);
+                    currentDistance = Vector3.Distance(transform.position, hook.transform.position);
 
-            currentDistance = Vector3.Distance(transform.position, hook.transform.position);
-
-            if (currentDistance >= maxDistance) {
+                    if (currentDistance >= maxDistance) {
+                        returnHook();
+                    }
+                }
+            } else {
                 returnHook();
             }
         }

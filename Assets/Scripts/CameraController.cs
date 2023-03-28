@@ -35,5 +35,4 @@ public class CameraController : MonoBehaviour
         transform.localEulerAngles = currentRotation;
         transform.position = target.position - transform.forward * targetDistance;
     }
-    
 }
