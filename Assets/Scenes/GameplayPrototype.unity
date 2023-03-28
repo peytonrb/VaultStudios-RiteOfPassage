@@ -566,6 +566,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4708984622049566988, guid: 374de1d0b45588241aa0793806bfc384, type: 3}
   m_PrefabInstance: {fileID: 279803350}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &334700711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7913867426281137179, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
+  m_PrefabInstance: {fileID: 7913867426206007216}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &349089885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,11 +1871,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000021472017
+      value: 0.0000000021472017
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.243223e-10
+      value: 1.243223e-10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
@@ -1881,6 +1886,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7913867426033757579, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7913867426033757681, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1894,8 +1903,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194227}
     - target: {fileID: 7913867426281137155, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 334700711}
+    - target: {fileID: 7913867426281137155, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
+      propertyPath: tpCamera
+      value: 
+      objectReference: {fileID: 1254600237}
+    - target: {fileID: 7913867426281137155, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
       propertyPath: hookTravelSpeed
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7913867426281137179, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
       propertyPath: m_Name
