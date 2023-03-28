@@ -45,7 +45,6 @@ public class GrapplingHook : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(new Vector3(x, y, 0));
 
             if (Physics.Raycast(ray, out hit, maxDistance, 9)) {
-                Debug.Log(hit.collider.tag);
                 if (hit.collider.tag == "isGrappable") {
                     hook.transform.LookAt(hit.point);
                     hook.transform.Translate(ray.direction * hookTravelSpeed * Time.deltaTime);
