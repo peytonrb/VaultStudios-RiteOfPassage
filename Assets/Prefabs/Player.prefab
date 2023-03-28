@@ -506,7 +506,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   cam: {fileID: 0}
-  lookForward: {fileID: 0}
   hookTravelSpeed: 50
   playerTravelSpeed: 30
   hooked: 0
