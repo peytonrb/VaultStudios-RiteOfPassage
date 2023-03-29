@@ -47,6 +47,7 @@ MonoBehaviour:
   photoDisplayArea: {fileID: 2540936914626138098}
   photoFrame: {fileID: 2540936914386395701}
   cameraUI: {fileID: 2540936914436926214}
+  mainUI: {fileID: 0}
   photoHolder: {fileID: 0}
 --- !u!1 &2540936913748582784
 GameObject:
