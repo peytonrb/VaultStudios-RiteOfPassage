@@ -12,6 +12,7 @@ public class PhotoCapture : MonoBehaviour
     [SerializeField] private GameObject photoFrame;
     [SerializeField] private GameObject cameraUI;
     [SerializeField] private GameObject mainUI;
+    public Shader shader;
     public GameObject photoHolder;
     private Renderer rend;
 
@@ -20,8 +21,10 @@ public class PhotoCapture : MonoBehaviour
 
     private void Start()
     {
-        screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        screenCapture = new Texture2D(720, 720, TextureFormat.RGB24, false);
         rend = photoHolder.GetComponent<Renderer>();
+
+        Debug.Log(Application.persistentDataPath);
     }
 
     private void OnEnable()
@@ -58,18 +61,18 @@ public class PhotoCapture : MonoBehaviour
 
         yield return new WaitForEndOfFrame();
 
-        Rect regionToRead = new Rect (0, 0, Screen.width, Screen.height);
+        Rect regionToRead = new Rect ((Screen.width/2) - 360, (Screen.height/2) - 360, 720, 720);
 
         screenCapture.ReadPixels(regionToRead, 0, 0, false);
         screenCapture.Apply();
 
-        //byte[] bytes = screenCapture.EncodeToPNG();
-        //File.WriteAllBytes(Application.dataPath + "/TempStuff/" + SceneManager.GetActiveScene().name + ".png", bytes);
-
-        //rend.material = new Material(Shader.Find("Standard"));
-        //rend.material.mainTexture = screenCapture;
-
         ShowPhoto();
+
+        byte[] bytes = screenCapture.EncodeToPNG();
+        File.WriteAllBytes(Application.persistentDataPath + SceneManager.GetActiveScene().name + ".png", bytes);
+
+        rend.material = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+        rend.material.mainTexture = screenCapture;
     }
 
     void ShowPhoto()
