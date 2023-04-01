@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // glider
-        if (Input.GetKeyDown(KeyCode.E) && !isGrounded) {
+        if (Input.GetButtonDown("Glide") && !isGrounded) {
             gravity = glideSpeed;
         }
 

@@ -42,7 +42,7 @@ public class Photograph : MonoBehaviour
                     fUI.SetActive(false);
                 }
 
-                if (Input.GetKeyDown(KeyCode.F) & mainCam.activeSelf)
+                if (Input.GetButtonDown("Interact") & mainCam.activeSelf)
                 {
                     if (photoCam.transform.position != area.transform.position)
                     {
@@ -51,7 +51,7 @@ public class Photograph : MonoBehaviour
                     
                     ActivateCamera();
                 }
-                else if (Input.GetKeyDown(KeyCode.F) & !mainCam.activeSelf)
+                else if (Input.GetButtonDown("Interact") & !mainCam.activeSelf)
                 {
                     DeactivateCamera();
                 }

@@ -25,7 +25,7 @@ public class GrapplingHook : MonoBehaviour
         Rigidbody rigidbody = this.GetComponent<Rigidbody>();
 
         // firing the hook
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !fired) {
+        if (Input.GetButtonDown("Grapple") && !fired) {
             fired = true;
         }
 
