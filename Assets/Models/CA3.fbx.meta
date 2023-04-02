@@ -1,59 +1,9 @@
 fileFormatVersion: 2
-guid: 4feb3163d2e8a6044b7f119619623ec9
+guid: 9e5a621f11e38934d9de245e8460f8a7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: OOoneeightfourfive
-    second: {fileID: 2100000, guid: be07c35c6756ca84f841f7cb45c8b016, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: OOonetwothreethree
-    second: {fileID: 2100000, guid: 8b393659f837b244cbff432d79f8fedf, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: OOtwoeightfivefive
-    second: {fileID: 2100000, guid: 40bc3016a6925b14486ab8ea5e76fb31, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: OfoursixsixCeight
-    second: {fileID: 2100000, guid: a41d89a2c1158f344b0269670d44e503, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: OthreefivethreeAfour
-    second: {fileID: 2100000, guid: 162a652f9d6cefe4da244a784ad11428, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: OtwothreeEsevenD
-    second: {fileID: 2100000, guid: a31ac7de30ddcae41bf6684686d6d1a2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: fiveCsixsevensevenD
-    second: {fileID: 2100000, guid: 70c2e2d00a2d2c648b8bb10fcf45707a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ninesevennineDAC
-    second: {fileID: 2100000, guid: f1c54507876725f48a496e36e968583f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: sevenDeightfivenineseven
-    second: {fileID: 2100000, guid: 15f517dcc7610c742b8a7f45de092425, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: threethreefouronefiveC
-    second: {fileID: 2100000, guid: 1c6f08fa7ab3a4948b1d624b08648ff5, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
