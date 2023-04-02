@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
     private Vector3 currentRotation;
     private Vector3 velocity = Vector3.zero;
     private float time = 0.2f;
-    private Vector2 rotationXMinMax = new Vector2(-40, 40);
+    private Vector2 rotationXMinMax = new Vector2(-80, 80);
 
     void Start()
     {

@@ -47,7 +47,14 @@ public class PlayerController : MonoBehaviour
 
             Vector3 moveDirection = Quaternion.Euler(0f, desiredRotation, 0f) * Vector3.forward; 
             controller.Move(moveDirection.normalized * speed * Time.deltaTime);
-            animator.SetBool("IsWalking", true);
+            if(animator.GetBool("IsGliding"))
+            {
+                animator.SetBool("IsWalking", false);
+            }
+            else
+            {
+                animator.SetBool("IsWalking", true);
+            }
         }
         else{
             animator.SetBool("IsWalking", false);
@@ -59,8 +66,9 @@ public class PlayerController : MonoBehaviour
         }
 
         // glider
-        if (Input.GetButtonDown("Glide") && !isGrounded) {
+        if (Input.GetButtonDown("Glide") && !isGrounded && velocity.y < 0) {
             gravity = glideSpeed;
+            animator.SetBool("IsWalking", false);
             animator.SetBool("IsGliding", true);
         }
         else if(isGrounded){
