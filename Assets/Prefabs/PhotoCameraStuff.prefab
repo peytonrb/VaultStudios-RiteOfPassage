@@ -775,7 +775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 7754538112500315468}
-  mouseSensitivity: 2
+  mouseSensitivity: 0.75
 --- !u!114 &7754538112502567086
 MonoBehaviour:
   m_ObjectHideFlags: 0

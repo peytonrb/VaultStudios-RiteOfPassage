@@ -22,8 +22,11 @@ public class PhotoCapture : MonoBehaviour
     private void Start()
     {
         screenCapture = new Texture2D(720, 720, TextureFormat.RGB24, false);
-        rend = photoHolder.GetComponent<Renderer>();
-
+        if(photoHolder != null)
+        {
+            rend = photoHolder.GetComponent<Renderer>();
+        }
+        
         Debug.Log(Application.persistentDataPath);
     }
 
