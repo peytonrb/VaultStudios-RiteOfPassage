@@ -19,8 +19,10 @@ public class GrapplingHook : MonoBehaviour
     public float maxDistance;
     private float currentDistance;
     private bool grounded;
+    private Animator animator;
 
     void Update() {
+        animator = GetComponent<Animator>();
         CharacterController charController = this.GetComponent<CharacterController>();
         Rigidbody rigidbody = this.GetComponent<Rigidbody>();
 
@@ -70,6 +72,7 @@ public class GrapplingHook : MonoBehaviour
             // transform.LookAt(new Vector3(hookedObject.transform.position.x, hookedObject.transform.position.y, 0));
             float distanceFromHook = Vector3.Distance(transform.position, hook.transform.position);
             rigidbody.useGravity = false;
+            animator.SetBool("IsGrappling", true);
 
             if (distanceFromHook < 1)
             {
@@ -86,6 +89,7 @@ public class GrapplingHook : MonoBehaviour
             hook.transform.parent = hookHolder.transform;
             rigidbody.useGravity = true;
             charController.enabled = true;
+            animator.SetBool("IsGrappling", false);
         }
     }
 

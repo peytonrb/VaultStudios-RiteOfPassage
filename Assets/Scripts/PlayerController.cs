@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float gravity;
     private float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
+    private Animator animator;
 
 
     [Header("Ground Check")]
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
     
     private void Update() 
     {
+        animator = GetComponent<Animator>();
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, ground); // is player on ground?
 
         if (isGrounded && velocity.y < 0) 
@@ -45,6 +47,10 @@ public class PlayerController : MonoBehaviour
 
             Vector3 moveDirection = Quaternion.Euler(0f, desiredRotation, 0f) * Vector3.forward; 
             controller.Move(moveDirection.normalized * speed * Time.deltaTime);
+            animator.SetBool("IsWalking", true);
+        }
+        else{
+            animator.SetBool("IsWalking", false);
         }
         
         if (Input.GetButtonDown("Jump") && isGrounded) {
@@ -55,6 +61,10 @@ public class PlayerController : MonoBehaviour
         // glider
         if (Input.GetButtonDown("Glide") && !isGrounded) {
             gravity = glideSpeed;
+            animator.SetBool("IsGliding", true);
+        }
+        else if(isGrounded){
+            animator.SetBool("IsGliding", false);
         }
 
         velocity.y += -gravity * Time.deltaTime;
