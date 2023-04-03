@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayButton()
     {
+        GameManager.Instance.win = false;
         SceneManager.LoadScene("Cave");
     }
 

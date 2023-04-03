@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PhotoCameraController : MonoBehaviour
 {
-    public GameObject target;
+    private GameObject target;
     public float mouseSensitivity = 2f;
     float cameraVerticalRotation = 0f;
 
@@ -18,6 +18,7 @@ public class PhotoCameraController : MonoBehaviour
 
     void Update()
     {
+        target = transform.parent.gameObject;
         // Getting Mouse Inputs
         float inputX = Input.GetAxis("Mouse X") * mouseSensitivity;
         float inputY = Input.GetAxis("Mouse Y") * mouseSensitivity;

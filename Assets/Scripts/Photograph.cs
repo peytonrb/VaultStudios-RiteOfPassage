@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Photograph : MonoBehaviour
 {
     public GameObject[] pictureAreas;
+    public GameObject photoSpot1;
+    public bool spot1Captured;
+    public GameObject photoSpot2;
+    public bool spot2Captured;
+    public GameObject photoSpot3;
+    public bool spot3Captured;
     public GameObject fUI;
     public GameObject mainCam;
     public GameObject photoCam;
@@ -13,6 +20,7 @@ public class Photograph : MonoBehaviour
     public float minDistance;
     private PlayerController pController;
     private Rigidbody rb;
+    private int score;
 
     void Start()
     {
@@ -28,6 +36,35 @@ public class Photograph : MonoBehaviour
     
     void Update()
     {
+        if (Vector3.Distance(photoSpot1.transform.position, transform.position) < minDistance || Vector3.Distance(photoSpot2.transform.position, transform.position) < minDistance || Vector3.Distance(photoSpot3.transform.position, transform.position) < minDistance)
+        {
+            if (mainCam.activeSelf)
+            {
+                fUI.SetActive(true);
+            }
+
+            if (Vector3.Distance(photoSpot1.transform.position, transform.position) < minDistance && Input.GetButtonDown("Jump"))
+            {
+                spot1Captured = true;
+                UpdateScore();
+            }
+            else if (Vector3.Distance(photoSpot2.transform.position, transform.position) < minDistance && Input.GetButtonDown("Jump"))
+            {
+                spot2Captured = true;
+                UpdateScore();
+            }
+            else if (Vector3.Distance(photoSpot3.transform.position, transform.position) < minDistance && Input.GetButtonDown("Jump"))
+            {
+                spot3Captured = true;
+                UpdateScore();
+            }
+        }
+        else
+        {
+            fUI.SetActive(false);
+        }
+
+
         foreach (GameObject area in pictureAreas)
         {
             if (Vector3.Distance(area.transform.position, transform.position) < minDistance)
@@ -35,17 +72,18 @@ public class Photograph : MonoBehaviour
                 //Debug.Log("In Range of Camera Area");
                 if (mainCam.activeSelf)
                 {
-                    fUI.SetActive(true);
+                    //fUI.SetActive(true);
                 }
                 else
                 {
-                    fUI.SetActive(false);
+                    //fUI.SetActive(false);
                 }
 
                 if (Input.GetButtonDown("Interact") & mainCam.activeSelf)
                 {
                     if (photoCam.transform.position != area.transform.position)
                     {
+                        photoCam.transform.parent = area.transform;
                         photoCam.transform.position = new Vector3(area.transform.position.x, area.transform.position.y + 1.75f, area.transform.position.z);
                     }
                     
@@ -58,8 +96,15 @@ public class Photograph : MonoBehaviour
             }
             else
             {
-                fUI.SetActive(false);
+                //fUI.SetActive(false);
             }
+        }
+
+        if (SceneManager.GetActiveScene().name != "Cave")
+        {
+            spot1Captured = false;
+            spot2Captured = false;
+            spot3Captured = false;
         }
     }
 
@@ -81,5 +126,23 @@ public class Photograph : MonoBehaviour
         rb.isKinematic = false;
         pController.enabled = true;
         mainUI.SetActive(true);
+    }
+
+    private void UpdateScore()
+    {
+        score = 0;
+        if (spot1Captured)
+        {
+            score ++;
+        }
+        if(spot2Captured)
+        {
+            score ++;
+        }
+        if(spot3Captured)
+        {
+            score ++;
+        }
+        GameManager.Instance.photosCaptured = score;
     }
 }

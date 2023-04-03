@@ -12,7 +12,7 @@ public class PhotoCapture : MonoBehaviour
     [SerializeField] private GameObject photoFrame;
     [SerializeField] private GameObject cameraUI;
     [SerializeField] private GameObject mainUI;
-    public Shader shader;
+    //public Shader shader;
     public GameObject photoHolder;
     private Renderer rend;
 
@@ -45,7 +45,7 @@ public class PhotoCapture : MonoBehaviour
     private void Update()
     {
         if (Input.GetButtonDown("Jump"))
-        {
+        {      
             if(!viewingPhoto)
             {
                 StartCoroutine(CapturePhoto());

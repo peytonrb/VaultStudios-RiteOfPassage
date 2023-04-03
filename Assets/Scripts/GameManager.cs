@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; } 
 
     private GameObject PauseMenu;
+    public int photosCaptured;
+    public bool win;
 
     private void Awake()
     {
@@ -21,6 +23,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);   
         }
+
+        win = false;
     }
 
     private void Update()
@@ -44,6 +48,17 @@ public class GameManager : MonoBehaviour
             {
                 resumeGame();
             }
+        }
+
+        if (photosCaptured >= 3 && Input.GetButtonDown("Interact"))
+        {
+            win = true;
+            SceneManager.LoadScene("EndScreen");
+        }
+
+        if (SceneManager.GetActiveScene().name != "Cave")
+        {
+            photosCaptured = 0;
         }
     }
     
