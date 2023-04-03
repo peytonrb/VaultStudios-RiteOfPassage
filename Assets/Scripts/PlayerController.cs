@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
     private Animator animator;
+    private bool isFootSound;
 
 
     [Header("Ground Check")]
@@ -26,6 +27,12 @@ public class PlayerController : MonoBehaviour
     [Header("Glider Mechanic")]
     public float glideSpeed;
     
+    
+    private void Start()
+    {
+        //AudioManager.Instance.Play("BackgroundMusic");
+    }
+
     private void Update() 
     {
         animator = GetComponent<Animator>();
@@ -50,14 +57,28 @@ public class PlayerController : MonoBehaviour
             if(animator.GetBool("IsGliding"))
             {
                 animator.SetBool("IsWalking", false);
+                isFootSound = false;
+                AudioManager.Instance.Stop("FootStepSound");
             }
             else
             {
                 animator.SetBool("IsWalking", true);
+                if(!isFootSound && isGrounded)
+                {
+                    isFootSound = true;
+                    AudioManager.Instance.Play("FootStepSound");
+                }
+                else if(!isGrounded)
+                {
+                    isFootSound = false;
+                    AudioManager.Instance.Stop("FootStepSound");
+                }
             }
         }
         else{
             animator.SetBool("IsWalking", false);
+            isFootSound = false;
+            AudioManager.Instance.Stop("FootStepSound");
         }
         
         if (Input.GetButtonDown("Jump") && isGrounded) {
@@ -69,6 +90,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Glide") && !isGrounded && velocity.y < 0) {
             gravity = glideSpeed;
             animator.SetBool("IsWalking", false);
+            isFootSound = false;
+            AudioManager.Instance.Stop("FootStepSound");
             animator.SetBool("IsGliding", true);
         }
         else if(isGrounded){

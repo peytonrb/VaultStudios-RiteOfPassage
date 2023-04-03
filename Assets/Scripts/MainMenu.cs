@@ -18,11 +18,13 @@ public class MainMenu : MonoBehaviour
     {
         mainMenu.SetActive(true);
         howToPlay.SetActive(false);
+        AudioManager.Instance.Play("BackgroundMusic");
     }
 
     public void PlayButton()
     {
         GameManager.Instance.win = false;
+        AudioManager.Instance.Stop("BackgroundMusic");
         SceneManager.LoadScene(1);
     }
 

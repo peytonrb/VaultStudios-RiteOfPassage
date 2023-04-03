@@ -688,7 +688,7 @@ Transform:
   - {fileID: 2120438911}
   - {fileID: 1641298957}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &236776588
 MeshCollider:
@@ -1177,7 +1177,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -49.347, y: -15.322, z: 68.536}
 --- !u!1 &478600245
 GameObject:
@@ -2828,7 +2828,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1579299847708563074, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1579299847708563074, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2873,6 +2873,26 @@ PrefabInstance:
     - target: {fileID: 1579299847708563100, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 092ad0a980fe9f04b9c53ac2aa60e7d0, type: 3}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.data[1].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: FootStepSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
@@ -4753,7 +4773,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1838242534
 GameObject:
@@ -6938,7 +6958,7 @@ Transform:
   m_Children:
   - {fileID: 1642775798599769416}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.349}
 --- !u!4 &543450652276392812
 Transform:
@@ -22085,7 +22105,7 @@ Transform:
   m_Children:
   - {fileID: 1783613918055713256}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6316150085215300234
 Transform:
@@ -23951,7 +23971,7 @@ Transform:
   - {fileID: 3773806508294989989}
   - {fileID: 543840388}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: -0.432, z: 0}
 --- !u!33 &7030906553528287950
 MeshFilter:

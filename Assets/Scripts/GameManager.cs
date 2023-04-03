@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
         if (photosCaptured >= 3 && Input.GetButtonDown("Interact"))
         {
             win = true;
+            AudioManager.Instance.Stop("BackgroundMusic");
             SceneManager.LoadScene(2);
         }
 
