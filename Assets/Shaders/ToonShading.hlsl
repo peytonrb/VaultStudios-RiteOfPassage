@@ -34,5 +34,4 @@ void ToonShading_float(in float3 Normal, in float ToonRampSmoothness, in float3 
         // output direction for rimlight
         Direction = light.direction;
     #endif
- 
 }

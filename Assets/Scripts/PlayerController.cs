@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsGliding", true);
         }
         else if(isGrounded){
+            gravity = 9.81f;
             animator.SetBool("IsGliding", false);
         }
 
