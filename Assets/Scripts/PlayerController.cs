@@ -104,4 +104,11 @@ public class PlayerController : MonoBehaviour
         velocity.y += -gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
+    void onTriggerEnter(Collision collision) {
+        if (collision.collider.tag == "isDeath") {
+            controller.enabled = false;
+            Debug.Log("entered");
+        }
+    }
 }
