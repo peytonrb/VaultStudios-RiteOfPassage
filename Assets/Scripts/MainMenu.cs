@@ -9,6 +9,11 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenu;
     public GameObject howToPlay;
 
+    public void Update()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
     public void Awake()
     {
         mainMenu.SetActive(true);
@@ -18,7 +23,7 @@ public class MainMenu : MonoBehaviour
     public void PlayButton()
     {
         GameManager.Instance.win = false;
-        SceneManager.LoadScene("Cave");
+        SceneManager.LoadScene(1);
     }
 
     public void ExitButton()

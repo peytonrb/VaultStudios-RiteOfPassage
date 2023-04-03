@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         if (photosCaptured >= 3 && Input.GetButtonDown("Interact"))
         {
             win = true;
-            SceneManager.LoadScene("EndScreen");
+            SceneManager.LoadScene(2);
         }
 
         if (SceneManager.GetActiveScene().name != "Cave")
