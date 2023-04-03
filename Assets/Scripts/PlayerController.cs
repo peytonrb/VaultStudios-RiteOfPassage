@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
     public float jumpHeight;
-    private float gravity;
+    public float gravity;
     private float turnSmoothTime = 0.1f;
     private float turnSmoothVelocity;
     private Animator animator;
@@ -26,10 +26,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Glider Mechanic")]
     public float glideSpeed;
+    private GrapplingHook hook;
     
     
     private void Start()
     {
+        hook = GetComponent<GrapplingHook>();
         //AudioManager.Instance.Play("BackgroundMusic");
     }
 
@@ -94,7 +96,7 @@ public class PlayerController : MonoBehaviour
             AudioManager.Instance.Stop("FootStepSound");
             animator.SetBool("IsGliding", true);
         }
-        else if(isGrounded){
+        else if(isGrounded && !hook.hooked){
             gravity = 9.81f;
             animator.SetBool("IsGliding", false);
         }

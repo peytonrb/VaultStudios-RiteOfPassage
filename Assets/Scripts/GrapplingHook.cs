@@ -9,6 +9,7 @@ public class GrapplingHook : MonoBehaviour
     public GameObject hookHolder;
     public LayerMask isGrappable;
     public Camera cam;
+    private PlayerController player;
 
     [Header("Variables")]
     public float hookTravelSpeed;
@@ -25,6 +26,7 @@ public class GrapplingHook : MonoBehaviour
         animator = GetComponent<Animator>();
         CharacterController charController = this.GetComponent<CharacterController>();
         Rigidbody rigidbody = this.GetComponent<Rigidbody>();
+        player = this.GetComponent<PlayerController>();
 
         // firing the hook
         if (Input.GetButtonDown("Grapple") && !fired) {
@@ -48,6 +50,7 @@ public class GrapplingHook : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, maxDistance, 9)) {
                 if (hit.collider.tag == "isGrappable") {
+                    Debug.Log(hit.point);
                     transform.LookAt(hit.point); // in case player is backwards when fire
                     hook.transform.LookAt(hit.point);
                     hook.transform.Translate(ray.direction * hookTravelSpeed * Time.deltaTime);
@@ -69,7 +72,6 @@ public class GrapplingHook : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, hook.transform.position, 
                                                     Time.deltaTime * playerTravelSpeed);
             charController.enabled = true;
-            // transform.LookAt(new Vector3(hookedObject.transform.position.x, hookedObject.transform.position.y, 0));
             float distanceFromHook = Vector3.Distance(transform.position, hook.transform.position);
             rigidbody.useGravity = false;
             animator.SetBool("IsGrappling", true);
