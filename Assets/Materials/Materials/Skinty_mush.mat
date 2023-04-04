@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Crystals_Mat_2D_View 1
+  m_Name: Skinty_mush
   m_Shader: {fileID: -6465566751694194690, guid: 0f3d052d2660efe47a4874acf4f37a03, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -135,16 +135,16 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.20392157, g: 1.5372549, b: 1.7176471, a: 1}
+    - _BaseColor: {r: 0.123307504, g: 0.2258426, b: 1.0456477, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
-    - _BottomColor: {r: 0.29421234, g: 0.38667908, b: 1.6055588, a: 1}
+    - _BottomColor: {r: 0, g: 0.17831959, b: 1.0461416, a: 1}
     - _CameraFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Toon_Ramp_Tinting: {r: 0.7176471, g: 0.7176471, b: 0.7176471, a: 0}
-    - _TopColor: {r: 0.90994936, g: 1.1441938, b: 1.7207954, a: 0.3921569}
+    - _TopColor: {r: 0.9730152, g: 2.162256, b: 6.8831816, a: 0.3921569}
   m_BuildTextureStacks: []
 --- !u!114 &8771928347024633460
 MonoBehaviour:
