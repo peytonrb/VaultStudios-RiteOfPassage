@@ -50,7 +50,7 @@ public class GrapplingHook : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, maxDistance, 9)) {
                 if (hit.collider.tag == "isGrappable") {
-                    Debug.Log(hit.point);
+                    Debug.Log(hit.collider.gameObject); // collides with right object :/
                     transform.LookAt(hit.point); // in case player is backwards when fire
                     hook.transform.LookAt(hit.point);
                     hook.transform.Translate(ray.direction * hookTravelSpeed * Time.deltaTime);

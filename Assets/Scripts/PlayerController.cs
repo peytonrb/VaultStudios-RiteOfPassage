@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            gravity = 9.81f;
+            gravity = 14f;
             velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * -gravity);
         }
 
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (isGrounded && !hook.hooked)
         {
-            gravity = 9.81f;
+            gravity = 14f;
             animator.SetBool("IsGliding", false);
         }
 
