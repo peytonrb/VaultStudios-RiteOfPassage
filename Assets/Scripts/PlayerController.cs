@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool isFootSound;
 
-
     [Header("Ground Check")]
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -27,20 +26,21 @@ public class PlayerController : MonoBehaviour
     [Header("Glider Mechanic")]
     public float glideSpeed;
     private GrapplingHook hook;
-    
-    
+
+
     private void Start()
     {
         hook = GetComponent<GrapplingHook>();
+        controller.enabled = true;
         //AudioManager.Instance.Play("BackgroundMusic");
     }
 
-    private void Update() 
+    private void Update()
     {
         animator = GetComponent<Animator>();
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, ground); // is player on ground?
 
-        if (isGrounded && velocity.y < 0) 
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
@@ -49,14 +49,16 @@ public class PlayerController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        if (direction.magnitude >= 0.1f) {
+        if (direction.magnitude >= 0.1f)
+        {
             float desiredRotation = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y; // calculates angle
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, desiredRotation, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-            Vector3 moveDirection = Quaternion.Euler(0f, desiredRotation, 0f) * Vector3.forward; 
+            Vector3 moveDirection = Quaternion.Euler(0f, desiredRotation, 0f) * Vector3.forward;
             controller.Move(moveDirection.normalized * speed * Time.deltaTime);
-            if(animator.GetBool("IsGliding"))
+
+            if (animator.GetBool("IsGliding"))
             {
                 animator.SetBool("IsWalking", false);
                 isFootSound = false;
@@ -65,38 +67,42 @@ public class PlayerController : MonoBehaviour
             else
             {
                 animator.SetBool("IsWalking", true);
-                if(!isFootSound && isGrounded)
+                if (!isFootSound && isGrounded)
                 {
                     isFootSound = true;
                     AudioManager.Instance.Play("FootStepSound");
                 }
-                else if(!isGrounded)
+                else if (!isGrounded)
                 {
                     isFootSound = false;
                     AudioManager.Instance.Stop("FootStepSound");
                 }
             }
         }
-        else{
+        else
+        {
             animator.SetBool("IsWalking", false);
             isFootSound = false;
             AudioManager.Instance.Stop("FootStepSound");
         }
-        
-        if (Input.GetButtonDown("Jump") && isGrounded) {
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
             gravity = 9.81f;
             velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * -gravity);
         }
 
         // glider
-        if (Input.GetButtonDown("Glide") && !isGrounded && velocity.y < 0) {
+        if (Input.GetButtonDown("Glide") && !isGrounded && velocity.y < 0)
+        {
             gravity = glideSpeed;
             animator.SetBool("IsWalking", false);
             isFootSound = false;
             AudioManager.Instance.Stop("FootStepSound");
             animator.SetBool("IsGliding", true);
         }
-        else if(isGrounded && !hook.hooked){
+        else if (isGrounded && !hook.hooked)
+        {
             gravity = 9.81f;
             animator.SetBool("IsGliding", false);
         }
@@ -105,10 +111,12 @@ public class PlayerController : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    void onTriggerEnter(Collision collision) {
-        if (collision.collider.tag == "isDeath") {
+    void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("isDeath"))
+        {
             controller.enabled = false;
-            Debug.Log("entered");
+            GameManager.Instance.isDead = true;
         }
     }
 }

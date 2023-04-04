@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     private GameObject PauseMenu;
     public int photosCaptured;
     public bool win;
+    public bool isDead;
 
     private void Awake()
     {
@@ -50,9 +51,15 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (photosCaptured >= 3 && Input.GetButtonDown("Interact"))
+        if (photosCaptured >= 3 && Input.GetButtonDown("Interact") && !isDead)
         {
             win = true;
+            AudioManager.Instance.Stop("BackgroundMusic");
+            SceneManager.LoadScene(2);
+        }
+        else if(isDead)
+        {
+            win = false;
             AudioManager.Instance.Stop("BackgroundMusic");
             SceneManager.LoadScene(2);
         }
