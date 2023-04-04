@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
     public float glideSpeed;
     private GrapplingHook hook;
 
-
     private void Start()
     {
         hook = GetComponent<GrapplingHook>();
