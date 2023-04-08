@@ -481,9 +481,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 7913867426281137153}
-  speed: 6
+  speed: 10
   cam: {fileID: 0}
   jumpHeight: 3
+  gravity: 0
   groundCheck: {fileID: 7913867427502418658}
   groundDistance: 0.4
   ground:
@@ -513,6 +514,7 @@ MonoBehaviour:
   hooked: 0
   hookedObject: {fileID: 0}
   maxDistance: 70
+  hookProximity: 10
 --- !u!114 &8873744035112471332
 MonoBehaviour:
   m_ObjectHideFlags: 0

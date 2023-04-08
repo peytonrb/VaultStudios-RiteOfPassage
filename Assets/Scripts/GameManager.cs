@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int photosCaptured;
     public bool win;
     public bool isDead;
+    public int activeSpot;
 
     private void Awake()
     {
@@ -57,9 +58,10 @@ public class GameManager : MonoBehaviour
             AudioManager.Instance.Stop("BackgroundMusic");
             SceneManager.LoadScene(2);
         }
-        else if(isDead)
+        else if(isDead && SceneManager.GetActiveScene().buildIndex != 2)
         {
             win = false;
+            isDead = false;
             AudioManager.Instance.Stop("BackgroundMusic");
             SceneManager.LoadScene(2);
         }

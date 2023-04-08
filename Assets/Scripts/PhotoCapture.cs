@@ -40,6 +40,7 @@ public class PhotoCapture : MonoBehaviour
     {
         cameraUI.SetActive(false);
         photoFrame.SetActive(false);
+        viewingPhoto = false;
     }
 
     private void Update()
@@ -72,10 +73,13 @@ public class PhotoCapture : MonoBehaviour
         ShowPhoto();
 
         byte[] bytes = screenCapture.EncodeToPNG();
-        File.WriteAllBytes(Application.persistentDataPath + SceneManager.GetActiveScene().name + ".png", bytes);
+        File.WriteAllBytes(Application.persistentDataPath + "/" + SceneManager.GetActiveScene().name + GameManager.Instance.activeSpot + ".png", bytes);
 
-        rend.material = new Material(Shader.Find("Universal Render Pipeline/Lit"));
-        rend.material.mainTexture = screenCapture;
+        if (photoHolder != null)
+        {
+            rend.material = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+            rend.material.mainTexture = screenCapture;
+        }
     }
 
     void ShowPhoto()

@@ -50,3 +50,8 @@ MonoBehaviour:
     volume: 1
     loop: 1
     source: {fileID: 0}
+  - name: FootStepSound
+    clip: {fileID: 8300000, guid: 092ad0a980fe9f04b9c53ac2aa60e7d0, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}

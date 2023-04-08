@@ -43,20 +43,32 @@ public class Photograph : MonoBehaviour
                 fUI.SetActive(true);
             }
 
-            if (Vector3.Distance(photoSpot1.transform.position, transform.position) < minDistance && Input.GetButtonDown("Jump"))
+            if (Vector3.Distance(photoSpot1.transform.position, transform.position) < minDistance)
             {
-                spot1Captured = true;
-                UpdateScore();
+                GameManager.Instance.activeSpot = 1;
+                if (Input.GetButtonDown("Jump"))
+                {
+                    spot1Captured = true;
+                    UpdateScore();
+                }
             }
-            else if (Vector3.Distance(photoSpot2.transform.position, transform.position) < minDistance && Input.GetButtonDown("Jump"))
+            else if (Vector3.Distance(photoSpot2.transform.position, transform.position) < minDistance)
             {
-                spot2Captured = true;
-                UpdateScore();
+                GameManager.Instance.activeSpot = 2;
+                if (Input.GetButtonDown("Jump"))
+                {
+                    spot2Captured = true;
+                    UpdateScore();
+                }
             }
-            else if (Vector3.Distance(photoSpot3.transform.position, transform.position) < minDistance && Input.GetButtonDown("Jump"))
+            else if (Vector3.Distance(photoSpot3.transform.position, transform.position) < minDistance)
             {
-                spot3Captured = true;
-                UpdateScore();
+                GameManager.Instance.activeSpot = 3;
+                if (Input.GetButtonDown("Jump"))
+                {
+                    spot3Captured = true;
+                    UpdateScore();
+                }
             }
         }
         else
@@ -69,16 +81,6 @@ public class Photograph : MonoBehaviour
         {
             if (Vector3.Distance(area.transform.position, transform.position) < minDistance)
             {
-                //Debug.Log("In Range of Camera Area");
-                if (mainCam.activeSelf)
-                {
-                    //fUI.SetActive(true);
-                }
-                else
-                {
-                    //fUI.SetActive(false);
-                }
-
                 if (Input.GetButtonDown("Interact") & mainCam.activeSelf)
                 {
                     if (photoCam.transform.position != area.transform.position)
@@ -93,10 +95,6 @@ public class Photograph : MonoBehaviour
                 {
                     DeactivateCamera();
                 }
-            }
-            else
-            {
-                //fUI.SetActive(false);
             }
         }
 
