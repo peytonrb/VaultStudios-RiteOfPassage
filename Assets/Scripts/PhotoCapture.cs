@@ -45,7 +45,7 @@ public class PhotoCapture : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("TakePicture"))
         {      
             if(!viewingPhoto)
             {
