@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Glider Mechanic")]
     public float glideSpeed;
+    private bool isGliding;
     private GrapplingHook hook;
 
     private void Start()
@@ -85,6 +86,11 @@ public class PlayerController : MonoBehaviour
             AudioManager.Instance.Stop("FootStepSound");
         }
 
+        if (isGrounded)
+        {
+            isGliding = false;
+        }
+
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             gravity = 14f;
@@ -92,13 +98,21 @@ public class PlayerController : MonoBehaviour
         }
 
         // glider
-        if (Input.GetButtonDown("Glide") && !isGrounded && velocity.y < 0)
+        if (Input.GetButtonDown("Glide") && !isGrounded) // && velocity.y < 0
         {
-            gravity = glideSpeed;
             animator.SetBool("IsWalking", false);
             isFootSound = false;
             AudioManager.Instance.Stop("FootStepSound");
             animator.SetBool("IsGliding", true);
+            isGliding = true;
+        }
+        else if (isGliding && !isGrounded && velocity.y < 0)
+        {
+            // animator.SetBool("IsWalking", false);
+            // isFootSound = false;
+            // AudioManager.Instance.Stop("FootStepSound");
+            // animator.SetBool("IsGliding", true);
+            gravity = glideSpeed;
         }
         else if (isGrounded && !hook.hooked)
         {
