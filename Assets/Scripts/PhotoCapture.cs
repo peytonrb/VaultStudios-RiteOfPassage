@@ -18,6 +18,8 @@ public class PhotoCapture : MonoBehaviour
 
     private Texture2D screenCapture;
     private bool viewingPhoto;
+    private bool used = false;
+    public float axis;
 
     private void Start()
     {
