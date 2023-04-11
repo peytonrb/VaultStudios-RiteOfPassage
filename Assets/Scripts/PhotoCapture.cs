@@ -18,8 +18,7 @@ public class PhotoCapture : MonoBehaviour
 
     private Texture2D screenCapture;
     private bool viewingPhoto;
-    private bool used = false;
-    public float axis;
+    private bool pulled;
 
     private void Start()
     {
@@ -30,6 +29,7 @@ public class PhotoCapture : MonoBehaviour
         }
         
         Debug.Log(Application.persistentDataPath);
+        pulled = false;
     }
 
     private void OnEnable()
@@ -47,9 +47,18 @@ public class PhotoCapture : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("TakePicture"))
+        if (Input.GetAxis("TakePicture") == 1)
+        {
+            pulled = true;
+        }
+        else
+        {
+            pulled = false;
+        }
+
+        if (Input.GetButtonDown("TakePicture") || pulled)
         {      
-            if(!viewingPhoto)
+            if(!viewingPhoto && pulled)
             {
                 StartCoroutine(CapturePhoto());
             }
@@ -58,6 +67,7 @@ public class PhotoCapture : MonoBehaviour
                 RemovePhoto();
             }
         }
+        
     }
 
     IEnumerator CapturePhoto()
