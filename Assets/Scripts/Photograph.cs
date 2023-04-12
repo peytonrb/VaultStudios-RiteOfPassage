@@ -15,21 +15,25 @@ public class Photograph : MonoBehaviour
     public GameObject fUI;
     public GameObject mainCam;
     public GameObject photoCam;
-    public GameObject CameraStuff;
+    public GameObject cameraStuff;
     public GameObject mainUI;
     public float minDistance;
     private PlayerController pController;
+    private PhotoCameraController pCController;
+    private PhotoCapture camManager;
     private Rigidbody rb;
     private int score;
 
     void Start()
     {
+        pController = GetComponent<PlayerController>();
+        pCController = photoCam.GetComponent<PhotoCameraController>();
+        camManager = cameraStuff.GetComponentInChildren<PhotoCapture>();
         pictureAreas = GameObject.FindGameObjectsWithTag("PhotoArea");
         fUI.SetActive(false);
         photoCam.SetActive(false);
         mainCam.SetActive(true);
-        CameraStuff.SetActive(false);
-        pController = GetComponent<PlayerController>();
+        cameraStuff.SetActive(false);
         rb = GetComponent<Rigidbody>();
         mainUI.SetActive(true);
     }
@@ -104,13 +108,29 @@ public class Photograph : MonoBehaviour
             spot2Captured = false;
             spot3Captured = false;
         }
+        if (GameManager.Instance.PauseMenu != null)
+        {
+            if (GameManager.Instance.PauseMenu.activeSelf)
+            {
+                pCController.enabled = false;
+                mainUI.SetActive(false);
+                camManager.enabled = false;
+            }
+            else if (photoCam.activeSelf)
+            {
+                pCController.enabled = true;
+                camManager.enabled = true;
+                fUI.SetActive(false);
+                mainUI.SetActive(true);
+            }
+        }
     }
 
     private void ActivateCamera()
     {
         mainCam.SetActive(false);
         photoCam.SetActive(true);
-        CameraStuff.SetActive(true);
+        cameraStuff.SetActive(true);
         rb.isKinematic = true;
         pController.enabled = false;
         mainUI.SetActive(false);
@@ -120,7 +140,7 @@ public class Photograph : MonoBehaviour
     {
         mainCam.SetActive(true);
         photoCam.SetActive(false);
-        CameraStuff.SetActive(false);
+        cameraStuff.SetActive(false);
         rb.isKinematic = false;
         pController.enabled = true;
         mainUI.SetActive(true);

@@ -13,12 +13,10 @@ public class PhotoCapture : MonoBehaviour
     [SerializeField] private GameObject cameraUI;
     [SerializeField] private GameObject mainUI;
     [SerializeField] private GameObject photoCam;
-    //public Shader shader;
     public GameObject photoHolder;
     private Renderer rend;
-    private PhotoCameraController photoCameraController;
     private Texture2D screenCapture;
-    private bool viewingPhoto;
+    public bool viewingPhoto;
     private bool rtPressed;
 
     private void Start()
@@ -29,12 +27,7 @@ public class PhotoCapture : MonoBehaviour
             rend = photoHolder.GetComponent<Renderer>();
         }
         
-        Debug.Log(Application.persistentDataPath);
         mainUI.SetActive(true);
-        if (photoCameraController != null)
-        {
-            photoCameraController = photoCam.GetComponent<PhotoCameraController>();
-        }
     }
 
     private void OnEnable()
@@ -51,7 +44,6 @@ public class PhotoCapture : MonoBehaviour
     {
         cameraUI.SetActive(false);
         photoFrame.SetActive(false);
-        //mainUI.SetActive(true);
         viewingPhoto = false;
     }
 
@@ -85,23 +77,14 @@ public class PhotoCapture : MonoBehaviour
         else if (rightTriggerValue < 1 && rtPressed)
         {
             rtPressed = false;
-        }
-
-        if (GameManager.Instance.PauseMenu.activeSelf && photoCameraController != null)
-        {
-            photoCameraController.enabled = false;
-        }
-        else if (photoCameraController != null)
-        {
-            photoCameraController.enabled = true;
-        }
-        
+        }        
     }
 
     IEnumerator CapturePhoto()
     {
-        cameraUI.SetActive(false);
         viewingPhoto = true;
+        cameraUI.SetActive(false);
+        mainUI.SetActive(false);
 
         yield return new WaitForEndOfFrame();
 

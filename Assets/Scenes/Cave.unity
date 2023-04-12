@@ -31723,11 +31723,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017169986
+      value: 0.000000017169986
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000011185098
+      value: 0.0000000011185098
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933170226417, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
@@ -40553,6 +40553,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1799468425}
     - target: {fileID: 7754538110976784074, guid: 74b3e577f0c1ebf40ae1ad621ea38966, type: 3}
+      propertyPath: photoCam
+      value: 
+      objectReference: {fileID: 1113854934}
+    - target: {fileID: 7754538110976784074, guid: 74b3e577f0c1ebf40ae1ad621ea38966, type: 3}
       propertyPath: photoHolder
       value: 
       objectReference: {fileID: 1811186737}
@@ -41060,6 +41064,10 @@ PrefabInstance:
       objectReference: {fileID: 1403462743}
     - target: {fileID: 8873744035112471332, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
       propertyPath: CameraStuff
+      value: 
+      objectReference: {fileID: 898937463}
+    - target: {fileID: 8873744035112471332, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
+      propertyPath: cameraStuff
       value: 
       objectReference: {fileID: 898937463}
     m_RemovedComponents: []
