@@ -12,13 +12,14 @@ public class PhotoCapture : MonoBehaviour
     [SerializeField] private GameObject photoFrame;
     [SerializeField] private GameObject cameraUI;
     [SerializeField] private GameObject mainUI;
+    [SerializeField] private GameObject photoCam;
     //public Shader shader;
     public GameObject photoHolder;
     private Renderer rend;
-
+    private PhotoCameraController photoCameraController;
     private Texture2D screenCapture;
     private bool viewingPhoto;
-    private bool pulled;
+    private bool rtPressed;
 
     private void Start()
     {
@@ -29,36 +30,38 @@ public class PhotoCapture : MonoBehaviour
         }
         
         Debug.Log(Application.persistentDataPath);
-        pulled = false;
+        mainUI.SetActive(true);
+        if (photoCameraController != null)
+        {
+            photoCameraController = photoCam.GetComponent<PhotoCameraController>();
+        }
     }
 
     private void OnEnable()
     {
         cameraUI.SetActive(true);
         mainUI.SetActive(false);
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.Stop("FootStepSound");
+        }
     }
 
     private void OnDisable()
     {
         cameraUI.SetActive(false);
         photoFrame.SetActive(false);
+        //mainUI.SetActive(true);
         viewingPhoto = false;
     }
 
     private void Update()
     {
-        if (Input.GetAxis("TakePicture") == 1)
-        {
-            pulled = true;
-        }
-        else
-        {
-            pulled = false;
-        }
+        float rightTriggerValue = Input.GetAxis("TakePicture");
 
-        if (Input.GetButtonDown("TakePicture") || pulled)
+        if (Input.GetButtonDown("TakePicture"))
         {      
-            if(!viewingPhoto && pulled)
+            if(!viewingPhoto)
             {
                 StartCoroutine(CapturePhoto());
             }
@@ -66,6 +69,31 @@ public class PhotoCapture : MonoBehaviour
             {
                 RemovePhoto();
             }
+        }
+        else if (rightTriggerValue == 1 && !rtPressed)
+        {
+            rtPressed = true;
+            if(!viewingPhoto)
+            {
+                StartCoroutine(CapturePhoto());
+            }
+            else
+            {
+                RemovePhoto();
+            }
+        }
+        else if (rightTriggerValue < 1 && rtPressed)
+        {
+            rtPressed = false;
+        }
+
+        if (GameManager.Instance.PauseMenu.activeSelf && photoCameraController != null)
+        {
+            photoCameraController.enabled = false;
+        }
+        else if (photoCameraController != null)
+        {
+            photoCameraController.enabled = true;
         }
         
     }

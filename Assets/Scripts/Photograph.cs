@@ -46,7 +46,7 @@ public class Photograph : MonoBehaviour
             if (Vector3.Distance(photoSpot1.transform.position, transform.position) < minDistance)
             {
                 GameManager.Instance.activeSpot = 1;
-                if (Input.GetButtonDown("Jump"))
+                if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
                 {
                     spot1Captured = true;
                     UpdateScore();
@@ -55,7 +55,7 @@ public class Photograph : MonoBehaviour
             else if (Vector3.Distance(photoSpot2.transform.position, transform.position) < minDistance)
             {
                 GameManager.Instance.activeSpot = 2;
-                if (Input.GetButtonDown("Jump"))
+                if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
                 {
                     spot2Captured = true;
                     UpdateScore();
@@ -64,7 +64,7 @@ public class Photograph : MonoBehaviour
             else if (Vector3.Distance(photoSpot3.transform.position, transform.position) < minDistance)
             {
                 GameManager.Instance.activeSpot = 3;
-                if (Input.GetButtonDown("Jump"))
+                if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
                 {
                     spot3Captured = true;
                     UpdateScore();

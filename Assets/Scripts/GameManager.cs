@@ -7,7 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; } 
-    private GameObject PauseMenu;
+    public GameObject PauseMenu;
     public int photosCaptured;
     public bool win;
     public bool isDead;
