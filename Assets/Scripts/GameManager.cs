@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public bool win;
     public bool isDead;
     public int activeSpot;
+    public bool savePhoto;
 
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);   
         }
 
+        savePhoto = false;
         win = false;
     }
 

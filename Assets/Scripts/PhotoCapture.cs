@@ -18,6 +18,7 @@ public class PhotoCapture : MonoBehaviour
     private Texture2D screenCapture;
     public bool viewingPhoto;
     private bool rtPressed;
+    public bool newPhoto = false;
 
     private void Start()
     {
@@ -55,11 +56,10 @@ public class PhotoCapture : MonoBehaviour
         {      
             if(!viewingPhoto)
             {
-                if (1==1)
+                if (GameManager.Instance.savePhoto)
                 {
                     StartCoroutine(CapturePhoto());
                 }
-                
             }
             else
             {
@@ -86,6 +86,7 @@ public class PhotoCapture : MonoBehaviour
 
     IEnumerator CapturePhoto()
     {
+        GameManager.Instance.savePhoto = false;
         viewingPhoto = true;
         cameraUI.SetActive(false);
         mainUI.SetActive(false);
@@ -104,9 +105,11 @@ public class PhotoCapture : MonoBehaviour
 
         if (photoHolder != null)
         {
-            rend.material = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+            rend.material = new Material(Shader.Find("Standard"));
             rend.material.mainTexture = screenCapture;
         }
+
+        newPhoto = true;
     }
 
     void ShowPhoto()
@@ -115,6 +118,7 @@ public class PhotoCapture : MonoBehaviour
         photoDisplayArea.sprite = photoSprite;
 
         photoFrame.SetActive(true);
+        
     }
 
     void RemovePhoto()

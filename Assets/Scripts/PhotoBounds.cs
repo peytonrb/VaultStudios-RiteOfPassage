@@ -13,9 +13,6 @@ public class PhotoBounds : MonoBehaviour
     
     public bool inRange(float x, float y)
     {
-        Debug.Log ("x: " + x);
-        Debug.Log ("y: " + y);
-        Debug.Log ("x1: " + x1);
         if (x1 < x2)
         {
             if (x > x1 && x < x2)

@@ -962,7 +962,7 @@ MonoBehaviour:
   x1: 300
   x2: 355
   y1: 320
-  y2: 360
+  y2: 359
   xIn: 0
   yIn: 0
 --- !u!1 &193968257
@@ -22453,6 +22453,7 @@ MonoBehaviour:
   win: 0
   isDead: 0
   activeSpot: 0
+  savePhoto: 0
 --- !u!4 &1991808568
 Transform:
   m_ObjectHideFlags: 0
@@ -31549,11 +31550,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1947644723259267687, guid: de165cf195483e04095d41ed0ac0b832, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000003444198
+      value: 0.00000003444198
       objectReference: {fileID: 0}
     - target: {fileID: 1947644723259267687, guid: de165cf195483e04095d41ed0ac0b832, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000016168226
+      value: 0.0000000016168226
       objectReference: {fileID: 0}
     - target: {fileID: 1947644723259267687, guid: de165cf195483e04095d41ed0ac0b832, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -32062,19 +32063,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017169986
+      value: 0.000000017169986
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000011185098
+      value: 0.0000000011185098
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933170226417, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017321208
+      value: 0.000000017321208
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933170226417, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -8.131159e-10
+      value: 8.131159e-10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
@@ -41377,6 +41378,18 @@ PrefabInstance:
       propertyPath: photoCam
       value: 
       objectReference: {fileID: 1113854934}
+    - target: {fileID: 8873744035112471332, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
+      propertyPath: polarUI1
+      value: 
+      objectReference: {fileID: 136020351}
+    - target: {fileID: 8873744035112471332, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
+      propertyPath: polarUI2
+      value: 
+      objectReference: {fileID: 1776402986}
+    - target: {fileID: 8873744035112471332, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
+      propertyPath: polarUI3
+      value: 
+      objectReference: {fileID: 153209266}
     - target: {fileID: 8873744035112471332, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
       propertyPath: photoSpot1
       value: 

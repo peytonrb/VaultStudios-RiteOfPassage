@@ -17,32 +17,30 @@ public class PhotoLoaderUI : MonoBehaviour
 
         if (UnityEngine.Input.GetButtonDown("TakePicture"))
         {      
-            photo = gameObject.GetComponent<Image>();
-            photo.material = new Material(Shader.Find("Unlit/Texture"));
-            if (File.Exists(Application.persistentDataPath + "/" + whatImage + ".png"))
-            {
-                imageData = File.ReadAllBytes(Application.persistentDataPath + "/" + whatImage + ".png");
-                tex = new Texture2D(720, 720);
-                tex.LoadImage(imageData);
-                photo.material.mainTexture = tex;
-            }
+            //LoadPhoto();            
         }
         else if (rightTriggerValue == 1 && !rtPressed)
         {
             rtPressed = true;
-            photo = gameObject.GetComponent<Image>();
-            photo.material = new Material(Shader.Find("Unlit/Texture"));
-            if (File.Exists(Application.persistentDataPath + "/" + whatImage + ".png"))
-            {
-                imageData = File.ReadAllBytes(Application.persistentDataPath + "/" + whatImage + ".png");
-                tex = new Texture2D(720, 720);
-                tex.LoadImage(imageData);
-                photo.material.mainTexture = tex;
-            }
+            //LoadPhoto();
         }
         else if (rightTriggerValue < 1 && rtPressed)
         {
             rtPressed = false;
         }
+        
     }   
+
+    public void LoadPhoto()
+    {
+        photo = gameObject.GetComponent<Image>();
+        photo.material = new Material(Shader.Find("Unlit/Texture"));
+        if (File.Exists(Application.persistentDataPath + "/" + whatImage + ".png"))
+        {
+            imageData = File.ReadAllBytes(Application.persistentDataPath + "/" + whatImage + ".png");
+            tex = new Texture2D(720, 720);
+            tex.LoadImage(imageData);
+            photo.material.mainTexture = tex;
+        }
+    }
 }

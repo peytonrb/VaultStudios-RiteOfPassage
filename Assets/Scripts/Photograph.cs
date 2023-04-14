@@ -17,6 +17,9 @@ public class Photograph : MonoBehaviour
     public GameObject photoCam;
     public GameObject cameraStuff;
     public GameObject mainUI;
+    public GameObject polarUI1;
+    public GameObject polarUI2;
+    public GameObject polarUI3;
     public float minDistance;
     private PlayerController pController;
     private PhotoCameraController pCController;
@@ -47,14 +50,25 @@ public class Photograph : MonoBehaviour
             {
                 fUI.SetActive(true);
             }
+            else
+            {
+                fUI.SetActive(false);
+            }
 
             if (Vector3.Distance(photoSpot1.transform.position, transform.position) < minDistance)
             {
                 GameManager.Instance.activeSpot = 1;
+
+                if (camManager.newPhoto)
+                {
+                    polarUI1.GetComponent<PhotoLoaderUI>().LoadPhoto();
+                }
+
                 if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
                 {
                     if (photoBounds.inRange(pictureAreas[0].transform.eulerAngles.y, photoCam.transform.eulerAngles.x))
                     {
+                        GameManager.Instance.savePhoto = true;
                         spot1Captured = true;
                         UpdateScore();
                     }
@@ -63,10 +77,17 @@ public class Photograph : MonoBehaviour
             else if (Vector3.Distance(photoSpot2.transform.position, transform.position) < minDistance)
             {
                 GameManager.Instance.activeSpot = 2;
+                
+                if (camManager.newPhoto)
+                {
+                    polarUI2.GetComponent<PhotoLoaderUI>().LoadPhoto();
+                }
+
                 if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
                 {
                     if (photoBounds.inRange(pictureAreas[1].transform.eulerAngles.y, photoCam.transform.eulerAngles.x))
                     {
+                        GameManager.Instance.savePhoto = true;
                         spot2Captured = true;
                         UpdateScore();
                     }
@@ -75,10 +96,18 @@ public class Photograph : MonoBehaviour
             else if (Vector3.Distance(photoSpot3.transform.position, transform.position) < minDistance)
             {
                 GameManager.Instance.activeSpot = 3;
+                
+                if (camManager.newPhoto)
+                {
+                    camManager.newPhoto = false;
+                    polarUI3.GetComponent<PhotoLoaderUI>().LoadPhoto();
+                }
+                
                 if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
                 {
                     if (photoBounds.inRange(pictureAreas[2].transform.eulerAngles.y, photoCam.transform.eulerAngles.x))
                     {
+                        GameManager.Instance.savePhoto = true;
                         spot3Captured = true;
                         UpdateScore();
                     }
@@ -162,14 +191,17 @@ public class Photograph : MonoBehaviour
         score = 0;
         if (spot1Captured)
         {
+            polarUI1.GetComponent<PhotoLoaderUI>().LoadPhoto();
             score ++;
         }
         if(spot2Captured)
         {
+            polarUI2.GetComponent<PhotoLoaderUI>().LoadPhoto();
             score ++;
         }
         if(spot3Captured)
         {
+            polarUI3.GetComponent<PhotoLoaderUI>().LoadPhoto();
             score ++;
         }
         GameManager.Instance.photosCaptured = score;
