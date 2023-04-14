@@ -55,7 +55,11 @@ public class PhotoCapture : MonoBehaviour
         {      
             if(!viewingPhoto)
             {
-                StartCoroutine(CapturePhoto());
+                if (1==1)
+                {
+                    StartCoroutine(CapturePhoto());
+                }
+                
             }
             else
             {
@@ -77,7 +81,7 @@ public class PhotoCapture : MonoBehaviour
         else if (rightTriggerValue < 1 && rtPressed)
         {
             rtPressed = false;
-        }        
+        }
     }
 
     IEnumerator CapturePhoto()

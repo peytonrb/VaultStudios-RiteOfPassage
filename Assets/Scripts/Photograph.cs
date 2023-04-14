@@ -22,6 +22,7 @@ public class Photograph : MonoBehaviour
     private PhotoCameraController pCController;
     private PhotoCapture camManager;
     private Rigidbody rb;
+    private PhotoBounds photoBounds;
     private int score;
 
     void Start()
@@ -52,8 +53,11 @@ public class Photograph : MonoBehaviour
                 GameManager.Instance.activeSpot = 1;
                 if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
                 {
-                    spot1Captured = true;
-                    UpdateScore();
+                    if (photoBounds.inRange(pictureAreas[0].transform.eulerAngles.y, photoCam.transform.eulerAngles.x))
+                    {
+                        spot1Captured = true;
+                        UpdateScore();
+                    }
                 }
             }
             else if (Vector3.Distance(photoSpot2.transform.position, transform.position) < minDistance)
@@ -61,8 +65,11 @@ public class Photograph : MonoBehaviour
                 GameManager.Instance.activeSpot = 2;
                 if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
                 {
-                    spot2Captured = true;
-                    UpdateScore();
+                    if (photoBounds.inRange(pictureAreas[1].transform.eulerAngles.y, photoCam.transform.eulerAngles.x))
+                    {
+                        spot2Captured = true;
+                        UpdateScore();
+                    }
                 }
             }
             else if (Vector3.Distance(photoSpot3.transform.position, transform.position) < minDistance)
@@ -70,8 +77,11 @@ public class Photograph : MonoBehaviour
                 GameManager.Instance.activeSpot = 3;
                 if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
                 {
-                    spot3Captured = true;
-                    UpdateScore();
+                    if (photoBounds.inRange(pictureAreas[2].transform.eulerAngles.y, photoCam.transform.eulerAngles.x))
+                    {
+                        spot3Captured = true;
+                        UpdateScore();
+                    }
                 }
             }
         }
@@ -85,6 +95,7 @@ public class Photograph : MonoBehaviour
         {
             if (Vector3.Distance(area.transform.position, transform.position) < minDistance)
             {
+                photoBounds = area.GetComponent<PhotoBounds>();
                 if (Input.GetButtonDown("Interact") & mainCam.activeSelf)
                 {
                     if (photoCam.transform.position != area.transform.position)
