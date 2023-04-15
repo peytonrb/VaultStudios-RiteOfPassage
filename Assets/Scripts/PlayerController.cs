@@ -120,6 +120,16 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsGliding", false);
         }
 
+        if (Input.GetButtonUp("Glide") && isGliding)
+        {
+            isGliding = false;
+            animator.SetBool("IsWalking", true);
+            isFootSound = true;
+            AudioManager.Instance.Play("FootStepSound");
+            animator.SetBool("IsGliding", false);
+            gravity = 14f;
+        }
+
         velocity.y += -gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }

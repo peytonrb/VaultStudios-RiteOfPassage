@@ -490,7 +490,7 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
-  glideSpeed: 1
+  glideSpeed: 2
 --- !u!114 &7913867426281137155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,8 +537,11 @@ MonoBehaviour:
   fUI: {fileID: 0}
   mainCam: {fileID: 0}
   photoCam: {fileID: 0}
-  CameraStuff: {fileID: 0}
+  cameraStuff: {fileID: 0}
   mainUI: {fileID: 0}
+  polarUI1: {fileID: 0}
+  polarUI2: {fileID: 0}
+  polarUI3: {fileID: 0}
   minDistance: 3
 --- !u!95 &955471424
 Animator:
