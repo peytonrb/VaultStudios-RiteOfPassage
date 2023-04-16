@@ -34,14 +34,14 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(true);
         howToPlay.SetActive(false);
         options.SetActive(false);
-        AudioManager.Instance.Play("BackgroundMusic");
+        //AudioManager.Instance.Play("BackgroundMusic");
         playButton.Select();
     }
 
     public void PlayButton()
     {
         GameManager.Instance.win = false;
-        AudioManager.Instance.Stop("BackgroundMusic");
+        //AudioManager.Instance.Stop("BackgroundMusic");
         SceneManager.LoadScene(1);
     }
 
@@ -102,7 +102,11 @@ public class MainMenu : MonoBehaviour
         float xSensValue = xSensSlider.value;
         float ySensValue = ySensSlider.value;
         PlayerPrefs.SetFloat("VolumeValue", volumeValue);
-        AudioManager.Instance.SetVolume("BackgroundMusic", musicVolumeValue);
+        AudioManager.Instance.SetVolume("CaveTheme", musicVolumeValue);
+        AudioManager.Instance.SetVolume("CityTheme", musicVolumeValue);
+        AudioManager.Instance.SetVolume("MainMenuTheme", musicVolumeValue);
+        AudioManager.Instance.SetVolume("RedwoodTheme", musicVolumeValue);
+        AudioManager.Instance.SetVolume("HubTheme", musicVolumeValue);
         GameManager.Instance.xSens = xSensValue;
         GameManager.Instance.ySens = ySensValue;
         LoadValues();
@@ -114,7 +118,7 @@ public class MainMenu : MonoBehaviour
         volumeSlider.value = volumeValue;
         AudioListener.volume = volumeValue;
         
-        float musicVolumeValue = AudioManager.Instance.GetVolume("BackgroundMusic");
+        float musicVolumeValue = AudioManager.Instance.GetVolume("MainMenuTheme");
         musicVolumeSlider.value = musicVolumeValue;
 
         float xSensValue = GameManager.Instance.xSens;

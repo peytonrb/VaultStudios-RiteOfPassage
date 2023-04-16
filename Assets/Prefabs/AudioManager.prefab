@@ -45,13 +45,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: BackgroundMusic
+  - name: CaveTheme
     clip: {fileID: 8300000, guid: 0cb4e7fa895741e48b19689d5d6a4f60, type: 3}
     volume: 1
     loop: 1
     source: {fileID: 0}
   - name: FootStepSound
     clip: {fileID: 8300000, guid: 092ad0a980fe9f04b9c53ac2aa60e7d0, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: CityTheme
+    clip: {fileID: 8300000, guid: 7a7adf7d0e2904e438f956fcd9224994, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: RedwoodTheme
+    clip: {fileID: 8300000, guid: ced3defecb4cf744c9209562009a1356, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MainMenuTheme
+    clip: {fileID: 8300000, guid: 6dc4f34609ae9c345a28e3ff8dd0259a, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: HubTheme
+    clip: {fileID: 8300000, guid: f1dbc71b5cc88014a94b3fd8c95e544f, type: 3}
     volume: 1
     loop: 1
     source: {fileID: 0}

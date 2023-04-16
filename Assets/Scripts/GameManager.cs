@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public bool savePhoto;
     public float xSens;
     public float ySens;
+    private string currentScene;
 
     private void Awake()
     {
@@ -26,15 +27,23 @@ public class GameManager : MonoBehaviour
         else 
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);   
+            DontDestroyOnLoad(gameObject);  
+            savePhoto = false;
+            win = false;
+            currentScene = SceneManager.GetActiveScene().name;
+            AudioManager.Instance.Play(currentScene + "Theme"); 
         }
-
-        savePhoto = false;
-        win = false;
     }
 
     private void Update()
     {
+        if (SceneManager.GetActiveScene().name != currentScene)
+        {
+            AudioManager.Instance.StopAll();
+            currentScene = SceneManager.GetActiveScene().name;
+            AudioManager.Instance.Play(currentScene + "Theme");
+        }
+
         if(PauseMenu == null)
         {
             PauseMenu = GameObject.Find("PauseMenu");
@@ -59,14 +68,14 @@ public class GameManager : MonoBehaviour
         if (photosCaptured >= 3 && Input.GetButtonDown("Interact") && !isDead)
         {
             win = true;
-            AudioManager.Instance.Stop("BackgroundMusic");
+            AudioManager.Instance.StopAll();
             SceneManager.LoadScene(2);
         }
         else if(isDead && SceneManager.GetActiveScene().buildIndex != 2)
         {
             win = false;
             isDead = false;
-            AudioManager.Instance.Stop("BackgroundMusic");
+            AudioManager.Instance.StopAll();
             SceneManager.LoadScene(2);
         }
 

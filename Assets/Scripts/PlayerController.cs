@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
     {
         hook = GetComponent<GrapplingHook>();
         controller.enabled = true;
-        //AudioManager.Instance.Play("BackgroundMusic");
     }
 
     private void Update()
