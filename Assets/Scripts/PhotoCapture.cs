@@ -86,7 +86,10 @@ public class PhotoCapture : MonoBehaviour
             rtPressed = true;
             if(!viewingPhoto)
             {
-                StartCoroutine(CapturePhoto());
+                if (GameManager.Instance.savePhoto)
+                {
+                    StartCoroutine(CapturePhoto());
+                }
             }
             else
             {

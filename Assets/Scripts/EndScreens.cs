@@ -2,12 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EndScreens : MonoBehaviour
 {
     public GameObject winText;
     public GameObject loseText;
+    public Button mainMenuButton;
 
+    private void Start()
+    {
+        mainMenuButton.Select();
+    } 
+    
     private void Update()
     {
         if(GameManager.Instance.win)

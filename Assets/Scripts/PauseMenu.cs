@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,11 +10,22 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject howToPlay;
     public GameObject background;
+    public Button hptBackButton;
+    public Button resumeButton;
 
     public void Awake()
     {
         pauseMenu.SetActive(true);
         howToPlay.SetActive(false);
+        background.SetActive(true);
+    }
+
+    public void OnEnable()
+    {
+        pauseMenu.SetActive(true);
+        howToPlay.SetActive(false);
+        background.SetActive(true);
+        resumeButton.Select();
     }
 
     public void MainMenuButton()
@@ -31,6 +43,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         howToPlay.SetActive(true);
+        hptBackButton.Select();
     }
 
     public void ResumeButton()
@@ -42,5 +55,6 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         howToPlay.SetActive(false);
+        resumeButton.Select();
     }
 }

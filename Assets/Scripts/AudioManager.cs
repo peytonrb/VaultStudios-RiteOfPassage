@@ -29,7 +29,6 @@ public class AudioManager : MonoBehaviour
                 //s.source.pitch = s.pitch;
             }
         }
-
     }
     
     private void OnDestroy()

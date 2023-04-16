@@ -19,6 +19,10 @@ public class MainMenu : MonoBehaviour
     public TMP_Text xSensText;
     public Slider ySensSlider;
     public TMP_Text ySensText;
+    public Button playButton;
+    public Button htpBackButton;
+    public Button applyAllButton;
+    
 
     public void Update()
     {
@@ -31,6 +35,7 @@ public class MainMenu : MonoBehaviour
         howToPlay.SetActive(false);
         options.SetActive(false);
         AudioManager.Instance.Play("BackgroundMusic");
+        playButton.Select();
     }
 
     public void PlayButton()
@@ -50,6 +55,7 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(false);
         howToPlay.SetActive(true);
         options.SetActive(false);
+        htpBackButton.Select();
     }
 
     public void OptionsButton()
@@ -58,6 +64,7 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(false);
         howToPlay.SetActive(false);
         options.SetActive(true);
+        applyAllButton.Select();
     }
 
     public void BackButton()
@@ -65,6 +72,7 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(true);
         howToPlay.SetActive(false);
         options.SetActive(false);
+        playButton.Select();
     }
 
     public void VolumeSlider(float volume)
