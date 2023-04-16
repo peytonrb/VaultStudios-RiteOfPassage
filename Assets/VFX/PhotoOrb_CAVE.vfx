@@ -24,19 +24,7 @@ MonoBehaviour:
     - model: {fileID: 8926484042661614602}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661614604}
-      id: 0
-      isStickyNote: 0
     - model: {fileID: 8926484042661614606}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614721}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614732}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614634}
       id: 0
       isStickyNote: 0
     - model: {fileID: 8926484042661614719}
@@ -60,15 +48,6 @@ MonoBehaviour:
     - model: {fileID: 8926484042661614637}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661614639}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614766}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614659}
-      id: 0
-      isStickyNote: 0
     - model: {fileID: 8926484042661614777}
       id: 0
       isStickyNote: 0
@@ -84,34 +63,10 @@ MonoBehaviour:
     - model: {fileID: 8926484042661614684}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661614686}
-      id: 0
-      isStickyNote: 0
     - model: {fileID: 8926484042661614706}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661614709}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614798}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614710}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614712}
-      id: 0
-      isStickyNote: 0
     - model: {fileID: 8926484042661614665}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614680}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614681}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614784}
       id: 0
       isStickyNote: 0
     - model: {fileID: 8926484042661614750}
@@ -137,28 +92,13 @@ MonoBehaviour:
     - model: {fileID: 8926484042661614800}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661614822}
-      id: 0
-      isStickyNote: 0
     - model: {fileID: 8926484042661614802}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614827}
       id: 0
       isStickyNote: 0
     - model: {fileID: 8926484042661614817}
       id: 0
       isStickyNote: 0
     - model: {fileID: 8926484042661614819}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614854}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614835}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614829}
       id: 0
       isStickyNote: 0
     - model: {fileID: 8926484042661614750}
@@ -184,46 +124,13 @@ MonoBehaviour:
     - model: {fileID: 8926484042661614856}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661614858}
-      id: 0
-      isStickyNote: 0
     - model: {fileID: 8926484042661614860}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614875}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614900}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614886}
       id: 0
       isStickyNote: 0
     - model: {fileID: 8926484042661614891}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661614894}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614925}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614897}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614895}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614932}
-      id: 0
-      isStickyNote: 0
     - model: {fileID: 8926484042661614889}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614937}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614957}
       id: 0
       isStickyNote: 0
     - model: {fileID: 8926484042661614923}
@@ -268,8 +175,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 396
     y: -38
-    width: 5371
-    height: 2280
+    width: 5369
+    height: 2267
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,7 +187,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4c867f6b72b714dbb5fd1780afe208, type: 3}
-  m_Name: Photo_Orb
+  m_Name: PhotoOrb_CAVE
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 0}
@@ -408,7 +315,7 @@ VisualEffectResource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Photo_Orb
+  m_Name: PhotoOrb_CAVE
   m_Graph: {fileID: 114350483966674976}
   m_Infos:
     m_RendererSettings:

@@ -13,15 +13,19 @@ public class PhotoCapture : MonoBehaviour
     [SerializeField] private GameObject cameraUI;
     [SerializeField] private GameObject mainUI;
     [SerializeField] private GameObject photoCam;
+    [SerializeField] private GameObject flash;
+    [SerializeField] private GameObject[] photoOrbs;
+    private PhotoCameraController photoCamController;
     public GameObject photoHolder;
     private Renderer rend;
     private Texture2D screenCapture;
     public bool viewingPhoto;
     private bool rtPressed;
-    public bool newPhoto = false;
+    public bool newPhoto;
 
     private void Start()
     {
+        newPhoto = false;
         screenCapture = new Texture2D(720, 720, TextureFormat.RGB24, false);
         if(photoHolder != null)
         {
@@ -29,6 +33,7 @@ public class PhotoCapture : MonoBehaviour
         }
         
         mainUI.SetActive(true);
+        photoCamController = photoCam.GetComponent<PhotoCameraController>();
     }
 
     private void OnEnable()
@@ -39,6 +44,11 @@ public class PhotoCapture : MonoBehaviour
         {
             AudioManager.Instance.Stop("FootStepSound");
         }
+
+        foreach (GameObject orb in photoOrbs)
+        {
+            orb.SetActive(true);
+        }
     }
 
     private void OnDisable()
@@ -46,6 +56,11 @@ public class PhotoCapture : MonoBehaviour
         cameraUI.SetActive(false);
         photoFrame.SetActive(false);
         viewingPhoto = false;
+
+        foreach (GameObject orb in photoOrbs)
+        {
+            orb.SetActive(false);
+        }
     }
 
     private void Update()
@@ -90,6 +105,13 @@ public class PhotoCapture : MonoBehaviour
         viewingPhoto = true;
         cameraUI.SetActive(false);
         mainUI.SetActive(false);
+        photoCamController.enabled = false;
+        flash.SetActive(true);
+
+        foreach (GameObject orb in photoOrbs)
+        {
+            orb.SetActive(false);
+        }
 
         yield return new WaitForEndOfFrame();
 
@@ -98,7 +120,6 @@ public class PhotoCapture : MonoBehaviour
         screenCapture.ReadPixels(regionToRead, 0, 0, false);
         screenCapture.Apply();
 
-        ShowPhoto();
 
         byte[] bytes = screenCapture.EncodeToPNG();
         File.WriteAllBytes(Application.persistentDataPath + "/" + SceneManager.GetActiveScene().name + GameManager.Instance.activeSpot + ".png", bytes);
@@ -109,7 +130,17 @@ public class PhotoCapture : MonoBehaviour
             rend.material.mainTexture = screenCapture;
         }
 
+        
+        yield return new WaitForSeconds(2);
+        flash.SetActive(false);
         newPhoto = true;
+        foreach (GameObject orb in photoOrbs)
+        {
+            orb.SetActive(true);
+        }
+        photoCamController.enabled = true;
+        
+        ShowPhoto();
     }
 
     void ShowPhoto()
@@ -118,7 +149,6 @@ public class PhotoCapture : MonoBehaviour
         photoDisplayArea.sprite = photoSprite;
 
         photoFrame.SetActive(true);
-        
     }
 
     void RemovePhoto()
@@ -126,5 +156,5 @@ public class PhotoCapture : MonoBehaviour
         viewingPhoto = false;
         photoFrame.SetActive(false);
         cameraUI.SetActive(true);
-    }
+    } 
 }

@@ -58,7 +58,6 @@ public class Photograph : MonoBehaviour
             if (Vector3.Distance(photoSpot1.transform.position, transform.position) < minDistance)
             {
                 GameManager.Instance.activeSpot = 1;
-
                 if (camManager.newPhoto)
                 {
                     polarUI1.GetComponent<PhotoLoaderUI>().LoadPhoto();
