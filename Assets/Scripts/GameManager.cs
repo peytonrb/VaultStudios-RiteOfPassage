@@ -28,11 +28,11 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);  
+        }
             savePhoto = false;
             win = false;
             currentScene = SceneManager.GetActiveScene().name;
             AudioManager.Instance.Play(currentScene + "Theme"); 
-        }
     }
 
     private void Update()
