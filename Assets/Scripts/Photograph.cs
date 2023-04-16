@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Cinemachine;
 
 public class Photograph : MonoBehaviour
 {
@@ -23,7 +22,6 @@ public class Photograph : MonoBehaviour
     public GameObject polarUI3;
     public GameObject thirdPersCam;
     public float minDistance;
-    public CinemachineFreeLook cmVirCam;
     private PlayerController pController;
     private PhotoCameraController pCController;
     private PhotoCapture camManager;

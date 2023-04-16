@@ -13,8 +13,6 @@ public class GameManager : MonoBehaviour
     public bool isDead;
     public int activeSpot;
     public bool savePhoto;
-    public float xSens;
-    public float ySens;
 
     private void Awake()
     {

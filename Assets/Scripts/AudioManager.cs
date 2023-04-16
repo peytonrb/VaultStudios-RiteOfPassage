@@ -83,26 +83,4 @@ public class AudioManager : MonoBehaviour
         }
         s.source.UnPause();
     }
-
-    public void SetVolume(string name, float volume)
-    {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.Log("No sound found");
-            return;
-        }
-        s.source.volume = volume;
-    }
-
-    public float GetVolume(string name)
-    {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.Log("No sound found");
-            return 0f;
-        }
-        return s.source.volume;
-    }
 }

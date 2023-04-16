@@ -13,8 +13,8 @@ public class MainMenu : MonoBehaviour
     public GameObject options;
     public Slider volumeSlider;
     public TMP_Text volumeText;
-    public Slider musicVolumeSlider;
-    public TMP_Text musicVolumeText;
+    public Slider masterVolumeSlider;
+    public TMP_Text masterVolumeText;
     public Slider xSensSlider;
     public TMP_Text xSensText;
     public Slider ySensSlider;
@@ -72,9 +72,9 @@ public class MainMenu : MonoBehaviour
         volumeText.text = volume.ToString("0.0");
     }
     
-    public void MusicVolumeSlider(float volume)
+    public void MasterVolumeSlider(float volume)
     {
-        musicVolumeText.text = volume.ToString("0.0");
+        masterVolumeText.text = volume.ToString("0.0");
     }
     
     public void XSensSlider(float sensitivity)
@@ -90,14 +90,10 @@ public class MainMenu : MonoBehaviour
     public void ApplyAllButton()
     {
         float volumeValue = volumeSlider.value;
-        float musicVolumeValue = musicVolumeSlider.value;
+        float masterVolumeValue = masterVolumeSlider.value;
         float xSensValue = xSensSlider.value;
         float ySensValue = ySensSlider.value;
         PlayerPrefs.SetFloat("VolumeValue", volumeValue);
-        AudioManager.Instance.SetVolume("BackgroundMusic", musicVolumeValue);
-        GameManager.Instance.xSens = xSensValue;
-        GameManager.Instance.ySens = ySensValue;
-        Debug.Log("Volume" + volumeValue);
         LoadValues();
     }
 
@@ -106,14 +102,5 @@ public class MainMenu : MonoBehaviour
         float volumeValue = PlayerPrefs.GetFloat("VolumeValue");
         volumeSlider.value = volumeValue;
         AudioListener.volume = volumeValue;
-        
-        float musicVolumeValue = AudioManager.Instance.GetVolume("BackgroundMusic");
-        musicVolumeSlider.value = musicVolumeValue;
-
-        float xSensValue = GameManager.Instance.xSens;
-        xSensSlider.value = xSensValue;
-
-        float ySensValue = GameManager.Instance.ySens;
-        ySensSlider.value = ySensValue;
     }
 }
