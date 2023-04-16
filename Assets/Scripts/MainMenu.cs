@@ -13,8 +13,8 @@ public class MainMenu : MonoBehaviour
     public GameObject options;
     public Slider volumeSlider;
     public TMP_Text volumeText;
-    public Slider masterVolumeSlider;
-    public TMP_Text masterVolumeText;
+    public Slider musicVolumeSlider;
+    public TMP_Text musicVolumeText;
     public Slider xSensSlider;
     public TMP_Text xSensText;
     public Slider ySensSlider;
@@ -72,28 +72,31 @@ public class MainMenu : MonoBehaviour
         volumeText.text = volume.ToString("0.0");
     }
     
-    public void MasterVolumeSlider(float volume)
+    public void MusicVolumeSlider(float volume)
     {
-        masterVolumeText.text = volume.ToString("0.0");
+        musicVolumeText.text = volume.ToString("0.0");
     }
     
     public void XSensSlider(float sensitivity)
     {
-        ySensText.text = sensitivity.ToString("0.0");
+        xSensText.text = sensitivity.ToString("0.0");
     }
     
     public void YSensSlider(float sensitivity)
     {
-        xSensText.text = sensitivity.ToString("0.0");
+        ySensText.text = sensitivity.ToString("0.0");
     }
 
     public void ApplyAllButton()
     {
         float volumeValue = volumeSlider.value;
-        float masterVolumeValue = masterVolumeSlider.value;
+        float musicVolumeValue = musicVolumeSlider.value;
         float xSensValue = xSensSlider.value;
         float ySensValue = ySensSlider.value;
         PlayerPrefs.SetFloat("VolumeValue", volumeValue);
+        AudioManager.Instance.SetVolume("BackgroundMusic", musicVolumeValue);
+        GameManager.Instance.xSens = xSensValue;
+        GameManager.Instance.ySens = ySensValue;
         LoadValues();
     }
 
@@ -102,5 +105,14 @@ public class MainMenu : MonoBehaviour
         float volumeValue = PlayerPrefs.GetFloat("VolumeValue");
         volumeSlider.value = volumeValue;
         AudioListener.volume = volumeValue;
+        
+        float musicVolumeValue = AudioManager.Instance.GetVolume("BackgroundMusic");
+        musicVolumeSlider.value = musicVolumeValue;
+
+        float xSensValue = GameManager.Instance.xSens;
+        xSensSlider.value = xSensValue;
+
+        float ySensValue = GameManager.Instance.ySens;
+        ySensSlider.value = ySensValue;
     }
 }
