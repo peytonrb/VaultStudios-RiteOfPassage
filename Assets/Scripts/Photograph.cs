@@ -36,6 +36,7 @@ public class Photograph : MonoBehaviour
         pController = GetComponent<PlayerController>();
         pCController = photoCam.GetComponent<PhotoCameraController>();
         camManager = cameraStuff.GetComponentInChildren<PhotoCapture>();
+        cmVirCam = thirdPersCam.GetComponent<CinemachineFreeLook>();
         pictureAreas = GameObject.FindGameObjectsWithTag("PhotoArea");
         fUI.SetActive(false);
         photoCam.SetActive(false);
@@ -43,6 +44,9 @@ public class Photograph : MonoBehaviour
         cameraStuff.SetActive(false);
         rb = GetComponent<Rigidbody>();
         mainUI.SetActive(true);
+
+        //cmVirCam.m_XAxis.m_InputAxisValue = cmVirCam.m_XAxis.m_InputAxisValue * GameManager.Instance.xSens;
+        //cmVirCam.m_YAxis.m_InputAxisValue = cmVirCam.m_YAxis.m_InputAxisValue * GameManager.Instance.ySens;
     }
     
     void Update()
