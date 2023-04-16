@@ -131,16 +131,16 @@ public class PhotoCapture : MonoBehaviour
         }
 
         
-        yield return new WaitForSeconds(2);
-        flash.SetActive(false);
-        newPhoto = true;
         foreach (GameObject orb in photoOrbs)
         {
             orb.SetActive(true);
         }
-        photoCamController.enabled = true;
-        
+        yield return new WaitForSeconds(0.1f);
+        flash.SetActive(false);
+        newPhoto = true;
+
         ShowPhoto();
+        photoCamController.enabled = true;
     }
 
     void ShowPhoto()

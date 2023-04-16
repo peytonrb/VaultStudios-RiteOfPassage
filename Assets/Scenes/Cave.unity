@@ -438,9 +438,6 @@ RectTransform:
   m_Children:
   - {fileID: 755194191}
   - {fileID: 1799468426}
-  - {fileID: 895221166}
-  - {fileID: 2070374351}
-  - {fileID: 1412042919}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -562,6 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a4306228ba7ab47a857cb21d81f69b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 2100000, guid: b32a6f81a07e5254a91e3fa8bba671c1, type: 2}
   whatImage: Cave1
 --- !u!1001 &137865728
 PrefabInstance:
@@ -697,6 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a4306228ba7ab47a857cb21d81f69b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 2100000, guid: d8e1a76da58a02245ad06548a61515a4, type: 2}
   whatImage: Cave3
 --- !u!114 &153209270
 MonoBehaviour:
@@ -1994,6 +1993,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8366303838655493738, guid: 3ce822dad4ac95a46a9b6f232187e98d, type: 3}
   m_PrefabInstance: {fileID: 8366303839043162484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &461243811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2321046931665697196, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
+  m_PrefabInstance: {fileID: 2321046932157733619}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &478600245
 GameObject:
@@ -4026,14 +4030,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895221165}
-  m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
+  m_LocalRotation: {x: -0, y: -0, z: 0.2588191, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20526437, y: 0.20526437, z: 0.20526437}
+  m_LocalScale: {x: 0.20526436, y: 0.20526436, z: 0.20526437}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 136020352}
-  m_Father: {fileID: 73053281}
-  m_RootOrder: 2
+  m_Father: {fileID: 1799468426}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6296,14 +6300,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412042918}
-  m_LocalRotation: {x: 0, y: 0, z: 0.08715578, w: 0.9961947}
+  m_LocalRotation: {x: -0, y: -0, z: 0.08715578, w: 0.9961947}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20526437, y: 0.20526437, z: 0.20526437}
+  m_LocalScale: {x: 0.2052644, y: 0.2052644, z: 0.20526437}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 153209267}
-  m_Father: {fileID: 73053281}
-  m_RootOrder: 4
+  m_Father: {fileID: 1799468426}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7509,6 +7513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a4306228ba7ab47a857cb21d81f69b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 2100000, guid: bf2aa9ac21e5915448c92d2b6abe6b58, type: 2}
   whatImage: Cave2
 --- !u!114 &1776402990
 MonoBehaviour:
@@ -7669,6 +7674,9 @@ RectTransform:
   - {fileID: 1096950695}
   - {fileID: 276558320}
   - {fileID: 1299879115}
+  - {fileID: 895221166}
+  - {fileID: 2070374351}
+  - {fileID: 1412042919}
   m_Father: {fileID: 73053281}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8864,14 +8872,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070374350}
-  m_LocalRotation: {x: 0, y: 0, z: 0.17364816, w: 0.9848078}
+  m_LocalRotation: {x: -0, y: -0, z: 0.17364816, w: 0.9848078}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20526437, y: 0.20526437, z: 0.20526437}
+  m_LocalScale: {x: 0.2052644, y: 0.2052644, z: 0.20526437}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1776402987}
-  m_Father: {fileID: 73053281}
-  m_RootOrder: 3
+  m_Father: {fileID: 1799468426}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13078,23 +13086,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.028714502
+      value: -0.028714482
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017199287
+      value: -0.000000017199287
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 4.9407267e-10
+      value: -4.9407234e-10
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017169986
+      value: 0.000000017169986
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000011185098
+      value: 0.0000000011185098
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933170226417, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
@@ -21985,6 +21993,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7754538110976784074, guid: 74b3e577f0c1ebf40ae1ad621ea38966, type: 3}
+      propertyPath: mat
+      value: 
+      objectReference: {fileID: 2100000, guid: b32a6f81a07e5254a91e3fa8bba671c1, type: 2}
+    - target: {fileID: 7754538110976784074, guid: 74b3e577f0c1ebf40ae1ad621ea38966, type: 3}
       propertyPath: flash
       value: 
       objectReference: {fileID: 1477322570}
@@ -22534,6 +22546,10 @@ PrefabInstance:
       propertyPath: cameraStuff
       value: 
       objectReference: {fileID: 898937463}
+    - target: {fileID: 8873744035112471332, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
+      propertyPath: thirdPersCam
+      value: 
+      objectReference: {fileID: 461243811}
     - target: {fileID: 8873744035112471332, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
       propertyPath: CameraManager
       value: 

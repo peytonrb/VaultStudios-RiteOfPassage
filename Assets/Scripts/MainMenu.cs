@@ -2,12 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
 
     public GameObject mainMenu;
     public GameObject howToPlay;
+    public GameObject options;
+    public Slider volumeSlider;
+    public TMP_Text volumeText;
+    public Slider masterVolumeSlider;
+    public TMP_Text masterVolumeText;
+    public Slider xSensSlider;
+    public TMP_Text xSensText;
+    public Slider ySensSlider;
+    public TMP_Text ySensText;
 
     public void Update()
     {
@@ -18,6 +29,7 @@ public class MainMenu : MonoBehaviour
     {
         mainMenu.SetActive(true);
         howToPlay.SetActive(false);
+        options.SetActive(false);
         AudioManager.Instance.Play("BackgroundMusic");
     }
 
@@ -37,11 +49,58 @@ public class MainMenu : MonoBehaviour
     {
         mainMenu.SetActive(false);
         howToPlay.SetActive(true);
+        options.SetActive(false);
+    }
+
+    public void OptionsButton()
+    {
+        LoadValues();
+        mainMenu.SetActive(false);
+        howToPlay.SetActive(false);
+        options.SetActive(true);
     }
 
     public void BackButton()
     {
         mainMenu.SetActive(true);
         howToPlay.SetActive(false);
+        options.SetActive(false);
+    }
+
+    public void VolumeSlider(float volume)
+    {
+        volumeText.text = volume.ToString("0.0");
+    }
+    
+    public void MasterVolumeSlider(float volume)
+    {
+        masterVolumeText.text = volume.ToString("0.0");
+    }
+    
+    public void XSensSlider(float sensitivity)
+    {
+        ySensText.text = sensitivity.ToString("0.0");
+    }
+    
+    public void YSensSlider(float sensitivity)
+    {
+        xSensText.text = sensitivity.ToString("0.0");
+    }
+
+    public void ApplyAllButton()
+    {
+        float volumeValue = volumeSlider.value;
+        float masterVolumeValue = masterVolumeSlider.value;
+        float xSensValue = xSensSlider.value;
+        float ySensValue = ySensSlider.value;
+        PlayerPrefs.SetFloat("VolumeValue", volumeValue);
+        LoadValues();
+    }
+
+    void LoadValues()
+    {
+        float volumeValue = PlayerPrefs.GetFloat("VolumeValue");
+        volumeSlider.value = volumeValue;
+        AudioListener.volume = volumeValue;
     }
 }

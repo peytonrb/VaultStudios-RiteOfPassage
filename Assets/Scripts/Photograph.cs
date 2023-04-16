@@ -20,6 +20,7 @@ public class Photograph : MonoBehaviour
     public GameObject polarUI1;
     public GameObject polarUI2;
     public GameObject polarUI3;
+    public GameObject thirdPersCam;
     public float minDistance;
     private PlayerController pController;
     private PhotoCameraController pCController;
@@ -60,12 +61,13 @@ public class Photograph : MonoBehaviour
                 GameManager.Instance.activeSpot = 1;
                 if (camManager.newPhoto)
                 {
+                    camManager.newPhoto = false;
                     polarUI1.GetComponent<PhotoLoaderUI>().LoadPhoto();
                 }
 
                 if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
                 {
-                    if (photoBounds.inRange(pictureAreas[0].transform.eulerAngles.y, photoCam.transform.eulerAngles.x))
+                    if (photoBounds.inRange(pictureAreas[0].transform.eulerAngles.y, photoCam.transform.eulerAngles.x) && !camManager.viewingPhoto)
                     {
                         GameManager.Instance.savePhoto = true;
                         spot1Captured = true;
@@ -79,12 +81,13 @@ public class Photograph : MonoBehaviour
                 
                 if (camManager.newPhoto)
                 {
+                    camManager.newPhoto = false;
                     polarUI2.GetComponent<PhotoLoaderUI>().LoadPhoto();
                 }
 
                 if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
                 {
-                    if (photoBounds.inRange(pictureAreas[1].transform.eulerAngles.y, photoCam.transform.eulerAngles.x))
+                    if (photoBounds.inRange(pictureAreas[1].transform.eulerAngles.y, photoCam.transform.eulerAngles.x) && !camManager.viewingPhoto)
                     {
                         GameManager.Instance.savePhoto = true;
                         spot2Captured = true;
@@ -104,7 +107,7 @@ public class Photograph : MonoBehaviour
                 
                 if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
                 {
-                    if (photoBounds.inRange(pictureAreas[2].transform.eulerAngles.y, photoCam.transform.eulerAngles.x))
+                    if (photoBounds.inRange(pictureAreas[2].transform.eulerAngles.y, photoCam.transform.eulerAngles.x) && !camManager.viewingPhoto)
                     {
                         GameManager.Instance.savePhoto = true;
                         spot3Captured = true;
@@ -147,13 +150,20 @@ public class Photograph : MonoBehaviour
             spot2Captured = false;
             spot3Captured = false;
         }
+
         if (GameManager.Instance.PauseMenu != null)
         {
             if (GameManager.Instance.PauseMenu.activeSelf)
             {
                 pCController.enabled = false;
+                thirdPersCam.SetActive(false);
                 mainUI.SetActive(false);
                 camManager.enabled = false;
+            }
+            else if (!GameManager.Instance.PauseMenu.activeSelf && !photoCam.activeSelf)
+            {
+                thirdPersCam.SetActive(true);
+                mainUI.SetActive(true);
             }
             else if (photoCam.activeSelf)
             {

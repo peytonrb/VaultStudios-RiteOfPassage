@@ -8,6 +8,7 @@ public class PhotoLoaderUI : MonoBehaviour
 {
     private Image photo;
     private Texture2D tex;
+    public Material mat;
     private byte[] imageData;
     public string whatImage;
     private bool rtPressed;
@@ -34,7 +35,7 @@ public class PhotoLoaderUI : MonoBehaviour
     public void LoadPhoto()
     {
         photo = gameObject.GetComponent<Image>();
-        photo.material = new Material(Shader.Find("Unlit/Texture"));
+        photo.material = mat;
         if (File.Exists(Application.persistentDataPath + "/" + whatImage + ".png"))
         {
             imageData = File.ReadAllBytes(Application.persistentDataPath + "/" + whatImage + ".png");
