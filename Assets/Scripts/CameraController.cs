@@ -22,8 +22,8 @@ public class CameraController : MonoBehaviour
     
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSens;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSens;
+        float mouseX = Input.GetAxis("Mouse X") * GameManager.Instance.xSens;
+        float mouseY = Input.GetAxis("Mouse Y") * GameManager.Instance.ySens;
 
         rotationY += mouseX;
         rotationX -= mouseY;
