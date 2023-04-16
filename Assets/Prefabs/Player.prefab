@@ -542,7 +542,9 @@ MonoBehaviour:
   polarUI1: {fileID: 0}
   polarUI2: {fileID: 0}
   polarUI3: {fileID: 0}
+  thirdPersCam: {fileID: 0}
   minDistance: 3
+  cmVirCam: {fileID: 0}
 --- !u!95 &955471424
 Animator:
   serializedVersion: 4

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 185447016}
+  - component: {fileID: 185447017}
   m_Layer: 7
   m_Name: PhotoArea
   m_TagString: PhotoArea
@@ -31,6 +32,24 @@ Transform:
   m_Father: {fileID: 7754538110725206284}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &185447017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185447015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff0d1e1e9ff2c3459dd0c497b5dd08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x1: 300
+  x2: 355
+  y1: 320
+  y2: 359
+  xIn: 0
+  yIn: 0
 --- !u!1 &240143708
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,6 +59,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 240143709}
+  - component: {fileID: 240143710}
   m_Layer: 7
   m_Name: PhotoArea
   m_TagString: PhotoArea
@@ -62,6 +82,24 @@ Transform:
   m_Father: {fileID: 7754538110725206284}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &240143710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240143708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff0d1e1e9ff2c3459dd0c497b5dd08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x1: 330
+  x2: 30
+  y1: 300
+  y2: 10
+  xIn: 0
+  yIn: 0
 --- !u!1 &7754538110479698624
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +440,12 @@ MonoBehaviour:
   cameraUI: {fileID: 7754538111597095371}
   mainUI: {fileID: 0}
   photoCam: {fileID: 7754538112502567074}
+  flash: {fileID: 7754538112474700124}
+  photoOrbs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   photoHolder: {fileID: 0}
   viewingPhoto: 0
   newPhoto: 0
@@ -616,7 +660,7 @@ GameObject:
   - component: {fileID: 7754538112474700127}
   - component: {fileID: 7754538112474700126}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: CameraFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -630,7 +674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7754538112474700124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.691563, y: 0.14579678, z: 9.560042}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -649,8 +693,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Intensity: 500
+  m_Range: 100
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -763,10 +807,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff0d1e1e9ff2c3459dd0c497b5dd08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x1: 20
+  x1: 125
   x2: 175
-  y1: 20
-  y2: 325
+  y1: 325
+  y2: 20
   xIn: 0
   yIn: 0
 --- !u!1 &7754538112502567074
