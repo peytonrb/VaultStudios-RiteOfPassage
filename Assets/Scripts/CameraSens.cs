@@ -11,6 +11,6 @@ public class CameraSens : MonoBehaviour
     void Start()
     {
         cam.m_XAxis.m_MaxSpeed = 1f + GameManager.Instance.xSens * 10f;
-        cam.m_YAxis.m_MaxSpeed = 1f + GameManager.Instance.ySens * 10f;
+        cam.m_YAxis.m_MaxSpeed = 1f + GameManager.Instance.ySens * 2f;
     }
 }
