@@ -44,9 +44,6 @@ public class Photograph : MonoBehaviour
         cameraStuff.SetActive(false);
         rb = GetComponent<Rigidbody>();
         mainUI.SetActive(true);
-
-        //cmVirCam.m_XAxis.m_InputAxisValue = cmVirCam.m_XAxis.m_InputAxisValue * GameManager.Instance.xSens;
-        //cmVirCam.m_YAxis.m_InputAxisValue = cmVirCam.m_YAxis.m_InputAxisValue * GameManager.Instance.ySens;
     }
     
     void Update()

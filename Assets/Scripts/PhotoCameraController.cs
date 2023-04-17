@@ -20,8 +20,8 @@ public class PhotoCameraController : MonoBehaviour
     {
         target = transform.parent.gameObject;
         // Getting Mouse Inputs
-        float inputX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float inputY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+        float inputX = Input.GetAxis("Mouse X") * (1 + GameManager.Instance.xSens);
+        float inputY = Input.GetAxis("Mouse Y") * (1 + GameManager.Instance.ySens);
 
         // Vertical Camera Rotation
         cameraVerticalRotation -= inputY;
