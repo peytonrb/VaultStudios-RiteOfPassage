@@ -69,7 +69,7 @@ public class Photograph : MonoBehaviour
                 if (camManager.newPhoto)
                 {
                     camManager.newPhoto = false;
-                    polarUI1.GetComponent<PhotoLoaderUI>().LoadPhoto();
+                    //polarUI1.GetComponent<PhotoLoaderUI>().LoadPhoto();
                 }
 
                 if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
@@ -89,7 +89,7 @@ public class Photograph : MonoBehaviour
                 if (camManager.newPhoto)
                 {
                     camManager.newPhoto = false;
-                    polarUI2.GetComponent<PhotoLoaderUI>().LoadPhoto();
+                    //polarUI2.GetComponent<PhotoLoaderUI>().LoadPhoto();
                 }
 
                 if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
@@ -109,7 +109,7 @@ public class Photograph : MonoBehaviour
                 if (camManager.newPhoto)
                 {
                     camManager.newPhoto = false;
-                    polarUI3.GetComponent<PhotoLoaderUI>().LoadPhoto();
+                    //polarUI3.GetComponent<PhotoLoaderUI>().LoadPhoto();
                 }
                 
                 if (Input.GetButtonDown("TakePicture") || Input.GetAxis("TakePicture") == 1)
@@ -207,17 +207,17 @@ public class Photograph : MonoBehaviour
         score = 0;
         if (spot1Captured)
         {
-            polarUI1.GetComponent<PhotoLoaderUI>().LoadPhoto();
+            //polarUI1.GetComponent<PhotoLoaderUI>().LoadPhoto();
             score ++;
         }
         if(spot2Captured)
         {
-            polarUI2.GetComponent<PhotoLoaderUI>().LoadPhoto();
+            //polarUI2.GetComponent<PhotoLoaderUI>().LoadPhoto();
             score ++;
         }
         if(spot3Captured)
         {
-            polarUI3.GetComponent<PhotoLoaderUI>().LoadPhoto();
+            //polarUI3.GetComponent<PhotoLoaderUI>().LoadPhoto();
             score ++;
         }
         GameManager.Instance.photosCaptured = score;

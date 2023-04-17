@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public bool caveW;
     public bool cityW;
     public bool redwoodW;
+    public bool resetUIPics;
 
     private void Awake()
     {
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name != currentScene)
         {
+            resetUIPics = true;
             AudioManager.Instance.StopAll();
             currentScene = SceneManager.GetActiveScene().name;
             if (currentScene == "EndScreen")

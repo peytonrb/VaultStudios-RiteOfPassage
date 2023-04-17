@@ -50,15 +50,15 @@ public class TextUI : MonoBehaviour
         {
             if (GameManager.Instance.activeSpot == 1)
             {
-                counter.text = "Capture a photo of the Mineshaft";
+                counter.text = "Capture a photo of the Wild Birds";
             }
             else if (GameManager.Instance.activeSpot == 2)
             {
-                counter.text = "Capture a photo of the Giant Mushrooms";
+                counter.text = "Capture a photo of the Sunset";
             }
             else if (GameManager.Instance.activeSpot == 3)
             {
-                counter.text = "Capture a photo of the Giant Crystal";
+                counter.text = "Capture a photo of the Firewatch Tower";
             }
             else
             {
@@ -69,15 +69,15 @@ public class TextUI : MonoBehaviour
         {
             if (GameManager.Instance.activeSpot == 1)
             {
-                counter.text = "Capture a photo of the Mineshaft";
+                counter.text = "Capture a photo of the Fountain and Town Hall";
             }
             else if (GameManager.Instance.activeSpot == 2)
             {
-                counter.text = "Capture a photo of the Giant Mushrooms";
+                counter.text = "Capture a photo of the Broken Lamps";
             }
             else if (GameManager.Instance.activeSpot == 3)
             {
-                counter.text = "Capture a photo of the Giant Crystal";
+                counter.text = "Capture a photo of the Taxi Cab";
             }
             else
             {

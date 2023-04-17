@@ -465,6 +465,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 374de1d0b45588241aa0793806bfc384, type: 3}
+--- !u!114 &245197710 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6973215546153693070, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+  m_PrefabInstance: {fileID: 734596724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &245197711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3940224275979995100, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+  m_PrefabInstance: {fileID: 734596724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &245197712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 170938362493098733, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+  m_PrefabInstance: {fileID: 734596724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &315300907 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2550463727306718371, guid: 66f5f27058eca8d4cb4ce221465f912e, type: 3}
@@ -1289,6 +1322,18 @@ PrefabInstance:
       propertyPath: mainUI
       value: 
       objectReference: {fileID: 734596725}
+    - target: {fileID: 7754538110976784074, guid: 74b3e577f0c1ebf40ae1ad621ea38966, type: 3}
+      propertyPath: photoDisplayUI1
+      value: 
+      objectReference: {fileID: 245197712}
+    - target: {fileID: 7754538110976784074, guid: 74b3e577f0c1ebf40ae1ad621ea38966, type: 3}
+      propertyPath: photoDisplayUI2
+      value: 
+      objectReference: {fileID: 245197711}
+    - target: {fileID: 7754538110976784074, guid: 74b3e577f0c1ebf40ae1ad621ea38966, type: 3}
+      propertyPath: photoDisplayUI3
+      value: 
+      objectReference: {fileID: 245197710}
     - target: {fileID: 7754538110976784074, guid: 74b3e577f0c1ebf40ae1ad621ea38966, type: 3}
       propertyPath: photoOrbs.Array.size
       value: 1
@@ -2225,15 +2270,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.028714422
+      value: -0.028714443
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017199287
+      value: -0.000000017199287
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 4.940713e-10
+      value: -4.940717e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9978849
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.x
