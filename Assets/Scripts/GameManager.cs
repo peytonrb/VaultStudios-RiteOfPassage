@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public bool savePhoto;
     public float xSens;
     public float ySens;
-    private string currentScene;
+    private string currentScene = "noScene";
 
     private void Awake()
     {
@@ -31,8 +31,11 @@ public class GameManager : MonoBehaviour
         }
             savePhoto = false;
             win = false;
-            currentScene = SceneManager.GetActiveScene().name;
-            AudioManager.Instance.Play(currentScene + "Theme"); 
+    }
+
+    private void OnDisable()
+    {
+        this.enabled = true;
     }
 
     private void Update()

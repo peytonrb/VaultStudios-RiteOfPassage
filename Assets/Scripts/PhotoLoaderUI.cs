@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Windows;
+//using UnityEngine.Windows;
 using UnityEngine.UI;
+using UnityEngine.IO;
+using System.IO;
 
 public class PhotoLoaderUI : MonoBehaviour
 {
@@ -12,7 +14,13 @@ public class PhotoLoaderUI : MonoBehaviour
     private byte[] imageData;
     public string whatImage;
     private bool rtPressed;
-    void Update()
+    private Image image;
+
+    public void Start()
+    {
+        image = GetComponent<Image>();
+    }
+    public void Update()
     {
         float rightTriggerValue = UnityEngine.Input.GetAxis("TakePicture");
 
@@ -42,6 +50,8 @@ public class PhotoLoaderUI : MonoBehaviour
             tex = new Texture2D(720, 720);
             tex.LoadImage(imageData);
             photo.material.mainTexture = tex;
+            Sprite spr = Sprite.Create(tex, new Rect(0,0, tex.width, tex.height), new Vector2(0,0));
+            image.sprite = spr;
         }
     }
 }
