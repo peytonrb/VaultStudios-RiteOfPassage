@@ -115,4 +115,9 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+    public void Portal(string level)
+    {
+        SceneManager.LoadScene(level);
+    }
 }

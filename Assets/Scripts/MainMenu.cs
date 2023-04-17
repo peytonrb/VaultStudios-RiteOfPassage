@@ -42,7 +42,7 @@ public class MainMenu : MonoBehaviour
     {
         GameManager.Instance.win = false;
         //AudioManager.Instance.Stop("BackgroundMusic");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Hub");
     }
 
     public void ExitButton()

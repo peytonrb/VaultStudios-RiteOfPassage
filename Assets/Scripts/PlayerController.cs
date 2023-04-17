@@ -140,5 +140,21 @@ public class PlayerController : MonoBehaviour
             controller.enabled = false;
             GameManager.Instance.isDead = true;
         }
+
+        if (collision.gameObject.CompareTag("portal"))
+        {
+            if (collision.gameObject.name == "ForestPortal")
+            {
+                GameManager.Instance.Portal("Redwood");
+            }
+            if (collision.gameObject.name == "CavePortal")
+            {
+                GameManager.Instance.Portal("Cave");
+            }
+            if (collision.gameObject.name == "CityPortal")
+            {
+                GameManager.Instance.Portal("City");
+            }
+        }
     }
 }
