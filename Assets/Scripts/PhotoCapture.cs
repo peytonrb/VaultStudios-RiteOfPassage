@@ -59,7 +59,10 @@ public class PhotoCapture : MonoBehaviour
 
         foreach (GameObject orb in photoOrbs)
         {
-            orb.SetActive(false);
+            if (orb != null)
+            {
+                orb.SetActive(false);
+            }
         }
     }
 

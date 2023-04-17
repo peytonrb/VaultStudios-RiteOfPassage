@@ -43,11 +43,27 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+
         if (SceneManager.GetActiveScene().name != currentScene)
         {
             AudioManager.Instance.StopAll();
             currentScene = SceneManager.GetActiveScene().name;
-            AudioManager.Instance.Play(currentScene + "Theme");
+            if (currentScene == "EndScreen")
+            {
+                if (win)
+                {
+                    AudioManager.Instance.Play("WinTheme");
+                }
+                else
+                {
+                    AudioManager.Instance.Play("LoseTheme");
+                }
+            }
+            else
+            {
+                AudioManager.Instance.Play(currentScene + "Theme");
+            }
+            
         }
 
         if(PauseMenu == null)
@@ -98,12 +114,12 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("Hub");
             }
         }
-        else if(isDead && SceneManager.GetActiveScene().buildIndex != 2)
+        else if(isDead)
         {
             win = false;
             isDead = false;
             AudioManager.Instance.StopAll();
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("EndScreen");
         }
 
         if (SceneManager.GetActiveScene().name != "Cave")

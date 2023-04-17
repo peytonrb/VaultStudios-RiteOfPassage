@@ -75,3 +75,13 @@ MonoBehaviour:
     volume: 1
     loop: 1
     source: {fileID: 0}
+  - name: WinTheme
+    clip: {fileID: 8300000, guid: 45ddfa262101b024fa43e5585fe92f69, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LoseTheme
+    clip: {fileID: 8300000, guid: 7564e162f78997842bb6faf237181c8f, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
