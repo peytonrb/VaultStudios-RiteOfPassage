@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("EndScreen");
         }
 
-        if (SceneManager.GetActiveScene().name != "Cave")
+        if (SceneManager.GetActiveScene().name == "Hub")
         {
             photosCaptured = 0;
         }

@@ -514,7 +514,7 @@ MonoBehaviour:
   hooked: 0
   hookedObject: {fileID: 0}
   maxDistance: 70
-  hookProximity: 10
+  hookProximity: 1
 --- !u!114 &8873744035112471332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,7 +544,6 @@ MonoBehaviour:
   polarUI3: {fileID: 0}
   thirdPersCam: {fileID: 0}
   minDistance: 3
-  cmVirCam: {fileID: 0}
 --- !u!95 &955471424
 Animator:
   serializedVersion: 4
