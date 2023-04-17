@@ -73,7 +73,7 @@ public class TextUI : MonoBehaviour
             }
             else if (GameManager.Instance.activeSpot == 2)
             {
-                counter.text = "Capture a photo of the Broken Lamps";
+                counter.text = "Capture a photo of the Crane and City Skyline";
             }
             else if (GameManager.Instance.activeSpot == 3)
             {
