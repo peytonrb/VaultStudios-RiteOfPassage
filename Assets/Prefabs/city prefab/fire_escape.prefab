@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5436373902313760286, guid: 44ebc5e14d2d53a41815910d9b4f767c, type: 3}
+  - {fileID: 2100000, guid: f6d87f4c28a19344fb65b07ee27b5cf3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -144,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5436373902313760286, guid: 44ebc5e14d2d53a41815910d9b4f767c, type: 3}
+  - {fileID: 2100000, guid: a3ca180d45923824481e0f17a02873ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -175,6 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 92952073946121124}
+  - component: {fileID: 6739605515529010194}
   m_Layer: 0
   m_Name: fire_escape
   m_TagString: Untagged
@@ -189,9 +190,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8663160670729226551}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -246.55287, y: -17.331966, z: 168.37178}
-  m_LocalScale: {x: 392.66617, y: 392.66617, z: 392.66617}
+  m_LocalScale: {x: 127.10525, y: 127.10525, z: 117.65672}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3333328884329352108}
@@ -199,3 +200,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &6739605515529010194
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8663160670729226551}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
