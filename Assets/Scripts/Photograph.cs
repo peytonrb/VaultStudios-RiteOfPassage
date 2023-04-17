@@ -150,7 +150,7 @@ public class Photograph : MonoBehaviour
             }
         }
 
-        if (SceneManager.GetActiveScene().name != "Cave")
+        if (SceneManager.GetActiveScene().name == "Hub")
         {
             spot1Captured = false;
             spot2Captured = false;
