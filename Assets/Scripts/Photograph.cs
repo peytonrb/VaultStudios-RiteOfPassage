@@ -53,7 +53,11 @@ public class Photograph : MonoBehaviour
     {
         if (Vector3.Distance(photoSpot1.transform.position, transform.position) < minDistance || Vector3.Distance(photoSpot2.transform.position, transform.position) < minDistance || Vector3.Distance(photoSpot3.transform.position, transform.position) < minDistance)
         {
-            if (mainCam.activeSelf)
+            if (mainCam.activeSelf && GameManager.Instance.currentScene != "Hub")
+            {
+                fUI.SetActive(true);
+            }
+            else if (mainCam.activeSelf && Vector3.Distance(photoSpot1.transform.position, transform.position) < minDistance)
             {
                 fUI.SetActive(true);
             }

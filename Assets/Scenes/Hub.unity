@@ -1294,6 +1294,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4764594066434196706, guid: 93c6427a964b9b044920711b98fbfeff, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4764594066460596897, guid: 93c6427a964b9b044920711b98fbfeff, type: 3}
       propertyPath: m_Name
       value: PhotoSpots
@@ -1353,6 +1357,10 @@ PrefabInstance:
     - target: {fileID: 4764594066541043005, guid: 93c6427a964b9b044920711b98fbfeff, type: 3}
       propertyPath: m_LocalPosition.z
       value: 41.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764594066869573311, guid: 93c6427a964b9b044920711b98fbfeff, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4764594067134334584, guid: 93c6427a964b9b044920711b98fbfeff, type: 3}
       propertyPath: m_LocalPosition.x
