@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
     public bool savePhoto;
     public float xSens;
     public float ySens;
-    private string currentScene = "noScene";
+    public string currentScene = "noScene";
+    public bool caveW;
+    public bool cityW;
+    public bool redwoodW;
 
     private void Awake()
     {
@@ -70,9 +73,30 @@ public class GameManager : MonoBehaviour
 
         if (photosCaptured >= 3 && Input.GetButtonDown("Interact") && !isDead)
         {
-            win = true;
             AudioManager.Instance.StopAll();
-            SceneManager.LoadScene(2);
+
+            if (currentScene == "Cave")
+            {
+                caveW = true;
+            }
+            else if (currentScene == "Redwood")
+            {
+                redwoodW = true;
+            }
+            else if ( currentScene == "City")
+            {
+                cityW = true;
+            }
+
+            if (caveW && redwoodW && cityW)
+            {
+                win = true;
+                SceneManager.LoadScene("EndScreen");
+            }
+            else
+            {
+                SceneManager.LoadScene("Hub");
+            }
         }
         else if(isDead && SceneManager.GetActiveScene().buildIndex != 2)
         {

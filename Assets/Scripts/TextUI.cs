@@ -8,21 +8,81 @@ public class TextUI : MonoBehaviour
     public TMP_Text counter;
     void Update()
     {
-        if (GameManager.Instance.activeSpot == 1)
+        if (GameManager.Instance.currentScene == "Hub")
         {
-            counter.text = "Capture a photo of the Mineshaft";
+            if (GameManager.Instance.activeSpot == 1)
+            {
+                counter.text = "Press F to enter camera mode, then press left mouse to capture a photo";
+            }
+            else if (GameManager.Instance.activeSpot == 2)
+            {
+                counter.text = "Jump and hold E to glide over to the other end of the room";
+            }
+            else if (GameManager.Instance.activeSpot == 3)
+            {
+                counter.text = "Press left shift to grapple while aiming at a green tile, then go to the middle of the platform";
+            }
+            else 
+            {
+                counter.text = "Enter the hallway to begin the tutorial, or enter a portal to start your adventure";
+            }
         }
-        else if (GameManager.Instance.activeSpot == 2)
+        if (GameManager.Instance.currentScene == "Cave")
         {
-            counter.text = "Capture a photo of the Giant Mushrooms";
+            if (GameManager.Instance.activeSpot == 1)
+            {
+                counter.text = "Capture a photo of the Mineshaft";
+            }
+            else if (GameManager.Instance.activeSpot == 2)
+            {
+                counter.text = "Capture a photo of the Giant Mushrooms";
+            }
+            else if (GameManager.Instance.activeSpot == 3)
+            {
+                counter.text = "Capture a photo of the Giant Crystal";
+            }
+            else
+            {
+                counter.text = "Take a photo at each of the three yellow rings";
+            }
         }
-        else if (GameManager.Instance.activeSpot == 3)
+        else if (GameManager.Instance.currentScene == "Redwood")
         {
-            counter.text = "Capture a photo of the Giant Crystal";
+            if (GameManager.Instance.activeSpot == 1)
+            {
+                counter.text = "Capture a photo of the Mineshaft";
+            }
+            else if (GameManager.Instance.activeSpot == 2)
+            {
+                counter.text = "Capture a photo of the Giant Mushrooms";
+            }
+            else if (GameManager.Instance.activeSpot == 3)
+            {
+                counter.text = "Capture a photo of the Giant Crystal";
+            }
+            else
+            {
+                counter.text = "Take a photo at each of the three yellow rings";
+            }
         }
-        else
+        if (GameManager.Instance.currentScene == "City")
         {
-            counter.text = "Take a photo at each of the three yellow rings";
+            if (GameManager.Instance.activeSpot == 1)
+            {
+                counter.text = "Capture a photo of the Mineshaft";
+            }
+            else if (GameManager.Instance.activeSpot == 2)
+            {
+                counter.text = "Capture a photo of the Giant Mushrooms";
+            }
+            else if (GameManager.Instance.activeSpot == 3)
+            {
+                counter.text = "Capture a photo of the Giant Crystal";
+            }
+            else
+            {
+                counter.text = "Take a photo at each of the three yellow rings";
+            }
         }
     }
 }
