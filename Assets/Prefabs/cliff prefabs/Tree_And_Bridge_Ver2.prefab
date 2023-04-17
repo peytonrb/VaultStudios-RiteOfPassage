@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 7630893146673759151}
   - component: {fileID: 1229832289943510786}
   - component: {fileID: 3034274349521094231}
+  - component: {fileID: 4256616242836758116}
   m_Layer: 0
   m_Name: Lamps_Bridge
   m_TagString: Untagged
@@ -119,6 +120,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4256616242836758116
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065164945980645629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2597624022633179780, guid: 8df2a0baef95d074ea524c919a0d6605, type: 3}
 --- !u!1 &4254359854498748622
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +145,8 @@ GameObject:
   - component: {fileID: 4646463654931150652}
   - component: {fileID: 2495500826701814108}
   - component: {fileID: 4769797393460371231}
-  m_Layer: 0
+  - component: {fileID: 529609663059161913}
+  m_Layer: 8
   m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,6 +218,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &529609663059161913
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254359854498748622}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 674340280032488212, guid: 8df2a0baef95d074ea524c919a0d6605, type: 3}
 --- !u!1 &4918653612025668181
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +243,7 @@ GameObject:
   - component: {fileID: 1692275888878756718}
   - component: {fileID: 20352963358975551}
   - component: {fileID: 8649500718307839964}
+  - component: {fileID: 911740153281135808}
   m_Layer: 0
   m_Name: lamp12
   m_TagString: Untagged
@@ -286,6 +317,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &911740153281135808
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918653612025668181}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8525353449413854323, guid: 8df2a0baef95d074ea524c919a0d6605, type: 3}
 --- !u!1 &8641952618732277863
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +342,7 @@ GameObject:
   - component: {fileID: 7456378706454760710}
   - component: {fileID: 5745629156235446229}
   - component: {fileID: 7971113142391960179}
+  - component: {fileID: 6979472017852261374}
   m_Layer: 0
   m_Name: Bridge_Tree
   m_TagString: Untagged
@@ -371,3 +417,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6979472017852261374
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641952618732277863}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5772276835555855496, guid: 8df2a0baef95d074ea524c919a0d6605, type: 3}
