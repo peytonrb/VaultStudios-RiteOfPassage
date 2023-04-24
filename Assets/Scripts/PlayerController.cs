@@ -17,11 +17,16 @@ public class PlayerController : MonoBehaviour
     private float turnSmoothVelocity;
     private Animator animator;
     private bool isFootSound;
+    public float maxVelocityFalling;
 
     [Header("Ground Check")]
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask ground;
+    public GameObject stepRayUpper;
+    public GameObject stepRayLower;
+    public float stepHeight;
+    public float stepSmooth;
 
     [Header("Glider Mechanic")]
     public float glideSpeed;
@@ -34,10 +39,24 @@ public class PlayerController : MonoBehaviour
         controller.enabled = true;
     }
 
+    private void Awake()
+    {
+        stepRayUpper.transform.position = new Vector3(stepRayUpper.transform.position.x, stepHeight, stepRayUpper.transform.position.z);
+    }
+
     private void Update()
     {
+        bool previouslyGrounded = isGrounded;
         animator = GetComponent<Animator>();
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, ground); // is player on ground?
+        climbSteps();
+
+        // FALL DAMAGE LOGIC
+        if (!previouslyGrounded && isGrounded && (velocity.y < -maxVelocityFalling))
+        {
+            controller.enabled = false;
+            GameManager.Instance.isDead = true;
+        }
 
         if (isGrounded && velocity.y < 0)
         {
@@ -154,6 +173,23 @@ public class PlayerController : MonoBehaviour
             if (collision.gameObject.name == "CityPortal")
             {
                 GameManager.Instance.Portal("City");
+            }
+        }
+    }
+
+    private void climbSteps()
+    {
+        RaycastHit hitLower;
+        
+        if (Physics.Raycast(stepRayLower.transform.position, transform.TransformDirection(Vector3.forward), out hitLower, 0.1f))
+        {
+            RaycastHit hitUpper;
+            Debug.Log("hit first");
+
+            if (!Physics.Raycast(stepRayUpper.transform.position, transform.TransformDirection(Vector3.forward), out hitUpper, 0.2f))
+            {
+                Debug.Log("hit second");
+                GetComponent<Rigidbody>().position -= new Vector3(0f, -stepSmooth, 0f);
             }
         }
     }
