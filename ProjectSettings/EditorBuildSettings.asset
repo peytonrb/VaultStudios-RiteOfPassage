@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Redwood.unity
     guid: 236d9e58ae125894c94c78e910ed4b58
   - enabled: 1
-    path: Assets/Scenes/City.unity
+    path: Assets/Scenes/city OLD.unity
     guid: ec5970e1486c2244dbd51ab6ba6af276
   - enabled: 1
     path: Assets/Scenes/Cave.unity
