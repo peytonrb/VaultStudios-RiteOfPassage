@@ -180,6 +180,9 @@ public class Photograph : MonoBehaviour
                 mainUI.SetActive(true);
             }
         }
+        GameManager.Instance.spot1 = spot1Captured;
+        GameManager.Instance.spot2 = spot2Captured;
+        GameManager.Instance.spot3 = spot3Captured;
     }
 
     private void ActivateCamera()

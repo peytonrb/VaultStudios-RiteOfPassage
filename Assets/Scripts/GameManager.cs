@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     public bool cityW;
     public bool redwoodW;
     public bool resetUIPics;
+    public bool spot1;
+    public bool spot2;
+    public bool spot3;
 
     private void Awake()
     {

@@ -16646,6 +16646,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1641564920581538416, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641564920581538416, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+      propertyPath: objText.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641564920581538416, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+      propertyPath: objText.Array.data[0]
+      value: Take a photo at each of the three yellow rings
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641564920581538416, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+      propertyPath: objText.Array.data[1]
+      value: Capture a photo of the Mineshaft
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641564920581538416, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+      propertyPath: objText.Array.data[2]
+      value: Capture a photo of the Giant Mushrooms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641564920581538416, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+      propertyPath: objText.Array.data[3]
+      value: Capture a photo of the Giant Crystal
+      objectReference: {fileID: 0}
     - target: {fileID: 1641564921506390750, guid: 352385883c252974aa41a7139a7756e8, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -17847,11 +17871,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017169986
+      value: 0.000000017169986
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000011185098
+      value: 0.0000000011185098
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933170226417, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.x
