@@ -105,17 +105,17 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 1
-    - _TopLine: 0.58
+    - _TopLine: 0.603
     - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 28.48253, g: 27.149141, b: 9.31504, a: 1}
-    - _BottomColor: {r: 2.4443693, g: 2.2805011, b: 1.0378329, a: 0.3921569}
+    - _BaseColor: {r: 220.26176, g: 211.03613, b: 72.65179, a: 1}
+    - _BottomColor: {r: 191.74902, g: 179.70197, b: 82.32157, a: 0.3921569}
     - _Color: {r: 0.006289184, g: 1, b: 0.06525333, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _TopColor: {r: 4.2524366, g: 3.2253652, b: 1.3153723, a: 0.3921569}
+    - _TopColor: {r: 6.4222345, g: 4.8755183, b: 2.0174558, a: 0.3921569}
   m_BuildTextureStacks: []
 --- !u!114 &1198737648105563775
 MonoBehaviour:

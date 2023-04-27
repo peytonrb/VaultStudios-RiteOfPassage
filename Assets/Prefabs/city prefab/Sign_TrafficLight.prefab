@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3833707751117012529}
   - component: {fileID: 1355838208120539899}
   - component: {fileID: 9201508545657993513}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sign_TrafficLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
