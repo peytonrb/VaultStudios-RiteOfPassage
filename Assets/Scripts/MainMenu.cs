@@ -107,6 +107,8 @@ public class MainMenu : MonoBehaviour
         AudioManager.Instance.SetVolume("MainMenuTheme", musicVolumeValue);
         AudioManager.Instance.SetVolume("RedwoodTheme", musicVolumeValue);
         AudioManager.Instance.SetVolume("HubTheme", musicVolumeValue);
+        AudioManager.Instance.SetVolume("WinTheme", musicVolumeValue);
+        AudioManager.Instance.SetVolume("LoseTheme", musicVolumeValue);
         GameManager.Instance.xSens = xSensValue;
         GameManager.Instance.ySens = ySensValue;
         LoadValues();

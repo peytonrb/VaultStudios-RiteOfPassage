@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     // public float sensitivity;
     public Transform cam;
-    private Vector3 velocity;
+    public Vector3 velocity;
     private bool isGrounded;
     public float jumpHeight;
     public float gravity;
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         climbSteps();
 
         // FALL DAMAGE LOGIC
-        if (!previouslyGrounded && isGrounded && (velocity.y < -maxVelocityFalling))
+        if (!previouslyGrounded && isGrounded && (velocity.y < -maxVelocityFalling) && !GrapplingHook.fired)
         {
             controller.enabled = false;
             GameManager.Instance.isDead = true;

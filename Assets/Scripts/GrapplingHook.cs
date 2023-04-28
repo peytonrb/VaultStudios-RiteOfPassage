@@ -34,6 +34,7 @@ public class GrapplingHook : MonoBehaviour
         if (Input.GetButtonDown("Grapple") && !fired)
         {
             fired = true;
+            AudioManager.Instance.Play("GrappleSound");
         }
 
         // creates visual line (rope)
@@ -112,6 +113,7 @@ public class GrapplingHook : MonoBehaviour
     // returns hook to original position
     private void returnHook()
     {
+        player.velocity = new Vector3(0, -2, 0);
         hook.transform.rotation = hookHolder.transform.rotation;
         hook.transform.position = hookHolder.transform.position;
         fired = false;

@@ -180,6 +180,8 @@ public class PhotoCapture : MonoBehaviour
         {
             orb.SetActive(true);
         }
+
+        AudioManager.Instance.Play("ShutterSound");
         yield return new WaitForSeconds(0.1f);
         flash.SetActive(false);
         newPhoto = true;

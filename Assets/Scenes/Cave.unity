@@ -6983,6 +6983,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f4a7d7930a3cbf24f9fc96f30da39a44, type: 3}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.data[8].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.data[8].name
+      value: ShutterSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a19e4bf39213063489b3b19372d53da8, type: 3}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.data[9].name
+      value: GrappleSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.data[8].volume
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
+      propertyPath: sounds.Array.data[9].volume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
 --- !u!1001 &1083861493
@@ -27584,7 +27616,7 @@ PrefabInstance:
       objectReference: {fileID: 963194227}
     - target: {fileID: 7913867426281137155, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
       propertyPath: hookProximity
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7913867426281137179, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
       propertyPath: m_Name
