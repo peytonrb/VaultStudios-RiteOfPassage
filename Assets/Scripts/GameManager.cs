@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     public bool spot1;
     public bool spot2;
     public bool spot3;
+    public float stam;
+    public float maxStam;
+    public bool gliding;
 
     private void Awake()
     {
@@ -92,9 +95,9 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (photosCaptured >= 3 && Input.GetButtonDown("Interact") && !isDead)
+        if (photosCaptured >= 3 && !isDead)
         {
-            AudioManager.Instance.StopAll();
+            //AudioManager.Instance.StopAll();
 
             if (currentScene == "Cave")
             {
@@ -112,11 +115,11 @@ public class GameManager : MonoBehaviour
             if (caveW && redwoodW && cityW)
             {
                 win = true;
-                SceneManager.LoadScene("EndScreen");
+                //SceneManager.LoadScene("EndScreen");
             }
             else
             {
-                SceneManager.LoadScene("Hub");
+                //SceneManager.LoadScene("Hub");
             }
         }
         else if(isDead)

@@ -85,3 +85,13 @@ MonoBehaviour:
     volume: 1
     loop: 1
     source: {fileID: 0}
+  - name: ShutterSound
+    clip: {fileID: 8300000, guid: f4a7d7930a3cbf24f9fc96f30da39a44, type: 3}
+    volume: 2
+    loop: 0
+    source: {fileID: 0}
+  - name: GrappleSound
+    clip: {fileID: 8300000, guid: a19e4bf39213063489b3b19372d53da8, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}

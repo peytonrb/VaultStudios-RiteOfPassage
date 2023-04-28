@@ -107,6 +107,10 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             isGliding = false;
+            if (GameManager.Instance.stam < GameManager.Instance.maxStam)
+            {
+                GameManager.Instance.gliding = false;
+            }
         }
 
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -116,13 +120,14 @@ public class PlayerController : MonoBehaviour
         }
 
         // glider
-        if (Input.GetButtonDown("Glide") && !isGrounded) // && velocity.y < 0
+        if (Input.GetButtonDown("Glide") && !isGrounded && GameManager.Instance.stam > 0) // && velocity.y < 0
         {
             animator.SetBool("IsWalking", false);
             isFootSound = false;
             AudioManager.Instance.Stop("FootStepSound");
             animator.SetBool("IsGliding", true);
             isGliding = true;
+            
         }
         else if (isGliding && !isGrounded && velocity.y < 0)
         {
@@ -131,6 +136,14 @@ public class PlayerController : MonoBehaviour
             // AudioManager.Instance.Stop("FootStepSound");
             // animator.SetBool("IsGliding", true);
             gravity = glideSpeed;
+            if (GameManager.Instance.stam > 0)
+            {
+                GameManager.Instance.gliding = true;
+            }
+            else
+            {
+                StopGliding();
+            }
         }
         else if (isGrounded && !hook.hooked)
         {
@@ -140,16 +153,21 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonUp("Glide") && isGliding)
         {
-            isGliding = false;
-            animator.SetBool("IsWalking", true);
-            isFootSound = true;
-            AudioManager.Instance.Play("FootStepSound");
-            animator.SetBool("IsGliding", false);
-            gravity = 14f;
+            StopGliding();
         }
 
         velocity.y += -gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void StopGliding()
+    {
+        isGliding = false;
+        animator.SetBool("IsWalking", true);
+        isFootSound = true;
+        AudioManager.Instance.Play("FootStepSound");
+        animator.SetBool("IsGliding", false);
+        gravity = 14f;
     }
 
     void OnTriggerEnter(Collider collision)

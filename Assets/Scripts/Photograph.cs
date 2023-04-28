@@ -54,7 +54,7 @@ public class Photograph : MonoBehaviour
             {
                 fUI.SetActive(true);
             }
-            else if (mainCam.activeSelf && Vector3.Distance(photoSpot1.transform.position, transform.position) < minDistance)
+            else if (mainCam.activeSelf && Vector3.Distance(photoSpot3.transform.position, transform.position) < minDistance)
             {
                 fUI.SetActive(true);
             }
@@ -183,6 +183,15 @@ public class Photograph : MonoBehaviour
         GameManager.Instance.spot1 = spot1Captured;
         GameManager.Instance.spot2 = spot2Captured;
         GameManager.Instance.spot3 = spot3Captured;
+
+        if (GameManager.Instance.gliding && GameManager.Instance.stam >= 0)
+        {
+            GameManager.Instance.stam -= 30 * Time.deltaTime;
+        }
+        else if (GameManager.Instance.stam <= 100)
+        {
+            GameManager.Instance.stam += 50 * Time.deltaTime;
+        }
     }
 
     private void ActivateCamera()

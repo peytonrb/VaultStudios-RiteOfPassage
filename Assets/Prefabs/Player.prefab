@@ -405,6 +405,7 @@ GameObject:
   - component: {fileID: 7913867426281137155}
   - component: {fileID: 8873744035112471332}
   - component: {fileID: 955471424}
+  - component: {fileID: 1722059143}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -548,6 +549,7 @@ MonoBehaviour:
   controller: {fileID: 7913867426281137153}
   speed: 10
   cam: {fileID: 0}
+  velocity: {x: 0, y: 0, z: 0}
   jumpHeight: 3
   gravity: 0
   maxVelocityFalling: 20
@@ -584,7 +586,7 @@ MonoBehaviour:
   hooked: 0
   hookedObject: {fileID: 0}
   maxDistance: 70
-  hookProximity: 10
+  hookProximity: 15
 --- !u!114 &8873744035112471332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,6 +636,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1722059143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7913867426281137179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e865eef7aeb1ac94795b99fa6f427962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stamWheel: {fileID: 0}
 --- !u!1 &7913867426372348536
 GameObject:
   m_ObjectHideFlags: 0

@@ -52,3 +52,13 @@ MonoBehaviour:
   savePhoto: 0
   xSens: 0
   ySens: 0
+  currentScene: noScene
+  caveW: 0
+  cityW: 0
+  redwoodW: 0
+  resetUIPics: 0
+  spot1: 0
+  spot2: 0
+  spot3: 0
+  stam: 0
+  maxStam: 100
