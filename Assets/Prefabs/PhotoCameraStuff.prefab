@@ -436,6 +436,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photoDisplayArea: {fileID: 7754538110479698626}
+  photoDisplayUI1: {fileID: 0}
+  photoDisplayUI2: {fileID: 0}
+  photoDisplayUI3: {fileID: 0}
   photoFrame: {fileID: 7754538111986186842}
   cameraUI: {fileID: 7754538111597095371}
   mainUI: {fileID: 0}
@@ -873,7 +876,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 2000
   field of view: 60
   orthographic: 0
   orthographic size: 5
