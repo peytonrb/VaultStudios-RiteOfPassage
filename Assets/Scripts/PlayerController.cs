@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            gravity = 14f;
+            gravity = 20f;
             velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * -gravity);
         }
 
@@ -147,7 +147,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (isGrounded && !hook.hooked)
         {
-            gravity = 14f;
+            gravity = 20f;
             animator.SetBool("IsGliding", false);
         }
 
@@ -167,7 +167,7 @@ public class PlayerController : MonoBehaviour
         isFootSound = true;
         AudioManager.Instance.Play("FootStepSound");
         animator.SetBool("IsGliding", false);
-        gravity = 14f;
+        gravity = 20f;
     }
 
     void OnTriggerEnter(Collider collision)
