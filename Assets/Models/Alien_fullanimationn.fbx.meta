@@ -21,6 +21,9 @@ ModelImporter:
   - first:
       74: -4799524434163024911
     second: Armature|walk
+  - first:
+      74: -6372505770197538151
+    second: Armature|walk (1)
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -71,11 +74,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|0TPOSE
-      takeName: Armature|0TPOSE
+      name: Armature|walk (1)
+      takeName: Armature|walk
       internalID: 0
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 79
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

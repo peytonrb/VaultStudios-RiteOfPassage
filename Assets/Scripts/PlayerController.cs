@@ -33,6 +33,15 @@ public class PlayerController : MonoBehaviour
     private bool isGliding;
     private GrapplingHook hook;
 
+    [Header("Falling Animation")]
+    private bool isFalling;
+
+    [Header("Jumping Animation")]
+    private bool isJumping;
+
+    [Header("Death Animation")]
+    private bool isDead;
+    
     private void Start()
     {
         hook = GetComponent<GrapplingHook>();
@@ -115,6 +124,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            
             gravity = 20f;
             velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * -gravity);
         }
