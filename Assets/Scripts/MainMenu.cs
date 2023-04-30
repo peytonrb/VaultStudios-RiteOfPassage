@@ -22,26 +22,70 @@ public class MainMenu : MonoBehaviour
     public Button playButton;
     public Button htpBackButton;
     public Button applyAllButton;
-    
 
-    public void Update()
-    {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-    }
+    public float timeBetween;
+    public Image cutscene;
+    public Sprite[] frames;
+
+    public float interval;
+    private float elapsedTime;
+    public Image background;
+    public Sprite[] bgFrames;
+    private int frameNum;
+
     public void Awake()
     {
         mainMenu.SetActive(true);
         howToPlay.SetActive(false);
         options.SetActive(false);
+        cutscene.gameObject.SetActive(false);
         //AudioManager.Instance.Play("BackgroundMusic");
         playButton.Select();
+        elapsedTime = 0;
+        frameNum = 0;
+    }
+
+    public void Update()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        elapsedTime += Time.deltaTime;
+        if (elapsedTime >= interval)
+        {
+            if (frameNum >= (bgFrames.Length - 1))
+            {
+                frameNum = 0;
+            }
+            else
+            {
+                frameNum ++;
+            }
+
+            elapsedTime = 0;
+            background.sprite = bgFrames[frameNum];
+        }
     }
 
     public void PlayButton()
     {
         GameManager.Instance.win = false;
         //AudioManager.Instance.Stop("BackgroundMusic");
+        
+        StartCoroutine(StartSequence());
+    }
+
+    private IEnumerator StartSequence()
+    {
+        cutscene.gameObject.SetActive(true);
+        for (int i = 0; i < frames.Length; i++)
+        {
+            cutscene.sprite = frames[i];
+
+            yield return new WaitForSeconds(timeBetween);
+        }
+
+        yield return new WaitForSeconds(0);
         SceneManager.LoadScene("Hub");
     }
 

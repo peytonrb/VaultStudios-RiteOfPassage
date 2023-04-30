@@ -31,23 +31,19 @@ public class EndScreens : MonoBehaviour
         mainMenuButton.Select();
         if(GameManager.Instance.win)
         {
-            StartCoroutine(winSequence(creditTime, new Vector3(960, startY, 0), new Vector3(960, endY, 0)));
+            StartCoroutine(WinSequence(creditTime, new Vector3(960, startY, 0), new Vector3(960, endY, 0)));
         }
         else
         {
-            //loseText.SetActive(true);
-            //winText.SetActive(false);
+            loseText.SetActive(true);
+            winText.SetActive(false);
         }
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     } 
-    
-    private void Update()
-    {
-    }
 
-    private IEnumerator winSequence(float time, Vector3 startPos, Vector3 endPos)
+    private IEnumerator WinSequence(float time, Vector3 startPos, Vector3 endPos)
     {
         //exitButton.SetActive(false);
         //mainMenuButton.gameObject.SetActive(false);
