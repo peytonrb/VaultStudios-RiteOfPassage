@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour
     {
         hook = GetComponent<GrapplingHook>();
         controller.enabled = true;
+        isJumping = true;
+        
     }
 
     private void Awake()
@@ -67,6 +69,7 @@ public class PlayerController : MonoBehaviour
             GameManager.Instance.isDead = true;
             animator.SetBool("isFalling", false);
         }
+        
 
         if (isGrounded && velocity.y < 0)
         {
@@ -77,6 +80,8 @@ public class PlayerController : MonoBehaviour
         if (!isGrounded && velocity.y < -11f)
         {
             animator.SetBool("isFalling", true);
+            
+            
         }
 
         float horizontal = Input.GetAxis("Horizontal");
