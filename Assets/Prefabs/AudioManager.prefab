@@ -86,7 +86,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: ShutterSound
-    clip: {fileID: 8300000, guid: f4a7d7930a3cbf24f9fc96f30da39a44, type: 3}
+    clip: {fileID: 8300000, guid: eb669d7bf6c71b24f96082413d9ee492, type: 3}
     volume: 2
     loop: 0
     source: {fileID: 0}
