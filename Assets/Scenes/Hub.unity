@@ -2544,6 +2544,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2590214847393669618, guid: f1ca2fccbaf350b4299cc7482d28be00, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f1ca2fccbaf350b4299cc7482d28be00, type: 3}
       propertyPath: m_Name
       value: Table_With_Cups
