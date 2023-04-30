@@ -65,11 +65,18 @@ public class PlayerController : MonoBehaviour
         {
             controller.enabled = false;
             GameManager.Instance.isDead = true;
+            animator.SetBool("isFalling", false);
         }
 
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
+        }
+
+        // 11f IS NOT A RANDOM VALUE, IT IS 2F MORE THAN THE MAX VELOCITY YOU GET WHEN JUMPING
+        if (!isGrounded && velocity.y < -11f)
+        {
+            animator.SetBool("isFalling", true);
         }
 
         float horizontal = Input.GetAxis("Horizontal");
@@ -115,6 +122,7 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded)
         {
+            animator.SetBool("isFalling", false);
             isGliding = false;
             if (GameManager.Instance.stam < GameManager.Instance.maxStam)
             {
@@ -124,15 +132,17 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            
+            animator.SetBool("IsJumping", true);
             gravity = 20f;
             velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * -gravity);
+            StartCoroutine(finishJumping());
         }
 
         // glider
         if (Input.GetButtonDown("Glide") && !isGrounded && GameManager.Instance.stam > 0) // && velocity.y < 0
         {
             animator.SetBool("IsWalking", false);
+            animator.SetBool("isFalling", false);
             isFootSound = false;
             AudioManager.Instance.Stop("FootStepSound");
             animator.SetBool("IsGliding", true);
@@ -141,10 +151,6 @@ public class PlayerController : MonoBehaviour
         }
         else if (isGliding && !isGrounded && velocity.y < 0)
         {
-            // animator.SetBool("IsWalking", false);
-            // isFootSound = false;
-            // AudioManager.Instance.Stop("FootStepSound");
-            // animator.SetBool("IsGliding", true);
             gravity = glideSpeed;
             if (GameManager.Instance.stam > 0)
             {
@@ -168,6 +174,12 @@ public class PlayerController : MonoBehaviour
 
         velocity.y += -gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    IEnumerator finishJumping()
+    {
+        yield return new WaitForSeconds(1f);
+        animator.SetBool("IsJumping", false);
     }
 
     void StopGliding()
