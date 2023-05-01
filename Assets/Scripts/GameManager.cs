@@ -65,8 +65,8 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    //AudioManager.Instance.Play("LoseTheme");
-                    AudioManager.Instance.Play("FinalCutsceneTheme");
+                    AudioManager.Instance.Play("LoseTheme");
+                    //AudioManager.Instance.Play("FinalCutsceneTheme");
                 }
             }
             else
