@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
             {
                 if (win)
                 {
-                    AudioManager.Instance.Play("WinTheme");
+                    //AudioManager.Instance.Play("WinTheme");
                 }
                 else
                 {

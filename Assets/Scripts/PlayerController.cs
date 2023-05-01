@@ -41,13 +41,15 @@ public class PlayerController : MonoBehaviour
 
     [Header("Death Animation")]
     private bool isDead;
+
+    public GameObject fUI;
     
     private void Start()
     {
         hook = GetComponent<GrapplingHook>();
         controller.enabled = true;
         isJumping = true;
-        
+        fUI.SetActive(false);
     }
 
     private void Awake()
@@ -223,6 +225,24 @@ public class PlayerController : MonoBehaviour
             {
                 GameManager.Instance.Portal("City");
             }
+        }
+
+        if (collision.gameObject.CompareTag("EndGame") && GameManager.Instance.win)
+        {
+            fUI.SetActive(true);
+            if (Input.GetButtonDown("Interact"))
+            {
+                GameManager.Instance.Portal("EndScreen");
+            }
+        }
+
+    }
+
+    void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("EndGame"))
+        {
+            fUI.SetActive(false);
         }
     }
 
