@@ -188,7 +188,7 @@ public class Photograph : MonoBehaviour
         {
             GameManager.Instance.stam -= 30 * Time.deltaTime;
         }
-        else if (GameManager.Instance.stam <= 100)
+        else if (GameManager.Instance.grounded && GameManager.Instance.stam <= 100)
         {
             GameManager.Instance.stam += 50 * Time.deltaTime;
         }

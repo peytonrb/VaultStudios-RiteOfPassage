@@ -57,6 +57,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        GameManager.Instance.grounded = isGrounded;
+
         bool previouslyGrounded = isGrounded;
         animator = GetComponent<Animator>();
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, ground); // is player on ground?
@@ -152,6 +154,7 @@ public class PlayerController : MonoBehaviour
             AudioManager.Instance.Stop("FootStepSound");
             animator.SetBool("IsGliding", true);
             isGliding = true;
+            GameManager.Instance.gliding = true;
             
         }
         else if (isGliding && !isGrounded && velocity.y < 0)
@@ -190,6 +193,7 @@ public class PlayerController : MonoBehaviour
     void StopGliding()
     {
         isGliding = false;
+        GameManager.Instance.gliding = false;
         animator.SetBool("IsWalking", true);
         isFootSound = true;
         AudioManager.Instance.Play("FootStepSound");

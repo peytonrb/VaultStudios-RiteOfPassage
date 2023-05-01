@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public float stam;
     public float maxStam;
     public bool gliding;
+    public bool grounded;
 
     private void Awake()
     {

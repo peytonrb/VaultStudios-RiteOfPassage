@@ -46,5 +46,9 @@ public class TextUI : MonoBehaviour
         {
             counter.text = objText[3];
         }
+        else 
+        {
+            counter.text = "Press ESC and return to the Hub";
+        }
     }
 }
