@@ -16,6 +16,11 @@ public class StammyBar : MonoBehaviour
     {
         stamWheel.value = GameManager.Instance.stam / GameManager.Instance.maxStam;
 
+        if (GameManager.Instance.stam > 100)
+        {
+            GameManager.Instance.stam = 100;
+        }
+
         
 
         if (GameManager.Instance.stam >= GameManager.Instance.maxStam)

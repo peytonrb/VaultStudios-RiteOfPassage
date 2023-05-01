@@ -2131,6 +2131,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1039247603, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039247603, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039247603, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1538070116, guid: 352385883c252974aa41a7139a7756e8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2183,6 +2195,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2038539119, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1641564920581538416, guid: 352385883c252974aa41a7139a7756e8, type: 3}
       propertyPath: objText.Array.data[0]
       value: Enter the hallway to begin the tutorial, or enter a portal to start
@@ -2200,6 +2216,10 @@ PrefabInstance:
       propertyPath: objText.Array.data[3]
       value: Press left shift to grapple while aiming at a green tile, then go to
         the middle of the platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641564921021489975, guid: 352385883c252974aa41a7139a7756e8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1641564921506390751, guid: 352385883c252974aa41a7139a7756e8, type: 3}
       propertyPath: m_Pivot.x

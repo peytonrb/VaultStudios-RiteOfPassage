@@ -1412,8 +1412,9 @@ MonoBehaviour:
   spot2: 0
   spot3: 0
   stam: 0
-  maxStam: 0
+  maxStam: 100
   gliding: 0
+  grounded: 0
 --- !u!4 &404023686
 Transform:
   m_ObjectHideFlags: 0
