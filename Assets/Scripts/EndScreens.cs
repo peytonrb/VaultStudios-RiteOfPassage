@@ -37,7 +37,7 @@ public class EndScreens : MonoBehaviour
         {
             loseText.SetActive(true);
             winText.SetActive(false);
-            //StartCoroutine(WinSequence(creditTime, new Vector3(960, startY, 0), new Vector3(960, endY, 0)));
+            StartCoroutine(WinSequence(creditTime, new Vector3(960, startY, 0), new Vector3(960, endY, 0)));
         }
 
         Cursor.visible = true;
@@ -64,6 +64,35 @@ public class EndScreens : MonoBehaviour
         for (int i = 0; i < frames.Length; i++)
         {
             cutscene.sprite = frames[i];
+
+            switch(i)
+            {
+                case 1:
+                    //AudioManager.Instance.Play("FinalCutsceneTheme");
+                    break;
+
+                case 3:
+                    AudioManager.Instance.Play("CloseBook");
+                    break;
+
+                case 9:
+                    AudioManager.Instance.Play("PlaceBook");
+                    break;
+                    
+                case 20:
+                    yield return new WaitForSeconds(0.25f);
+                    AudioManager.Instance.Play("ButtonPress");
+                    break;
+
+                case 23:
+                    AudioManager.Instance.Play("ExplosionSound");
+                    break;
+            }
+
+            if (i == 4 || i == 5 || i == 6 || i == 15 || i == 16 || i == 17)
+            {
+                AudioManager.Instance.Play("CutsceneStepSound");
+            }
 
             yield return new WaitForSeconds(timeBetween);
         }
@@ -109,7 +138,8 @@ public class EndScreens : MonoBehaviour
 
             yield return null;
         }
-
+        AudioManager.Instance.Stop("FinalCutsceneTheme");
+        AudioManager.Instance.Play("WinTheme");
         credits.SetActive(false);
     }
 

@@ -95,3 +95,33 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
+  - name: ExplosionSound
+    clip: {fileID: 8300000, guid: 832a090e5adfce345986a5c2aa61e6c2, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: FinalCutsceneTheme
+    clip: {fileID: 8300000, guid: 3b88ecbf7394b45428c8f499a346778d, type: 3}
+    volume: 0.7
+    loop: 1
+    source: {fileID: 0}
+  - name: CloseBook
+    clip: {fileID: 8300000, guid: e0ddcb2cb238ce8419083e83a02585ec, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CutsceneStepSound
+    clip: {fileID: 8300000, guid: 5863d1889f476ee43bc1eb4481e4d96a, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtonPress
+    clip: {fileID: 8300000, guid: cc29242ab1aec0d438664a2c42e8a18d, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlaceBook
+    clip: {fileID: 8300000, guid: 19015ccbdaa54b64dac88fb56d64354b, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
