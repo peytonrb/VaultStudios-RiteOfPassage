@@ -49,7 +49,10 @@ public class PlayerController : MonoBehaviour
         hook = GetComponent<GrapplingHook>();
         controller.enabled = true;
         isJumping = true;
-        fUI.SetActive(false);
+        if(fUI != null)
+        {
+            fUI.SetActive(false);
+        }
     }
 
     private void Awake()
@@ -184,6 +187,14 @@ public class PlayerController : MonoBehaviour
 
         velocity.y += -gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+        if (fUI != null)
+        {
+            if (fUI.activeSelf && Input.GetButtonDown("Interact"))
+            {
+                GameManager.Instance.Portal("EndScreen");
+            }
+        }
     }
 
     IEnumerator finishJumping()
@@ -229,10 +240,9 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("EndGame") && GameManager.Instance.win)
         {
-            fUI.SetActive(true);
-            if (Input.GetButtonDown("Interact"))
+            if (fUI != null)
             {
-                GameManager.Instance.Portal("EndScreen");
+                fUI.SetActive(true);
             }
         }
 
@@ -242,7 +252,10 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("EndGame"))
         {
-            fUI.SetActive(false);
+            if (fUI != null)
+            {
+                fUI.SetActive(false);
+            }
         }
     }
 

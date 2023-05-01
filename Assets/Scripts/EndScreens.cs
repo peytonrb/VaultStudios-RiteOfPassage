@@ -37,6 +37,7 @@ public class EndScreens : MonoBehaviour
         {
             loseText.SetActive(true);
             winText.SetActive(false);
+            //StartCoroutine(WinSequence(creditTime, new Vector3(960, startY, 0), new Vector3(960, endY, 0)));
         }
 
         Cursor.visible = true;

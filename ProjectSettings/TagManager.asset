@@ -9,6 +9,7 @@ TagManager:
   - Hook
   - isDeath
   - portal
+  - EndGame
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - InvisToCamera
   - Ground
   - Hook
-  - 
+  - EndGame
   - 
   - 
   - 

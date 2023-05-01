@@ -1101,6 +1101,7 @@ MonoBehaviour:
   stam: 0
   maxStam: 0
   gliding: 0
+  grounded: 0
 --- !u!4 &674708244
 Transform:
   m_ObjectHideFlags: 0
@@ -1315,35 +1316,35 @@ MonoBehaviour:
   exitButton: {fileID: 339766282}
   startY: -4560
   endY: 3480
-  creditTime: 5
+  creditTime: 45
   space: {fileID: 442739436}
   frames:
-  - {fileID: -1706891649, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: -1314003775, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 1183481096, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: -1317345355, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 864685546, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: -964106032, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 1419624651, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 1246677739, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 1688176709, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: -542060623, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: -1680606242, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: -310716386, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 1800458568, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 1697747791, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: -1284613085, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 1049610795, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: -1705022592, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 1394819457, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: -1922589044, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 1960911730, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: -1302790194, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 777252286, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 1181243734, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 1013408227, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  - {fileID: 318756097, guid: 8d6a88cbe55bec94ea3aab98f335c28f, type: 3}
-  timeBetween: 0.1
+  - {fileID: -111632515, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -1811737109, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: 734241178, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: 1697047365, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: 728439517, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -1127329634, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -1809323608, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -1715307406, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: 438842552, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: 2117023236, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -1986227190, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: 1570259118, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -954462692, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -184437371, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -561204811, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -196509715, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: 2078915771, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -1713386666, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -1589641113, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: 834010952, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: 623537515, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -1360068177, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -1480653575, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: -1548687320, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  - {fileID: 1128152698, guid: 4af39f2ce767a9e4081d419adbe6585d, type: 3}
+  timeBetween: 1
   cutscene: {fileID: 369581940}
 --- !u!1 &1033618983
 GameObject:
