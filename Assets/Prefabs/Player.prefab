@@ -1905,7 +1905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 7913867426281137153}
-  speed: 10
+  speed: 13
   cam: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
   jumpHeight: 3
@@ -1921,6 +1921,7 @@ MonoBehaviour:
   stepHeight: 0.8
   stepSmooth: 0.6
   glideSpeed: 2
+  fUI: {fileID: 0}
 --- !u!114 &7913867426281137155
 MonoBehaviour:
   m_ObjectHideFlags: 0
