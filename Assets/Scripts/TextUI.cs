@@ -1,3 +1,5 @@
+// handles the organization and implementation of the objective UI while playing
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

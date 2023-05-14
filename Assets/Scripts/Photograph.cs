@@ -1,3 +1,6 @@
+// handles the picture-taking mechanic and returns the player to game view after camera view.
+//      updates player score and UI.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -220,17 +223,17 @@ public class Photograph : MonoBehaviour
         if (spot1Captured)
         {
             //polarUI1.GetComponent<PhotoLoaderUI>().LoadPhoto();
-            score ++;
+            score++;
         }
         if(spot2Captured)
         {
             //polarUI2.GetComponent<PhotoLoaderUI>().LoadPhoto();
-            score ++;
+            score++;
         }
         if(spot3Captured)
         {
             //polarUI3.GetComponent<PhotoLoaderUI>().LoadPhoto();
-            score ++;
+            score++;
         }
         GameManager.Instance.photosCaptured = score;
     }

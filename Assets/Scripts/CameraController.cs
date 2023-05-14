@@ -1,3 +1,5 @@
+// script for player-follow Cinemachine Free Look camera
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,7 +1,8 @@
+// loads player photo into UI
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// using UnityEngine.Windows;
 using System.IO;
 
 public class PhotoLoader : MonoBehaviour

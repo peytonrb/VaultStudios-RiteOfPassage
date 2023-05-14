@@ -1,3 +1,5 @@
+// activates or deactivates the "return to hub" portals depending on player progress
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

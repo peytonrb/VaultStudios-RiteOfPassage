@@ -1,3 +1,5 @@
+// determines whether a collision between the hook and another object has occured
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

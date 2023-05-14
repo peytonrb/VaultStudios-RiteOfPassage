@@ -1,3 +1,6 @@
+// handles the entire player controller including mechanics such as movement, physics, animation, sound, 
+//      glider mechanic, grappling mechanic, death states, etc. 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

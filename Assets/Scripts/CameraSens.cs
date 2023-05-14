@@ -1,3 +1,5 @@
+// manages the sensitivity of the Cinemachine Free Look camera
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +9,6 @@ public class CameraSens : MonoBehaviour
 {
     public CinemachineFreeLook cam;
 
-    // Start is called before the first frame update
     void Update()
     {
         cam.m_XAxis.m_MaxSpeed = 0.5f + GameManager.Instance.xSens * 10f;

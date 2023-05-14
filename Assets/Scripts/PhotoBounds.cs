@@ -1,3 +1,6 @@
+// establishes the range in which the player can use the photo-taking mechanic. player is 
+//      unable to take photos when outside of this range
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

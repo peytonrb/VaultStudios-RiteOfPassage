@@ -1,3 +1,5 @@
+// handles main menu functionality
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +9,6 @@ using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
-
     public GameObject mainMenu;
     public GameObject howToPlay;
     public GameObject options;
@@ -22,11 +23,9 @@ public class MainMenu : MonoBehaviour
     public Button playButton;
     public Button htpBackButton;
     public Button applyAllButton;
-
     public float timeBetween;
     public Image cutscene;
     public Sprite[] frames;
-
     public float interval;
     private float elapsedTime;
     public Image background;

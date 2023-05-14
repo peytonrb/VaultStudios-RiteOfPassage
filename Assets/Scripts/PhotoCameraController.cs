@@ -1,3 +1,6 @@
+// handles the photo-taking mechanic after the player has pressed the corresponding button,
+//      (F by default)
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +10,6 @@ public class PhotoCameraController : MonoBehaviour
     private GameObject target;
     public float mouseSensitivity = 2f;
     float cameraVerticalRotation = 0f;
-
     // bool lockedCursor = true; <-- commented bc variable is assigned but not being used
 
     void Start()
@@ -30,6 +32,5 @@ public class PhotoCameraController : MonoBehaviour
 
         // Horizontal Mouse Rotation
         target.transform.Rotate(Vector3.up * inputX);
-        
     }
 }

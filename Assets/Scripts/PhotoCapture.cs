@@ -1,3 +1,6 @@
+// handles the photo-taking mechanic once the player takes a photo within the desired range. is also
+//      responsible for updating the UI elements with the selected photo
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

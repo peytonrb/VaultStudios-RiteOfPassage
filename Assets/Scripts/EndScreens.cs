@@ -1,3 +1,5 @@
+// handles UI upond game completion
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,8 +25,6 @@ public class EndScreens : MonoBehaviour
     public Sprite[] frames;
     public float timeBetween;
     public Image cutscene;
-    
-
 
     private void Start()
     {
@@ -37,7 +37,6 @@ public class EndScreens : MonoBehaviour
         {
             loseText.SetActive(true);
             winText.SetActive(false);
-            //StartCoroutine(WinSequence(creditTime, new Vector3(960, startY, 0), new Vector3(960, endY, 0)));
         }
 
         Cursor.visible = true;
@@ -46,8 +45,6 @@ public class EndScreens : MonoBehaviour
 
     private IEnumerator WinSequence(float time, Vector3 startPos, Vector3 endPos)
     {
-        //exitButton.SetActive(false);
-        //mainMenuButton.gameObject.SetActive(false);
         winText.SetActive(true);
         loseText.SetActive(false);
         credits.SetActive(true);
@@ -60,7 +57,6 @@ public class EndScreens : MonoBehaviour
         space.color = tempColor;
         creditImage.color = tempColor;
 
-
         for (int i = 0; i < frames.Length; i++)
         {
             cutscene.sprite = frames[i];
@@ -68,7 +64,6 @@ public class EndScreens : MonoBehaviour
             switch(i)
             {
                 case 1:
-                    //AudioManager.Instance.Play("FinalCutsceneTheme");
                     break;
 
                 case 3:
@@ -118,15 +113,6 @@ public class EndScreens : MonoBehaviour
         }
         cutscene.gameObject.SetActive(false);
         yield return new WaitForSeconds(1);
-        
-        /*elapsedTime = 0;
-        while (elapsedTime < time)
-        {
-            credits.transform.position = Vector3.Lerp(endPos, new Vector3(endPos.x, endPos.y + endY - startY, endPos.z), (elapsedTime / time));
-            elapsedTime += Time.deltaTime;
-
-            yield return null;
-        }*/
 
         elapsedTime = 0;
         while (elapsedTime < 2)
@@ -138,6 +124,7 @@ public class EndScreens : MonoBehaviour
 
             yield return null;
         }
+
         AudioManager.Instance.Stop("FinalCutsceneTheme");
         AudioManager.Instance.Play("WinTheme");
         credits.SetActive(false);

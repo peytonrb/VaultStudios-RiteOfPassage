@@ -1,3 +1,5 @@
+// handles the UI element for glider stamina
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

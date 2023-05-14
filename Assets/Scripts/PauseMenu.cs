@@ -1,3 +1,5 @@
+// handles pause menu functionality
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

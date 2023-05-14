@@ -1,3 +1,5 @@
+// adds functionality to the grappling hook mechanic, including the rendering and physics
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

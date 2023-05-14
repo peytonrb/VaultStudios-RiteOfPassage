@@ -1,3 +1,5 @@
+// handles overall audio for Rite of Passage
+
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
@@ -5,7 +7,6 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
-
     public Sound[] sounds;
 
     void Awake()
@@ -26,14 +27,12 @@ public class AudioManager : MonoBehaviour
 
                 s.source.volume = s.volume;
                 s.source.loop = s.loop;
-                //s.source.pitch = s.pitch;
             }
         }
     }
     
     private void OnDestroy()
     {
-        
         if (Instance == this) 
         {
             Instance = null;
@@ -43,22 +42,26 @@ public class AudioManager : MonoBehaviour
     public void Play (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+
         if (s == null)
         {
             Debug.Log("No sound found");
             return;
         }
+
         s.source.Play();
     }
 
     public void Stop(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+
         if (s == null)
         {
             Debug.Log("No sound found");
             return;
         }
+
         s.source.Stop();
     }
 
@@ -73,44 +76,52 @@ public class AudioManager : MonoBehaviour
     public void Pause(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+
         if (s == null)
         {
             Debug.Log("No sound found");
             return;
         }
+
         s.source.Pause();
     }
 
     public void UnPause(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+
         if (s == null)
         {
             Debug.Log("No sound found");
             return;
         }
+
         s.source.UnPause();
     }
 
     public void SetVolume(string name, float volume)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+
         if (s == null)
         {
             Debug.Log("No sound found");
             return;
         }
+
         s.source.volume = volume;
     }
 
     public float GetVolume(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+
         if (s == null)
         {
             Debug.Log("No sound found");
             return 0f;
         }
+
         return s.source.volume;
     }
 }
