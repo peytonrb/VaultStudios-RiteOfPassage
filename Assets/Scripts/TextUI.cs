@@ -48,7 +48,7 @@ public class TextUI : MonoBehaviour
         }
         else 
         {
-            counter.text = "Press ESC and return to the Hub";
+            counter.text = "Enter the portal to return to Hub";
         }
     }
 }

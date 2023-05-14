@@ -105,11 +105,11 @@ public class GameManager : MonoBehaviour
             {
                 caveW = true;
             }
-            else if (currentScene == "Redwood")
+            else if (currentScene == "redwood")
             {
                 redwoodW = true;
             }
-            else if ( currentScene == "City")
+            else if (currentScene == "city")
             {
                 cityW = true;
             }

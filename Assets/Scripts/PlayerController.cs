@@ -33,12 +33,6 @@ public class PlayerController : MonoBehaviour
     private bool isGliding;
     private GrapplingHook hook;
 
-    [Header("Falling Animation")]
-    private bool isFalling;
-
-    [Header("Jumping Animation")]
-    private bool isJumping;
-
     [Header("Death Animation")]
     private bool isDead;
 
@@ -48,7 +42,6 @@ public class PlayerController : MonoBehaviour
     {
         hook = GetComponent<GrapplingHook>();
         controller.enabled = true;
-        isJumping = true;
         if(fUI != null)
         {
             fUI.SetActive(false);
@@ -235,6 +228,11 @@ public class PlayerController : MonoBehaviour
             if (collision.gameObject.name == "CityPortal")
             {
                 GameManager.Instance.Portal("City");
+            }
+
+            if (collision.gameObject.name == "HubPortal")
+            {
+                GameManager.Instance.Portal("Hub");
             }
         }
 
