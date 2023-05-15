@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
     private Queue<string> facts;
+    public TMP_Text dialogueText;
+    public GameObject textBoxUI;
+    public Animator animator;
     
     void Start()
     {
         facts = new Queue<string>();
+        textBoxUI.SetActive(false);
     }
 
     void Update()
@@ -21,8 +26,9 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("starting converstaion");
+        animator.SetBool("isOpen", true);
         facts.Clear();
+        textBoxUI.SetActive(true);
 
         foreach (string fact in dialogue.facts)
         {
@@ -41,11 +47,24 @@ public class DialogueManager : MonoBehaviour
         }
 
         string fact = facts.Dequeue();
-        Debug.Log(fact);
+        StopAllCoroutines();
+        StartCoroutine(SentenceScroll(fact));
+    }
+
+    IEnumerator SentenceScroll(string fact)
+    {
+        dialogueText.text = "";
+
+        foreach (char letter in fact.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null;
+        }
     }
 
     void EndDialogue()
     {
-        Debug.Log("end of conversation");
+        animator.SetBool("isOpen", false);
+        // textBoxUI.SetActive(false);
     }
 }

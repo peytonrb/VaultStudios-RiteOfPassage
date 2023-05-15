@@ -5,9 +5,11 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
+    // public GameObject trigger;
 
-    public void OnTriggerEnter(Collider collider)
+    public void OnTriggerExit(Collider collider)
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        // trigger.GetComponent<Collider>().enabled = false;
     }
 }

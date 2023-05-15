@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour
     public TMP_Text xSensText;
     public Slider ySensSlider;
     public TMP_Text ySensText;
+    public GameObject factUI;
 
     public void Awake()
     {
@@ -35,6 +36,7 @@ public class PauseMenu : MonoBehaviour
         howToPlay.SetActive(false);
         background.SetActive(true);
         options.SetActive(false);
+        factUI.SetActive(false);
     }
 
     public void OnEnable()
@@ -43,6 +45,7 @@ public class PauseMenu : MonoBehaviour
         howToPlay.SetActive(false);
         background.SetActive(true);
         options.SetActive(false);
+        factUI.SetActive(false);
         resumeButton.Select();
         if (GameManager.Instance != null)
         {

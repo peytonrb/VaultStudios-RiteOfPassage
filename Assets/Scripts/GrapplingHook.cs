@@ -22,7 +22,6 @@ public class GrapplingHook : MonoBehaviour
     public float maxDistance;
     public float hookProximity; // how close to hook will player release grapple and drop to ground
     private float currentDistance;
-    private bool grounded;
     private Animator animator;
 
     void Update()
@@ -122,22 +121,5 @@ public class GrapplingHook : MonoBehaviour
         hooked = false;
         LineRenderer rope = hook.GetComponent<LineRenderer>();
         rope.positionCount = 0;
-    }
-
-    // helper method, performs ground check 
-    private void isGrounded()
-    {
-        RaycastHit hit;
-        float distance = 1f;
-        Vector3 direction = new Vector3(0, -1);
-
-        if (Physics.Raycast(transform.position, direction, out hit, distance))
-        {
-            grounded = true;
-        }
-        else
-        {
-            grounded = false;
-        }
     }
 }
