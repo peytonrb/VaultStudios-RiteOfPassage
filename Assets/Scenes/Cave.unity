@@ -123,6 +123,80 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &4933824
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1971046788}
+    m_Modifications:
+    - target: {fileID: 888545863566739509, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_Name
+      value: Trigger2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -16.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -78.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538193611536211468, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: dialogue.facts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538193611536211468, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: dialogue.facts.Array.data[0]
+      value: Exploring caves is called caving, potholing, or spelunking.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538193611536211468, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: dialogue.facts.Array.data[1]
+      value: ... so I guess we can be considered spelunkers!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+--- !u!4 &4933825 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+  m_PrefabInstance: {fileID: 4933824}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8368758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1466,6 +1540,81 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2080820524894161641, guid: 09759774066d4a746a6a0f3a64c882a2, type: 3}
+--- !u!1001 &161547723
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1971046788}
+    m_Modifications:
+    - target: {fileID: 888545863566739509, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_Name
+      value: Trigger5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 31.32567
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 59.81834
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -58.281654
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -93.734344
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99109495
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.13315725
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 15.304
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538193611536211468, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: dialogue.facts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538193611536211468, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: dialogue.facts.Array.data[0]
+      value: Caves provide shelter for bats, insects, animals in hibernation, and
+        even humans!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+--- !u!4 &161547724 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+  m_PrefabInstance: {fileID: 161547723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &162360117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2630,6 +2779,76 @@ MeshCollider:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5528953459584422304, guid: 4d1ef1bbb67b9fd47adee82d46d53730, type: 3}
   m_PrefabInstance: {fileID: 1608766096}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &381806645
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1971046788}
+    m_Modifications:
+    - target: {fileID: 888545863566739509, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_Name
+      value: Trigger3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 43.70834
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -195.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538193611536211468, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: dialogue.facts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538193611536211468, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: dialogue.facts.Array.data[0]
+      value: "Stalagmites are caused by mineral deposits that have hardened!\r"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+--- !u!4 &381806646 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+  m_PrefabInstance: {fileID: 381806645}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &386843759
 PrefabInstance:
@@ -6620,9 +6839,7 @@ MonoBehaviour:
   dialogue:
     name: Buddy Bot
     facts:
-    - 'Usually caves are really creepy, but this cave is really cool! '
-    - 'Caves are made when water runs over soft rock, like limestone. '
-    - 'The acid in the water slowly eats away at the limestone and makes a hole! '
+    - 'Speleology is the study of caves. Would you like to be a speleologist? '
 --- !u!65 &991025633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9305,6 +9522,85 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4764594067134334583, guid: 93c6427a964b9b044920711b98fbfeff, type: 3}
   m_PrefabInstance: {fileID: 4764594066318877216}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1406522101
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1971046788}
+    m_Modifications:
+    - target: {fileID: 888545863566739509, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_Name
+      value: Trigger4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 104.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -57.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -171.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.93553466
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.35323492
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -41.371
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538193611536211468, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: dialogue.facts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538193611536211468, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: dialogue.facts.Array.data[0]
+      value: Usually caves are really creepy, but this cave is really cool!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538193611536211468, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: dialogue.facts.Array.data[1]
+      value: Caves are made when water runs over soft rock, like limestone.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538193611536211468, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+      propertyPath: dialogue.facts.Array.data[2]
+      value: 'The acid in the water slowly eats away at the limestone and makes a
+        hole! '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+--- !u!4 &1406522102 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8269154022369688606, guid: 05b781871dcb9574180db61729d94f64, type: 3}
+  m_PrefabInstance: {fileID: 1406522101}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &1431802344
 MeshCollider:
@@ -12668,6 +12964,10 @@ Transform:
   m_Children:
   - {fileID: 263203955}
   - {fileID: 991025631}
+  - {fileID: 4933825}
+  - {fileID: 381806646}
+  - {fileID: 1406522102}
+  - {fileID: 161547724}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18111,15 +18411,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.028714482
+      value: -0.028714502
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017199287
+      value: 0.000000017199287
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -4.9407234e-10
+      value: 4.9407267e-10
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.w
@@ -28012,6 +28312,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 7913867426281137152, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
+      propertyPath: maxVelocityFalling
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7913867426281137155, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
       propertyPath: cam
       value: 
@@ -28072,6 +28376,10 @@ PrefabInstance:
       propertyPath: fUI
       value: 
       objectReference: {fileID: 1690620718}
+    - target: {fileID: 8873744035112471332, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
+      propertyPath: factUI
+      value: 
+      objectReference: {fileID: 441476270}
     - target: {fileID: 8873744035112471332, guid: 9c568e4f260f150469edda367eef32c5, type: 3}
       propertyPath: mainUI
       value: 

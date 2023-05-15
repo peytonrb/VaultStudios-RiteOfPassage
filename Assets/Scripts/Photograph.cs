@@ -21,6 +21,7 @@ public class Photograph : MonoBehaviour
     public GameObject photoCam;
     public GameObject cameraStuff;
     public GameObject mainUI;
+    public GameObject factUI;
     public GameObject polarUI1;
     public GameObject polarUI2;
     public GameObject polarUI3;
@@ -200,6 +201,7 @@ public class Photograph : MonoBehaviour
     private void ActivateCamera()
     {
         mainCam.SetActive(false);
+        factUI.SetActive(false);
         photoCam.SetActive(true);
         cameraStuff.SetActive(true);
         rb.isKinematic = true;
