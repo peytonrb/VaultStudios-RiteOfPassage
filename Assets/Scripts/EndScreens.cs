@@ -132,7 +132,7 @@ public class EndScreens : MonoBehaviour
 
     public void MainMenuButton()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void ExitButton()
