@@ -201,7 +201,10 @@ public class Photograph : MonoBehaviour
     private void ActivateCamera()
     {
         mainCam.SetActive(false);
-        factUI.SetActive(false);
+        if (SceneManager.GetActiveScene().name != "Hub")
+        {
+            factUI.SetActive(false);
+        }
         photoCam.SetActive(true);
         cameraStuff.SetActive(true);
         rb.isKinematic = true;

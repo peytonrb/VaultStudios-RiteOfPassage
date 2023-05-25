@@ -36,7 +36,10 @@ public class PauseMenu : MonoBehaviour
         howToPlay.SetActive(false);
         background.SetActive(true);
         options.SetActive(false);
-        factUI.SetActive(false);
+        if (SceneManager.GetActiveScene().name != "Hub")
+        {
+            factUI.SetActive(false);
+        }
     }
 
     public void OnEnable()
@@ -45,7 +48,10 @@ public class PauseMenu : MonoBehaviour
         howToPlay.SetActive(false);
         background.SetActive(true);
         options.SetActive(false);
-        factUI.SetActive(false);
+        if (SceneManager.GetActiveScene().name != "Hub")
+        {
+            factUI.SetActive(false);
+        }
         resumeButton.Select();
         if (GameManager.Instance != null)
         {
