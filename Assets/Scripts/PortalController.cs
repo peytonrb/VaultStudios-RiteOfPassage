@@ -20,7 +20,7 @@ public class PortalController : MonoBehaviour
 
     void Update()
     {
-        if (sceneName == "city")
+        if (sceneName == "City")
         {
             Debug.Log("first if");
             Debug.Log(GameManager.Instance.cityW);
@@ -31,7 +31,7 @@ public class PortalController : MonoBehaviour
             }
         }
 
-        if (sceneName == "redwood")
+        if (sceneName == "Redwood")
         {
             if (GameManager.Instance.redwoodW == true)
             {
