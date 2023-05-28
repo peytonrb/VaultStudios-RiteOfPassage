@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance { get; private set; }
     public Sound[] sounds;
 
-    void Awake()
+    void Awake() 
     {
         if (Instance != null) 
         {
@@ -43,11 +43,18 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
 
+/*
+        foreach(Sound sound in sounds)
+        {
+            Debug.Log("name: " + sound.name);
+        } 
+        */
+
         Debug.Log(name);
 
         if (s == null)
         {
-            Debug.Log("No sound found");
+            Debug.Log("No sound found(play)");
             return;
         }
 
@@ -60,7 +67,7 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.Log("No sound found");
+            Debug.Log("No sound found(stop)");
             return;
         }
 
@@ -81,7 +88,7 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.Log("No sound found");
+            Debug.Log("No sound found(pause)");
             return;
         }
 
@@ -94,7 +101,7 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.Log("No sound found");
+            Debug.Log("No sound found(unpause)");
             return;
         }
 
@@ -107,7 +114,7 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.Log("No sound found");
+            Debug.Log("No sound found(setvolume)");
             return;
         }
 
@@ -120,7 +127,7 @@ public class AudioManager : MonoBehaviour
 
         if (s == null)
         {
-            Debug.Log("No sound found");
+            Debug.Log("No sound found(getvolume)");
             return 0f;
         }
 

@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         {
             controller.enabled = false;
             GameManager.Instance.isDead = true;
-            animator.SetBool("isFalling", false);
+            //animator.SetBool("isFalling", false);
         }
         
 
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
         // 11f IS NOT A RANDOM VALUE, IT IS 2F MORE THAN THE MAX VELOCITY YOU GET WHEN JUMPING
         if (!isGrounded && velocity.y < -11f)
         {
-            animator.SetBool("isFalling", true);
+            //animator.SetBool("isFalling", true);
             
             
         }
@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded)
         {
-            animator.SetBool("isFalling", false);
+            //animator.SetBool("isFalling", false);
             isGliding = false;
             if (GameManager.Instance.stam < GameManager.Instance.maxStam)
             {
@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Glide") && !isGrounded && GameManager.Instance.stam > 0) // && velocity.y < 0
         {
             animator.SetBool("IsWalking", false);
-            animator.SetBool("isFalling", false);
+            //animator.SetBool("isFalling", false);
             isFootSound = false;
             AudioManager.Instance.Stop("FootStepSound");
             animator.SetBool("IsGliding", true);
@@ -222,7 +222,7 @@ public class PlayerController : MonoBehaviour
         {
             if (collision.gameObject.name == "ForestPortal")
             {
-                GameManager.Instance.Portal("Redwood");
+                GameManager.Instance.Portal("redwood");
             }
             if (collision.gameObject.name == "CavePortal")
             {

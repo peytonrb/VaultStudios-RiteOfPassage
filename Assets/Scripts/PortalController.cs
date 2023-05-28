@@ -31,7 +31,7 @@ public class PortalController : MonoBehaviour
             }
         }
 
-        if (sceneName == "Redwood")
+        if (sceneName == "redwood")
         {
             if (GameManager.Instance.redwoodW == true)
             {
