@@ -22,11 +22,8 @@ public class PortalController : MonoBehaviour
     {
         if (sceneName == "City")
         {
-            Debug.Log("first if");
-            Debug.Log(GameManager.Instance.cityW);
             if (GameManager.Instance.cityW)
             {
-                Debug.Log("second if");
                 portal.SetActive(true);
             }
         }

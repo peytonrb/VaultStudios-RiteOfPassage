@@ -43,7 +43,7 @@ public class EndScreens : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     } 
 
-    private IEnumerator WinSequence(float time, Vector3 startPos, Vector3 endPos)
+    public IEnumerator WinSequence(float time, Vector3 startPos, Vector3 endPos)
     {
         winText.SetActive(true);
         loseText.SetActive(false);
