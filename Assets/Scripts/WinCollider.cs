@@ -16,7 +16,7 @@ public class WinCollider : MonoBehaviour
 
     void Update()
     {
-        if (withinRange && Input.GetKeyDown(KeyCode.F))
+        if (withinRange && Input.GetKeyDown(KeyCode.F) && GameManager.Instance.win)
         {
             SceneManager.LoadScene(4);
         }
@@ -24,8 +24,11 @@ public class WinCollider : MonoBehaviour
 
     public void OnTriggerEnter(Collider collider)
     {
-        withinRange = true;
-        fui.SetActive(true);
+        if (GameManager.Instance.win)
+        {
+            withinRange = true;
+            fui.SetActive(true);
+        }
     }
 
     public void OnTriggerExit(Collider collider)

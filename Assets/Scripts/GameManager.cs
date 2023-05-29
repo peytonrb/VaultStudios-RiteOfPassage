@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
 
             if (caveW && redwoodW && cityW)
             {
+                Debug.Log("GAME WON");
                 win = true;
                 //SceneManager.LoadScene("EndScreen");
             }

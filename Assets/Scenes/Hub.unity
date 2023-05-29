@@ -5695,15 +5695,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.021671385
+      value: -0.021671386
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000025867603
+      value: -0.000025865742
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000056071843
+      value: -0.0000005606781
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6246,7 +6246,6 @@ GameObject:
   - component: {fileID: 1885545578}
   - component: {fileID: 1885545577}
   - component: {fileID: 1885545576}
-  - component: {fileID: 1885545580}
   m_Layer: 0
   m_Name: Console
   m_TagString: Untagged
@@ -6324,8 +6323,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885545575}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: -0.1, z: -8.52}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.7, y: -0.1, z: 7.84}
   m_LocalScale: {x: 6.8951254, y: 2.2830136, z: 2.7175715}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6337,20 +6336,7 @@ Transform:
   - {fileID: 1729771641}
   m_Father: {fileID: 0}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1885545580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885545575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c881a2e883406244b6520bcad3174d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  console: {fileID: 1885545575}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1891286647 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1064074277701912683, guid: a59dd160f8383564195b34e7536a074e, type: 3}
