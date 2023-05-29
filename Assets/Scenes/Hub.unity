@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4165,11 +4165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1564347166756312418, guid: 9267ac39a32dc1240943ad8ca3a098fc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000025816675
+      value: -0.000025885847
       objectReference: {fileID: 0}
     - target: {fileID: 1564347166756312418, guid: 9267ac39a32dc1240943ad8ca3a098fc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000010296905
+      value: -0.0000010324493
       objectReference: {fileID: 0}
     - target: {fileID: 1564347166798747298, guid: 9267ac39a32dc1240943ad8ca3a098fc, type: 3}
       propertyPath: m_RootOrder
@@ -4422,158 +4422,6 @@ PrefabInstance:
     - target: {fileID: 1579299847708563100, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
       propertyPath: m_Name
       value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.size
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[3].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 6dc4f34609ae9c345a28e3ff8dd0259a, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[3].name
-      value: MainMenuTheme
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[4].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: f1dbc71b5cc88014a94b3fd8c95e544f, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[4].name
-      value: HubTheme
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[5].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 45ddfa262101b024fa43e5585fe92f69, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[5].loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[5].name
-      value: WinTheme
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[6].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 7564e162f78997842bb6faf237181c8f, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[6].loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[6].name
-      value: LoseTheme
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[7].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: eb669d7bf6c71b24f96082413d9ee492, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[7].loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[7].name
-      value: ShutterSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[8].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: a19e4bf39213063489b3b19372d53da8, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[8].name
-      value: GrappleSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[9].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 832a090e5adfce345986a5c2aa61e6c2, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[9].name
-      value: ExplosionSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[10].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 3b88ecbf7394b45428c8f499a346778d, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[10].loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[10].name
-      value: FinalCutsceneTheme
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[11].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: e0ddcb2cb238ce8419083e83a02585ec, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[11].loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[11].name
-      value: CloseBook
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[12].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 5863d1889f476ee43bc1eb4481e4d96a, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[12].name
-      value: CutsceneStepSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[13].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: cc29242ab1aec0d438664a2c42e8a18d, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[13].name
-      value: ButtonPress
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[14].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 19015ccbdaa54b64dac88fb56d64354b, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[14].name
-      value: PlaceBook
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[15].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: ced3defecb4cf744c9209562009a1356, type: 3}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[15].loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[15].name
-      value: redwoodTheme
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[7].volume
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[8].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[9].volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[10].volume
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1579299847708563101, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
-      propertyPath: sounds.Array.data[11].volume
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46af77986085973409b3dd6b95efe04a, type: 3}
@@ -5416,11 +5264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000025865742
+      value: -0.00002586574
       objectReference: {fileID: 0}
     - target: {fileID: 2321046932492341442, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000005606781
+      value: -0.00000056067813
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933040543706, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5448,11 +5296,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933170226417, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00002583407
+      value: -0.000025868454
       objectReference: {fileID: 0}
     - target: {fileID: 2321046933170226417, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000010303843
+      value: -0.0000010317558
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4675acfae5026a4bb5967daaf4d2391, type: 3}

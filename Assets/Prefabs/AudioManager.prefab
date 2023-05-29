@@ -60,11 +60,6 @@ MonoBehaviour:
     volume: 1
     loop: 1
     source: {fileID: 0}
-  - name: RedwoodTheme
-    clip: {fileID: 8300000, guid: ced3defecb4cf744c9209562009a1356, type: 3}
-    volume: 1
-    loop: 1
-    source: {fileID: 0}
   - name: MainMenuTheme
     clip: {fileID: 8300000, guid: 6dc4f34609ae9c345a28e3ff8dd0259a, type: 3}
     volume: 1
@@ -124,4 +119,9 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 19015ccbdaa54b64dac88fb56d64354b, type: 3}
     volume: 1
     loop: 0
+    source: {fileID: 0}
+  - name: redwoodTheme
+    clip: {fileID: 8300000, guid: ced3defecb4cf744c9209562009a1356, type: 3}
+    volume: 1
+    loop: 1
     source: {fileID: 0}

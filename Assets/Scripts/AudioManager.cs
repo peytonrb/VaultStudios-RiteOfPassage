@@ -43,14 +43,11 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
 
-/*
-        foreach(Sound sound in sounds)
-        {
-            Debug.Log("name: " + sound.name);
-        } 
-        */
-
-        Debug.Log(name);
+        Debug.Log("name: " + name);
+        Debug.Log("before sound");
+        Debug.Log("sound: " + s);
+        // Debug.Log("sound name: " + s.name);
+        Debug.Log("after sound");
 
         if (s == null)
         {

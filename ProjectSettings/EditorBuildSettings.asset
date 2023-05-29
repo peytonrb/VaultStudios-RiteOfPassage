@@ -11,8 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hub.unity
     guid: 355de9b33d77b9741855db76e3d448de
-  - enabled: 1
-    path: Assets/Scenes/redwood.unity
+  - enabled: 0
+    path: Assets/Scenes/Redwood OLD.unity
     guid: 236d9e58ae125894c94c78e910ed4b58
   - enabled: 1
     path: Assets/Scenes/City.unity
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: 1923b57576ac508439ab95fdddbe39e6
+  - enabled: 1
+    path: Assets/Scenes/redwood.unity
+    guid: 4a14158fdac31c0439bb4fc7f40f744e
   m_configObjects: {}
