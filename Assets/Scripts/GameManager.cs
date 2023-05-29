@@ -71,7 +71,6 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("scene: " + currentScene);
                 AudioManager.Instance.Play(currentScene + "Theme");
             }
             

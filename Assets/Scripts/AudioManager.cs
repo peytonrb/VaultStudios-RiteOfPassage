@@ -43,12 +43,6 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
 
-        Debug.Log("name: " + name);
-        Debug.Log("before sound");
-        Debug.Log("sound: " + s);
-        // Debug.Log("sound name: " + s.name);
-        Debug.Log("after sound");
-
         if (s == null)
         {
             Debug.Log("No sound found(play)");
